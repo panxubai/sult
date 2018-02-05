@@ -1,0 +1,32 @@
+<!--pages/searchs/searchs.wxml-->
+<view class="container">
+<!-- 搜索框 -->
+  <view class='searchPageSum'>
+  <view class='search_border'>
+    <view class='searchBoxSum'>
+       <icon size="14" type="search"></icon>
+         <input placeholder-style="color:#999999" placeholder="请输入地址地名关键字" value="{{inputVal}}" bindinput="searchEndChange" />
+         <image src='../../resources/ic_search_closs.png' bindtap='eliminateTap'></image>
+    </view>
+  </view>
+
+<view class='searchEnd'>
+    <view class='hotSearch'>
+        <p>热门搜索</p>
+          <span wx:for="{{hotSearch}}" wx:key="key" data-text="{{item}}" bindtap="bindtapa">{{item}}</span>
+    </view>
+     <view class='hotSearch historySearch'>
+        <p>历史搜索
+            <image src='../../resources/ic_search_delete.png' bindtap='removeHistorySearch'></image>
+        </p>
+          <span wx:for="{{historySearch}}" wx:key="key" data-text="{{item}}" bindtap="bindtapa">{{item}}</span>
+    </view>
+  
+</view>
+
+
+
+
+
+  </view>
+</view>

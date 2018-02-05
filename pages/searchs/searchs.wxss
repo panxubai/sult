@@ -1,0 +1,70 @@
+/* pages/searchs/searchs.wxss */
+.searchPageSum{
+  width: 670rpx;
+  margin: 0 auto;
+}
+.searchBoxSum{
+  width: 100%;
+  height: 80rpx;
+  background: #F8F8F8 ;
+  border-radius:120rpx; 
+  margin-top:38rpx;
+}
+.search_border{
+  width: 100%;
+  height: 152rpx;
+  border-bottom: 1px solid #F8F8F8;
+}
+.searchBoxSum icon{
+  float: left;
+  margin:26rpx 16rpx 0 40rpx;
+}
+.searchBoxSum input{
+   caret-color:#F5A623; 
+  width: 70%;
+  height: 100%;
+font-size: 35rpx;
+  float: left;
+ 
+}
+.searchBoxSum image{
+  width: 48rpx;
+  height: 48rpx;
+  float: right;
+  margin-top:16rpx;
+  margin-right: 40rpx;
+}
+.searchEnd{
+  width: 100%;
+}
+.searchEnd .hotSearch{
+  width: 100%;
+  padding: 40rpx 0 16rpx;
+  border-bottom: 1px solid #F8F8F8;
+}
+.searchEnd .hotSearch p{
+  width: 100%;
+  display: block;
+  font-family: PingFangSC-Regular;
+    font-size: 34rpx;
+    color: #9B9B9B;
+    letter-spacing: 0;
+    margin-bottom: 40rpx;
+}
+.searchEnd .hotSearch image{
+  width: 48rpx;
+  height: 48rpx;
+  float: right;
+}
+.searchEnd .hotSearch span{
+  display:inline-block;
+  padding: 12rpx 38rpx;
+  min-width: 40rpx;
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+  color: #555555;
+  background: #F8F8F8;
+border-radius: 20rpx;
+margin-right: 24rpx;
+margin-bottom: 24rpx;
+}

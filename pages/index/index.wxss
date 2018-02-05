@@ -1,0 +1,343 @@
+/**index.wxss**/
+.home_hander{
+  height: 108rpx;
+  width: 100%;
+}
+.home_hander image{
+  width: 48rpx;
+  height: 48rpx;
+  margin-top:31rpx;
+}
+.mine_icon,.mine_new{
+  width: 15%;
+  height: 100%;
+  float: left;
+  text-align: center;
+  position: relative;
+}
+.mine_icon p,.mine_new p{
+  width: 1px;
+  height: 34rpx;
+  background: #eee;
+  position: absolute;
+  bottom:38rpx;
+  margin-top:-27rpx;
+}
+.mine_icon p{
+  right: 0;
+}
+.mine_new p{
+  left: 0;
+}
+.mine_renting,.mine_landlord{
+  width: 35%;
+  height: 100%;
+  line-height: 108rpx;
+  float: left;
+  text-align: center;
+  position: relative;
+}
+.mine_renting p,.mine_landlord p{
+  width: 14rpx;
+  height: 14rpx;
+  border-radius: 50%;
+  background: #f2a533;
+  position: relative;
+  left:50%;
+  margin-left:-7rpx;
+  bottom: 25rpx;
+  display: none;
+}
+.active_color{
+  color: #f2a533;
+}
+.home_hander .active_home{
+  display: block;
+}
+.home_mine_renting,.home_mine_landlord{
+  display: none;
+}
+.home_mine_landlord_renting{
+  display: block;
+}
+.home_mine_renting .renting_top{
+  width: 100%;
+  height: 422rpx;
+  overflow: hidden;
+  background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1517794578&di=68c58de36f0c6555e31d5f2a339db8d8&imgtype=jpg&er=1&src=http%3A%2F%2Fimg0.pchouse.com.cn%2Fpchouse%2F1602%2F18%2F1451753_8.jpg);
+  background-position: 100% 100%;
+}
+.renting_top .searchBox{
+  width: 90%;
+  height: 80rpx;
+  background: #fff;
+  border-radius: 50rpx;
+  margin-top:310rpx;
+  margin-left:5%;
+  box-sizing: border-box;
+  padding: 0 30rpx; 
+}
+.searchBox .searchCity{
+  width: 25%;
+  float: left;
+  position: relative;
+}
+.searchCity text{
+  font-size: 36rpx;
+color: #222222;
+line-height: 80rpx;
+}
+.searchBox .searchCity p{
+        width:0; 
+        height:0;
+        border-width:10rpx;
+        border-style:solid;
+        border-color:#999 transparent transparent transparent;   
+        position: absolute;
+        top:36rpx;
+        right: 50rpx;
+}
+.searchBox .searchCity span{
+  width: 1px;
+  height: 32rpx;
+  background: #eee;
+  position: absolute;
+  right: 10rpx;
+  top:24rpx;
+}
+.searchBox .searchMain{
+  width: 70%;
+  float: left;
+}
+.searchBox .searchMain icon{
+  margin-top:24rpx;
+  margin-left:42rpx;
+}
+.searchBox .searchMain .searchTiao{
+  width: 80%;
+  float: right;
+  height: 100%;
+  font-size: 32rpx;
+  line-height: 80rpx;
+  color: #999;
+}
+.picker-view {
+  transform:translateY(40vh);
+  width: 100%;
+  display: flex;
+  z-index:12;
+  background-color: #fff;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0rpx;
+  left: 0rpx;
+  height: 40vh;
+}
+.dialog-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 8;
+  background: rgba(0, 0, 0, 0.3);
+}
+.home_screen{
+  width: 100%;
+  height: 547rpx;
+}
+.home_screen_sum{
+  width:670rpx;
+  margin:0 auto;
+ 
+}
+.home_screen_sum .screen_top{
+  height: 197rpx;
+  width: 100%;
+   border-bottom: 1px solid #e5e5e5;
+}
+.screen_top .budgeting{
+  width: 423rpx;
+    float: left;
+    line-height: 64rpx;
+}
+.home_screen p{
+   width:0; 
+    height:0;
+    border-width:10rpx;
+    border-style:solid;
+    border-color:#999 transparent transparent transparent;   
+    position: absolute;
+    top:27rpx;
+    right: 23rpx;
+}
+.home_screen text,.home_screen text{
+  font-family: PingFangSC-Medium;
+  display: block;
+  width: 100%;
+  font-size: 40rpx;
+  color: #222222;
+  line-height: 100rpx;
+}
+.budgeting .budgeting_little,.budgeting .budgeting_more,.styleFish .styleFish_option,.screen_relation_option{
+
+  height: 64rpx;
+  background: #F8F8F8;
+  border-radius: 16rpx;
+  line-height: 64rpx;
+  box-sizing: border-box;
+  padding-left:28rpx;
+  font-size: 30rpx;
+  font-family: PingFangSC-Regular;
+  color: #555555;
+  position: relative;
+ border: none;
+}
+.budgeting .budgeting_little{
+ margin-right: 12rpx;
+   float: left;
+     width:170rpx;
+}
+.budgeting .budgeting_more{
+  float: right;
+  margin-right: 40rpx;
+  width:170rpx;
+}
+.screen_top .styleFish{
+  width: 247rpx;
+  float: right;
+}
+.styleFish .styleFish_option{
+  width: 100%;
+}
+.screen_relation{
+  width: 31%;
+  float: left;
+}
+.screen_relation_max{
+  width: 38%;
+}
+.screen_relation span{
+  float: left;
+  margin-right: 16rpx;
+  font-size: 34rpx;
+  line-height: 64rpx;
+}
+.screen_relation_option{
+width: 158rpx;
+height: 64rpx;
+float: left;
+}
+.screen_relation_num{
+  width: 110rpx;
+}
+.searchEnd{
+  width: 100%;
+  height: 80rpx;
+  background: #F5A623;
+  border-radius: 120rpx;
+  color: #fff;
+  line-height: 80rpx;
+  font-family: PingFangSC-Regular;
+  font-size: 35rpx;
+  float: left;
+  margin-top:64rpx;
+  border: none;
+}
+.bannerSurvey{
+  height: 220rpx;
+  width: 100%;
+  border-top:20rpx solid #eff3f6; 
+  border-bottom:20rpx solid #eff3f6; 
+  text-align: center;
+}
+.bannerSurvey image{
+  width: 670rpx;
+  height: 180rpx;
+  margin-top:20rpx;
+}
+.strategyPrompts{
+  width: 100%;
+  padding-bottom: 46rpx;
+}
+.strategyPrompts .strategyMian{
+  width: 670rpx;
+  margin:0 auto;
+}
+.strategyPrompts .strategyMian .tittleGL{
+  font-family: PingFangSC-Medium;
+  font-size: 40rpx;
+  color: #222222;
+  font-weight:600;
+  height: 84rpx;
+  line-height: 116rpx;
+}
+.strategyPrompts .strategyMian .articleImg{
+  width: 100%;
+  height: 268rpx;
+  padding:32rpx 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e5e5e5;
+}
+.articleImg .articleImg_left{
+    width: 390rpx;
+     float: left;
+}
+.articleImg .articleImg_left span,.strategyPrompts .articleNoImg span{
+  display: block;
+  width: 100%;
+  line-height: 50rpx;
+  font-weight:500;
+  font-size: 36rpx;
+}
+.articleImg .articleImg_left p,.strategyPrompts .articleNoImg p{
+  width: 100%;
+  margin-top:12rpx;
+   margin-bottom:20rpx;
+  font-size: 30rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  display:-webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical;
+}
+.commentIcon,.transmitIcon{
+  width: 118rpx;
+  float: left;
+}
+
+ .commentIcon image,.transmitIcon image{
+  width: 40rpx;
+   height: 40rpx;
+  float: left;
+}
+.commentIcon text,.transmitIcon text{
+ font-family: PingFangSC-Regular;
+font-size: 24rpx;
+color: #9B9B9B;
+  float: left;
+letter-spacing: 0.26px;
+margin-left: 10rpx;
+line-height: 40rpx;
+}
+.articleImg .articleImg_right{
+  width: 260rpx;
+  height: 174rpx;
+  float: right;
+}
+.articleImg .articleImg_right image{
+  width: 100%;
+  height: 174rpx;
+}
+.strategyPrompts .articleNoImg{
+ width: 100%;
+  height: 268rpx;
+  padding:32rpx 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e5e5e5;
+}
+

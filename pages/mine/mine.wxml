@@ -1,0 +1,40 @@
+<!--pages/mine/mine.wxml-->
+<view class="container">
+    <view class='mine_top'>
+      <image class='headImg' src="{{userInfo.avatarUrl}}"></image>
+      <view class='mine_name'>
+        <span>{{userInfo.nickName}}</span>
+         <image wx:if="{{userInfo.gender == 1}}" class='iconfont' src="../../resources/location.png"></image>
+         <image class='iconfont' wx:else src="../../resources/others.png"></image>
+      </view>     
+    </view>
+    <view class='mine_bottom'>
+         <view class='mine_list'>
+              <image class='icon' src='../../resources/others.png'></image>
+              <text>我的行程</text>
+              <image class='arrows' src='../../resources/others.png'></image>
+         </view>
+         <view class='mine_list'>
+              <image class='icon' src=''></image>
+              <text>个人资料</text>
+              <image class='arrows' src=''></image>
+         </view>
+         <view class='mine_list'>
+              <image class='icon' src=''></image>
+              <text>我的卡包</text>
+              <image class='arrows' src=''></image>
+         </view>
+         <view class='mine_list'>
+              <image class='icon' src=''></image>
+              <text>系统设置</text>
+              <image class='arrows' src=''></image>
+         </view>
+    </view>
+    <view class='input'>
+     <input placeholder='sdasd'></input>
+     发不
+    </view>
+   
+
+</view>
+

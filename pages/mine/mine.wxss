@@ -1,0 +1,55 @@
+/* pages/mine/mine.wxss */
+
+.mine_top{
+  width: 100%;
+  padding: 100rpx 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  text-align: center;
+}
+.mine_top .headImg{
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.mine_top .mine_name{
+  width: 100%;
+}
+.mine_top .mine_name span{
+  margin-left: 20rpx;
+}
+.mine_top .mine_name image{
+    width: 28rpx;
+    height: 28rpx;
+    margin-left: 20rpx;
+}
+.mine_bottom{
+  border-top:20rpx solid #eff3f6;
+  width: 100%;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+.mine_bottom .mine_list{
+  width: 100%;
+  padding: 30rpx 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e5e5e5; 
+}
+.mine_bottom .mine_list .icon{
+  width: 50rpx;
+  height: 50rpx;
+}
+.mine_bottom .mine_list .arrows{
+  width: 30rpx;
+  height: 30rpx;
+  float: right;
+}
+.input{
+  position: fixed;
+  bottom:0;
+  background: #f00;
+  width: 100%;
+}

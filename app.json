@@ -1,0 +1,14 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/searchs/searchs",
+    "pages/mine/mine",
+    "pages/article/article"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "SULT",
+    "navigationBarTextStyle":"black"
+  }
+}

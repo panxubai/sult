@@ -1,0 +1,197 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='home_hander'>
+      <view class='mine_icon' bindtap='tapmine'>
+        <image src='../../resources/ic_topbar_me.png'></image>
+        <p></p>
+      </view>
+      <view class="mine_renting {{Rentin?'active_color':''}}" bindtap='tapRentin'>
+          <text>我要租房</text>
+           <p class="{{Rentin?'active_home':''}}"></p>
+      </view>
+      <view class="mine_landlord {{landlord?'active_color':''}}" bindtap='tapLandlord'>
+          <text>我是房东</text>
+           <p class="{{landlord?'active_home':''}}"></p>
+      </view>
+      <view class='mine_new'>
+        <image src='../../resources/ic_topbar_information.png'></image>
+        <p></p>
+      </view>
+  </view>
+  <!-- 我要租房 搜索-->
+
+    <view class="home_mine_renting {{Rentin?'home_mine_landlord_renting':''}}">
+        <view class='renting_top'>
+            <view class=' searchBox'>
+                <view class='searchCity' bindtap='selectCity'>
+                    <text>{{cityYes}}</text>
+                    <p></p>
+                    <span></span>
+                </view>
+                <view class='searchMain' bindtap='searchPage'>
+                    <icon type="search" size="14"/>
+                    <view class='searchTiao'>{{addressId}}</view>
+                </view>
+            </view>
+        </view>
+      <!-- 筛选 -->
+      <view class='home_screen'>
+          <view class='home_screen_sum'>
+              <view class='screen_top'>
+                  <view class='budgeting'>
+                      <text>预算</text>
+                      <view class='budgeting_little' bindtap='budgetingMin'>
+                       {{budgetMinrYes}}
+                        <p></p>
+                      </view>
+                      -
+                      <view class='budgeting_more' bindtap='budgetingMax'>
+                        {{budgetMaxrYes}}
+                        <p></p>
+                      </view>
+                  </view>
+                   <view class='styleFish'>
+                      <text>装修风格</text>
+                       <view class='styleFish_option' bindtap='styletap'>
+                       {{styleFishYes}}
+                        <p></p>
+                      </view>
+                   </view>
+              </view>
+
+              <view class='screen_bottom'>
+                  <text>构成</text>
+                  <view class='screen_relation screen_relation_max'>
+                      <span>关系</span>
+                      <view class='screen_relation_option' bindtap='relationtap'>
+                        {{relationYes}}
+                        <p></p>
+                      </view>
+                  </view>
+                  <view class='screen_relation'>
+                       <span>成人</span>
+                       <view class='screen_relation_option screen_relation_num' bindtap='adultTap'>
+                        {{numberYes1}}
+                        <p></p>
+                      </view>
+                  </view>
+                  <view class='screen_relation'>
+                       <span>儿童</span>
+                       <view class='screen_relation_option screen_relation_num'  bindtap='childrenTap'>
+                        {{numberYes2}}
+                        <p></p>
+                      </view>
+                  </view>
+              </view>
+              <button class='searchEnd'>搜 索</button>
+          </view>
+      </view>
+<!-- bannr图 -->
+    <view class='bannerSurvey'>
+        <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1517217508462&di=d0271ad68ff45f876cd3adca6067b190&imgtype=0&src=http%3A%2F%2Fpfile.righthere.com.cn%2FTRFiles%2FCommunityFiles%2F116%2FTrainingDynamic%2Ff6eb2228-4264-480e-9c7f-892fa04f511520160128160907.jpg'></image>
+    </view>
+    <!-- 攻略提示 -->
+    <view class='strategyPrompts'>
+        <view class='strategyMian'>
+            <view class='tittleGL'>
+                攻略贴士
+            </view>
+            <view class='articleList'>
+                <!-- 第一种样式有图片 -->
+                <view wx:for="{{showArticleList}}" data-id='{{item.id}}' wx:key="key" class="{{item.picture?'articleImg':'articleNoImg'}}" bindtap='articleTap'>
+                    <view class='articleImg_left'>
+                        <span>{{item.title}}</span>
+                        <p>大家喀什角动量卡就打开啦到喀什角动量卡什角动量卡就打开啦到喀什角动量卡上就打什角动量卡就打开啦到喀什角动量卡上就打上就打开拉萨就多久撒可见度卢卡斯就</p>
+                        <view class='commentIcon'>
+                          <image src='../../resources/ic_comment_n.png'></image>
+                          <text>100</text>
+                        </view>
+                        <view class='transmitIcon' bindtap='transmitTap'>
+                            <image src='../../resources/ic_transpond_n.png'></image>
+                            <text>100</text>
+                        </view>
+                    </view>
+                    <view wx:if="{{item.picture}}" class='articleImg_right'>
+                        <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1517220223009&di=a8b73ab14c1c938d23b86085be71b5e4&imgtype=0&src=http%3A%2F%2Fuploads.xuexila.com%2Fallimg%2F1609%2F805-160923101P0-50.jpg'></image>
+                    </view>
+                </view>
+               
+            </view>
+        
+        </view>
+    </view>
+
+
+
+
+
+ <!--"调起城市组件开始-->
+<view class="dialog-mask " style="z-index:11;visibility:{{addressMenuIsShow ? 'visible': 'hidden'}}" bindtap="hideCitySelected" />
+<view class="picker-view" animation="{{animationAddressMenu}}" style="visibility:{{addressMenuIsShow ? 'visible':'hidden'}}">
+  <view style="height:15% ;width:95%;margin-top:10rpx;margin-bottom:10rpx;">
+    <text catchtap="cityCancel">取消</text>
+    <text style="float: right;color:#F5A623" catchtap="citySure" >确定</text>
+  </view>
+  <!--"可以显示默认的城市，使用后级联选择城市反应很慢就不使用了-->
+  <picker-view wx:if="{{activeShow == 0}}" style="width: 100%; height: 300px;" bindchange="cityChange" value="{{value}}" wx:key="">
+    <picker-view-column>
+      <view  wx:for="{{arrayCity}}" wx:key="key" class="picker-item"  style="text-align: center;line-height:34px">
+        {{item}}</view>
+    </picker-view-column>
+  </picker-view>
+  <!-- 预算 -->
+  <picker-view wx:if="{{activeShow == 1}}" style="width: 100%; height: 300px;" bindchange="cityChange" value="{{value}}" wx:key="">
+    <picker-view-column>
+         <view wx:for="{{budgetLitter}}" wx:key="key" class="picker-item"  style="text-align: center;line-height:34px">
+        {{item}}</view>
+    </picker-view-column>
+  </picker-view>
+    <picker-view wx:if="{{activeShow == 2}}" style="width: 100%; height: 300px;" bindchange="cityChange" value="{{value}}" wx:key="">
+    <picker-view-column>
+        <view wx:for="{{budgetbig}}" wx:key="key" class="picker-item"  style="text-align: center;line-height:34px">
+        {{item}}</view>
+    </picker-view-column>
+  </picker-view>
+  <!-- 装修 -->
+    <picker-view wx:if="{{activeShow == 3}}" style="width: 100%; height: 300px;" bindchange="cityChange" value="{{value}}" wx:key="">
+    <picker-view-column>
+         <view  wx:for="{{styleFishs}}" wx:key="key" class="picker-item"  style="text-align: center;line-height:34px">
+        {{item}}</view>
+    </picker-view-column>
+  </picker-view>
+  <!-- 关系 -->
+    <picker-view wx:if="{{activeShow == 4}}" style="width: 100%; height: 300px;" bindchange="cityChange" value="{{value}}" wx:key="">
+    <picker-view-column>
+         <view  wx:for="{{relationArr}}" wx:key="key" class="picker-item"  style="text-align: center;line-height:34px">
+        {{item}}</view>
+    </picker-view-column>
+  </picker-view>
+   <!-- 成人 -->
+    <picker-view wx:if="{{activeShow == 5}}" style="width: 100%; height: 300px;" bindchange="cityChange" value="{{value}}" wx:key="">
+    <picker-view-column>
+         <view  wx:for="{{numberArr1}}" wx:key="key" class="picker-item"  style="text-align: center;line-height:34px">
+        {{item}}</view>
+    </picker-view-column>
+  </picker-view>
+   <!-- 儿童-->
+    <picker-view wx:if="{{activeShow == 6}}" style="width: 100%; height: 300px;" bindchange="cityChange" value="{{value}}" wx:key="">
+    <picker-view-column>
+         <view  wx:for="{{numberArr2}}" wx:key="key" class="picker-item"  style="text-align: center;line-height:34px">
+        {{item}}</view>
+    </picker-view-column>
+  </picker-view>
+   
+</view>
+        <!--"调起城市组件结束-->
+
+        
+
+</view>
+
+     <view  class="home_mine_landlord {{landlord?'home_mine_landlord_renting':''}}">
+        我是房东
+        <view animation="{{animationData}}" style="background:red;height:100rpx;width:100rpx;position: absolute;left:100rpx;" bindtap='tap'></view>
+     </view>
+
+
+</view>
