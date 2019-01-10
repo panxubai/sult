@@ -1,0 +1,136 @@
+/* pages/journeyList/journeyList.wxss */
+page{
+  background: #eff3f6;
+}
+.container{
+
+  box-shadow: 0 4rpx 8rpx 0 rgba(0,0,0,0.10) inset;
+  overflow: hidden;
+}
+.routeList:first-child{
+  margin-top: 3rpx;
+ 
+   box-shadow: 0 4rpx 8rpx 0 rgba(0,0,0,0.10) inset; 
+}
+.routeList{
+  width: 100%;
+  height: 212rpx;
+  padding: 40rpx 40rpx 0;
+   border-top: 1px solid #eff3f6;
+  box-sizing: border-box;
+  background: #fff;
+  margin-bottom: 22rpx;
+  position: relative;
+}
+.routeList .del{
+  width: 100px;
+  height: 212rpx;
+  text-align: center;
+  line-height: 212rpx;
+  background: #FF3B30;
+  font-size: 28rpx;
+  color: #FFFFFF;
+  position: absolute;
+  top: 0;
+  right: -100px;
+  z-index: 999;
+}
+.routeList .routeTop{
+   width: 100%;
+  height: 170rpx;
+  display: flex;
+}
+.routeList .routeTop .imgsum{
+   width: 172rpx;
+  height: 130rpx;
+  display:flex;
+  flex-wrap:wrap;
+  background: #D8D8D8;
+}
+.routeList .routeTop .imgsumtwo{
+  align-items:center;
+}
+.routeList .routeTop .imgsumthree image:first-child{
+margin-left: 25%;
+}
+.routeList .routeTop .imgsum image{
+  width: 50%;
+  height: 50%;
+
+}
+.routeList .routeTop .routeRight{
+    margin-left: 32rpx;
+ height: 170rpx; 
+ width: 100%;
+ position: relative;
+}
+.routeList .routeTop .routeRight span{
+   display:block;
+    width:40rpx;
+    height:40rpx;
+    background:#FE2C54;
+  border-radius:50%;
+  font-size:20rpx;
+  color:#FFFFFF;
+  letter-spacing:0;
+  line-height:40rpx;
+  position:absolute;
+  top:0;
+  right:0;
+  text-align:center;
+}
+.routeList .routeTop .routeRight p{
+ display: block;
+ font-size: 32rpx;
+color: #222222;
+font-weight: 500;
+margin-bottom: 40rpx;
+}
+.routeList .routeTop .routeRight .routeTime{
+  width: 100%;
+}
+.routeList .routeTop .routeRight .routeTime text{
+  font-size: 28rpx;
+color: #9B9B9B;
+}
+.routeList .routeTop .routeRight .routeTime b{
+  font-size: 44rpx;
+color: #FE8B25;
+float: right;
+}
+.routeList .routeTop .routeRight .routeTime b a{
+ font-size: 28rpx;
+color: #FE8B25;
+}
+
+/* .routeList .routeBottom{
+   width: 100%;
+  height: 80rpx;
+}
+.routeList .routeBottom span{
+   font-size: 28rpx;
+   line-height: 80rpx;
+color: #222;
+}
+.routeList .routeBottom image{
+   width: 32rpx;
+   height: 32rpx;
+   float: right;
+   margin-top: 24rpx;
+} */
+
+.noHome{
+  width: 100%;
+  text-align: center;
+}
+.noHome image{
+  width: 260rpx;
+  height: 260rpx;
+  margin-top: 250rpx;
+}
+.noHome text{
+  display: block;
+  font-size: 32rpx;
+color: #9B9B9B;
+margin-top: 48rpx;
+}

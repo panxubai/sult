@@ -1,0 +1,66 @@
+<!--pages/discussion/discussion.wxml-->
+<view class="container" style='margin-top: {{height}}px'> 
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+     <view class='fdEndBox' data-id='{{dataArr.house_info.id}}' bindtap='houseTap'>
+        <view class='searchEndList' bindtap='homeDetailTap'>
+            <view class='leftImg'>
+              <image mode="aspectFill" src='{{dataArr.img}}'></image>
+            </view>
+            <view class='rightMain'>
+              <p>{{dataArr.house_info.ward}}-{{dataArr.house_info.village}}</p>
+              <view class='nameImgPic'>
+                  <image src='{{dataArr.head}}'></image>
+                  <span>{{dataArr.callers}}</span>
+                  <b>{{dataArr.house_info.rent}} <a>元/月</a></b>
+                 
+              </view>
+              <text>{{dataArr.house_info.type}}-{{dataArr.house_info.area}} ㎡</text>
+               <view class='addessSum'>
+                  <image src='https://www.suitius.com/image/resources/ic_list_sign.png'></image>
+                  <span>{{dataArr.house_info.metro}}</span>
+               </view>
+            </view>
+        </view>
+    </view>
+
+    <view class='chatBoxes'>
+        <scroll-view scroll-y scroll-top="{{scrollTop}}" scroll-with-animation style="height: {{scrollHeight-height}}px;">
+        <!-- 本人的聊天 --> 
+        <view wx:for="{{array}}" wx:key="key">
+            <view wx:if="{{item.user_id == userInfo.user_id}}" class='oneselfId commons'>
+                <view class='content'>
+                    <span>{{item.name}}</span>
+                    <view class='contentText'>
+                        <text selectable='true'>{{item.comment}}</text> 
+                        <p></p>
+                    </view>
+                </view>
+                <view class='headPortrait'>
+                    <image src='{{item.head}}'></image>
+                </view>
+            </view>
+            <!-- 其他人的聊天 -->
+             <view wx:else class='otherId commons'>
+                <view class='headPortrait'>
+                    <image src='{{item.head}}'></image>
+                </view>
+                <view class='content'>
+                    <span>{{item.name}}</span>
+                    <view class='contentText'>
+                        <text selectable='true'>{{item.comment}}</text> 
+                        <p></p>
+                    </view>
+                </view>
+            </view>
+            </view>         
+        </scroll-view>
+    </view>
+
+<view class='inputBox' >
+    <view class='inputWidth'>
+        <input type='text' maxlength="50" cursor-spacing="8" placeholder='请留言' value='{{mainInput}}' bindinput='mainInput'/>
+        <p bindtap='sendTap'>发送</p>
+    </view>
+</view>
+
+</view>

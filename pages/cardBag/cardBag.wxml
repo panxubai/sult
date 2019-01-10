@@ -1,0 +1,8 @@
+<!--pages/cardBag/cardBag.wxml-->
+<view class="container" style='margin-top: {{height}}px'> 
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+     <view class='noHome'>
+     <image src='../../resources/restImg/img_missing_card1.png'></image>
+        <text>Oops...暂未开通</text>
+    </view>  
+</view>

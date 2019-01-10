@@ -1,0 +1,360 @@
+<!--pages/amendHome/amendHome.wxml-->
+<view class="container" style='margin-top: {{height}}px'> 
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+  <!-- ------ -->
+  <view class='swiperTop'>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+      <block wx:for="{{homeArr.img}}" wx:key="key">
+        <swiper-item bindtap='swiperImgTap' data-index="{{index}}">
+          <image mode="aspectFill" src="{{item}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- ------ -->
+  <view class='filloutMes'>
+
+    <view class='fillList fillPlot'>
+      <image src='../../resources/restImg/ic_landlord_house.png'></image>
+      <input type='text' placeholder='小区名称' disabled placeholder-style="color:#9B9B9B" value='{{homeArr.ward}}-{{homeArr.village}}' bindinput='plotInput'></input>
+    </view>
+    <view class='fillList fillAddess'>
+      <image src='../../resources/restImg/ic_landlord_site.png'></image>
+      <input type='text' placeholder='详细地址' disabled placeholder-style="color:#9B9B9B" value='{{homeArr.road}}' bindinput='addessInput'></input>
+    </view>
+    <view class='fillList fillName'>
+      <image src='../../resources/restImg/ic_landlord_bag4.png'></image>
+      <input type='number' placeholder='请输入面积' disabled placeholder-style="color:#9B9B9B" value='{{homeArr.area}} ㎡' bindinput='areaInput'></input>
+    </view>
+
+    <view class='fillSelect'>
+      <view class='leftSelect'>
+        <text>户型</text>
+        <view class='leftSelectBox'>
+          {{homeArr.type}}
+          <!-- <p></p> -->
+        </view>
+      </view> 
+      <view class='rightSelect'>
+        <text>装修风格</text>
+        <view class='leftSelectBox'>
+         {{homeArr.style}}
+          <!-- <p></p> -->
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- ------ -->
+  <view class='settingHome'>
+    <view class='settingWidth'>
+      <view class='tittleTop'>房屋设定</view>
+      <view class='fillList'>
+        <image src='../../resources/restImg/ic_landlord_money.png'></image>
+        <input type='number' maxlength='8' placeholder='请输入租金' placeholder-style="color:#9B9B9B" bindinput='moneyInput' value='{{moneyText}}'></input>
+        <a>元/月</a>
+      </view>
+
+      <view class='fillSelect'>
+        <view class='leftSelect'>
+          <text>状态</text>
+          <view class='leftSelectBox' bindtap='leftSelectTap'>
+            {{cityYes}}
+            <p></p>
+          </view>
+        </view>
+        <view class='rightSelect'>
+          <text>押金方式</text>
+          <view class='leftSelectBox leftSelectMargin' bindtap='selectYaTap'>
+            {{budgetMinrYes}}
+            <p></p>
+          </view>
+          <view class='leftSelectBox' bindtap='selectfuTap'>
+            {{budgetMaxrYes}}
+            <p></p>
+          </view>
+        </view>
+      </view>
+
+      <view class='petWhat'>
+        <text>是否接受宠物</text>
+        <view class='petYes' data-index = '0' bindtap='petWhatTap'>
+          <image wx:if="{{petIndex == 0}}" src='https://www.suitius.com/image/resources/questionnaire/ic_boy6.png' data-index = '1'></image>
+          <image wx:else src='https://www.suitius.com/image/resources/questionnaire/ic_boy5.png' data-index = '0'></image>
+          是
+        </view>
+        <view class='petNo' data-index = '1' bindtap='petWhatTap'>
+          <image wx:if="{{petIndex == 1}}" src='https://www.suitius.com/image/resources/questionnaire/ic_boy6.png'   data-index = '1'></image>
+                  <image wx:else src='https://www.suitius.com/image/resources/questionnaire/ic_boy5.png'   data-index = '1'></image>
+          否
+        </view>
+      </view>
+
+     <view class='linkOnline'> 
+          <text>每日用户申请上限</text>
+          <view class='leftSelectBox' bindtap='linkOnlineTap'>
+            {{linkOnlineYes}}
+            <p></p>
+          </view>
+     </view>
+
+
+      <view class='rentingWhat'>
+        <text>选择租房方式</text>
+        <view class='rentingYes' data-index = '0' bindtap='rentingWhatTap'>
+         <image wx:if="{{rentingIndex == 0}}" src='https://www.suitius.com/image/resources/questionnaire/ic_boy6.png' data-index = '0'></image>
+          <image wx:else src='https://www.suitius.com/image/resources/questionnaire/ic_boy5.png' data-index = '0'></image>
+          整租
+        </view>
+        <view class='rentingNo' data-index = '1' bindtap='rentingWhatTap'>
+          <image wx:if="{{rentingIndex == 1}}" src='https://www.suitius.com/image/resources/questionnaire/ic_boy6.png' data-index = '1' ></image>
+          <image wx:else src='https://www.suitius.com/image/resources/questionnaire/ic_boy5.png' data-index = '1'></image>
+          合租
+        </view>
+
+        <view class='rentingNoYes' data-index = '2' bindtap='rentingWhatTap'>
+          <image wx:if="{{rentingIndex == 2}}" src='https://www.suitius.com/image/resources/questionnaire/ic_boy6.png' data-index = '2' ></image>
+          <image wx:else src='https://www.suitius.com/image/resources/questionnaire/ic_boy5.png' data-index = '2'></image>
+          皆可
+        </view>
+      </view>
+
+      <view class='lesseeType'>
+        <text>能接受的租户类型</text>
+        <view class='typeFlex'>
+          <view class='typeList' data-index = '0' bindtap='typeScreetTap'>
+            <p data-index = '0'>单身</p>
+            <image data-index = '0' wx:if="{{typeArray[0] == 1}}"src='https://www.suitius.com/image/resources/questionnaire/ic_boy6.png'></image>
+            <image wx:else src='https://www.suitius.com/image/resources/questionnaire/ic_boy5.png' data-index = '0'></image>
+          </view>
+          <view class='typeList' data-index = '1' bindtap='typeScreetTap'>
+            <p data-index = '1'>情侣</p>
+            <image data-index = '1' wx:if="{{typeArray[1] == 1}}"src='https://www.suitius.com/image/resources/questionnaire/ic_boy6.png'></image>
+            <image wx:else src='https://www.suitius.com/image/resources/questionnaire/ic_boy5.png' data-index = '1'></image>
+          </view>
+          <view class='typeList'  data-index = '2' bindtap='typeScreetTap'>
+            <p data-index = '2'>家庭</p>
+            <image data-index = '2' wx:if="{{typeArray[2] == 1}}"src='https://www.suitius.com/image/resources/questionnaire/ic_boy6.png'></image>
+            <image wx:else src='https://www.suitius.com/image/resources/questionnaire/ic_boy5.png' data-index = '2'></image>
+          </view>
+          <view class='typeList' data-index = '3' bindtap='typeScreetTap'>
+            <p data-index = '3'>朋友</p>
+            <image data-index = '3' wx:if="{{typeArray[3] == 1}}"src='https://www.suitius.com/image/resources/questionnaire/ic_boy6.png'></image>
+            <image wx:else src='https://www.suitius.com/image/resources/questionnaire/ic_boy5.png' data-index = '3'></image>
+          </view>
+          <view class='typeList' data-index = '4' bindtap='typeScreetTap'>
+            <p data-index = '4'>其他</p>
+            <image data-index = '4' wx:if="{{typeArray[4] == 1}}"src='https://www.suitius.com/image/resources/questionnaire/ic_boy6.png'></image>
+            <image wx:else src='https://www.suitius.com/image/resources/questionnaire/ic_boy5.png' data-index = '4'></image>
+          </view>
+        </view>
+      </view>
+
+      <view class='timeShijian'>
+          <text>入住人数</text>
+          <view class='mainNumber'>
+            <p>成人</p>
+            <input type='number' maxlength='2' value='' bindinput='adultInput' value='{{adultText}}'></input>
+          </view>
+          <view class='mainNumber'>
+            <p>儿童</p>
+            <input type='number' maxlength='2' value='' bindinput='childInput' value='{{childText}}'></input>
+          </view>
+      </view>
+
+
+      <view class='settingTime'>
+        <text>能接受的预约时间点</text>
+        <view class='selectTime'>
+          <view class='leftSelectBox' bindtap='timeMinTap'>
+            {{styleFishYes1}}:{{styleFishYes2}}
+            <p></p>
+          </view>
+          <a>-</a>
+          <view class='leftSelectBox' bindtap='timeMaxTap'>
+            {{relationYes1}}:{{relationYes2}}
+            <p></p>
+          </view>
+
+        </view>
+
+      </view>
+    </view>
+  </view>
+  <!-- ------ -->
+
+  <view class='facilitiesSelect'>
+    <view class='facilities'>
+      <text>配套设施</text>
+      <a>请点击选择设施</a>
+    </view>
+
+    <view class='facilityImg'>
+      <view class='imgList' data-index='0' bindtap='facilitiesTap'>
+         <image wx:if="{{facilitiesArr[0] == 0}}" src='../../resources/restImg/ic_suite_kongt_n.png' data-index='0'></image>
+        <image wx:else src='https://www.suitius.com/image/resources/homeDetail/ic_suite_balcony9.png' data-index='0'></image>
+        <a data-index='0'>空调</a>
+      </view>
+      <view class='imgList' data-index='1' bindtap='facilitiesTap'>
+      <image wx:if="{{facilitiesArr[1] == 0}}" src='../../resources/restImg/ic_suite_tv_n.png' data-index='1'></image>
+        <image wx:else src='https://www.suitius.com/image/resources/homeDetail/ic_suite_balcony15.png' data-index='1'></image>
+        <a data-index='1'>电视</a>
+      </view>
+      <view class='imgList' data-index='2' bindtap='facilitiesTap'>
+      <image wx:if="{{facilitiesArr[2] == 0}}" src='../../resources/restImg/ic_suite_wardrobe_n.png' data-index='2'></image>
+        <image wx:else src='https://www.suitius.com/image/resources/homeDetail/ic_suite_balcony16.png' data-index='2'></image>
+        <a data-index='2'>衣柜</a>
+      </view>
+      <view class='imgList' data-index='3' bindtap='facilitiesTap'>
+      <image wx:if="{{facilitiesArr[3] == 0}}" src='../../resources/restImg/ic_suite_washer_n.png'  data-index='3'></image>
+        <image wx:else src='https://www.suitius.com/image/resources/homeDetail/ic_suite_balcony17.png' data-index='3'></image>
+        <a data-index='3'>洗衣机</a>
+      </view>
+      <view class='imgList' data-index='4' bindtap='facilitiesTap'>
+      <image wx:if="{{facilitiesArr[4] == 0}}" src='../../resources/restImg/ic_suite_refrigerator_n.png'  data-index='4' ></image>
+        <image wx:else src='https://www.suitius.com/image/resources/homeDetail/ic_suite_balcony12.png' data-index='4' ></image>
+        <a data-index='4' >冰箱</a>
+      </view>
+      <view class='imgList' data-index='5' bindtap='facilitiesTap'>
+      <image wx:if="{{facilitiesArr[5] == 0}}" src='../../resources/restImg/ic_suite_water_heater_n.png'  data-index='5'></image>
+        <image wx:else src='https://www.suitius.com/image/resources/homeDetail/ic_suite_balcony18.png' data-index='5'></image>
+        <a data-index='5'>热水器</a>
+      </view>
+      <view class='imgList' data-index='6' bindtap='facilitiesTap'>
+      <image wx:if="{{facilitiesArr[6] == 0}}" src='../../resources/restImg/ic_suite_bed_n.png'  data-index='6'></image>
+        <image wx:else src='https://www.suitius.com/image/resources/homeDetail/ic_suite_balcony2.png' data-index='6'></image>
+        <a data-index='6'>床</a>
+      </view>
+      <view class='imgList' data-index='7' bindtap='facilitiesTap'>
+      <image wx:if="{{facilitiesArr[7] == 0}}" src='../../resources/restImg/ic_suite_sofa_n.png' data-index='7'></image>
+        <image wx:else src='https://www.suitius.com/image/resources/homeDetail/ic_suite_balcony13.png' data-index='7'></image>
+        <a data-index='7'>沙发</a>
+      </view>
+      <view class='imgList' data-index='8' bindtap='facilitiesTap'>
+      <image wx:if="{{facilitiesArr[8] == 0}}" src='../../resources/restImg/ic_suite_desk_n.png' data-index='8'></image>
+        <image wx:else src='https://www.suitius.com/image/resources/homeDetail/ic_suite_balcony6.png' data-index='8'></image>
+        <a data-index='8'>桌子</a>
+      </view>
+      <view class='imgList' data-index='9' bindtap='facilitiesTap'>
+      <image wx:if="{{facilitiesArr[9] == 0}}" src='../../resources/restImg/ic_suite_hearth_n.png' data-index='9' ></image>
+        <image wx:else src='https://www.suitius.com/image/resources/homeDetail/ic_suite_balcony8.png' data-index='9' ></image>
+        <a data-index='9' >煤气灶</a>
+      </view>
+      <view class='imgList' data-index='10' bindtap='facilitiesTap'>
+      <image wx:if="{{facilitiesArr[10] == 0}}" src='../../resources/restImg/ic_suite_cooker_hood_n.png' data-index='10'></image>
+        <image wx:else src='https://www.suitius.com/image/resources/homeDetail/ic_suite_balcony5.png' data-index='10'></image>
+        <a data-index='10'>油烟机</a>
+      </view>
+      <view class='imgList' data-index='11' bindtap='facilitiesTap'>
+      <image wx:if="{{facilitiesArr[11] == 0}}" src='../../resources/restImg/ic_suite_chair_n.png' data-index='11'></image>
+        <image wx:else src='https://www.suitius.com/image/resources/homeDetail/ic_suite_balcony4.png' data-index='11'></image>
+        <a data-index='11'>椅子</a>
+      </view>
+      <view class='imgList' data-index='12' bindtap='facilitiesTap'>
+      <image wx:if="{{facilitiesArr[12] == 0}}" src='../../resources/restImg/ic_suite_bedside_table_n.png' data-index='12'></image>
+        <image wx:else src='https://www.suitius.com/image/resources/homeDetail/ic_suite_balcony3.png' data-index='12'></image>
+        <a data-index='12'>床头柜</a>
+      </view>
+      <view class='imgList' data-index='13' bindtap='facilitiesTap'>
+      <image wx:if="{{facilitiesArr[13] == 0}}" src='../../resources/restImg/ic_suite_mattress_n.png' data-index='13'></image>
+        <image wx:else src='https://www.suitius.com/image/resources/homeDetail/ic_suite_balcony11.png' data-index='13'></image>
+        <a data-index='13'>床垫</a>
+      </view>
+      <view class='imgList' data-index='14' bindtap='facilitiesTap'>
+      <image wx:if="{{facilitiesArr[14] == 0}}" src='../../resources/restImg/ic_suite_wifi_n.png' data-index='14'></image>
+        <image wx:else src='https://www.suitius.com/image/resources/homeDetail/ic_suite_balcony19.png' data-index='14'></image>
+        <a data-index='14'>WiFi</a>
+      </view>
+      <view class='imgList' data-index='15' bindtap='facilitiesTap'>
+      <image wx:if="{{facilitiesArr[15] == 0}}" src='../../resources/restImg/ic_suite_lock_n.png' data-index='15'></image>
+        <image wx:else src='https://www.suitius.com/image/resources/homeDetail/ic_suite_balcony10.png' data-index='15'></image>
+        <a data-index='15'>智能锁</a>
+      </view>
+      <view class='imgList' data-index='16' bindtap='facilitiesTap'>
+      <image wx:if="{{facilitiesArr[16] == 0}}" src='../../resources/restImg/ic_suite_balcony_n.png' data-index='16'></image>
+        <image wx:else src='https://www.suitius.com/image/resources/homeDetail/ic_suite_balcony1.png' data-index='16'></image>
+        <a data-index='16'>阳台</a>
+      </view>
+      <view class='imgList' data-index='17' bindtap='facilitiesTap'>
+      <image wx:if="{{facilitiesArr[17] == 0}}" src='../../resources/restImg/ic_suite_toilet_n.png' data-index='17'></image>
+        <image wx:else src='https://www.suitius.com/image/resources/homeDetail/ic_suite_balcony14.png' data-index='17'></image>
+        <a>卫生间</a>
+      </view>
+      <view class='imgList' data-index='18' bindtap='facilitiesTap'>
+      <image wx:if="{{facilitiesArr[18] == 0}}" src='../../resources/restImg/ic_suite_garden_n.png' data-index='18'></image>
+        <image wx:else src='https://www.suitius.com/image/resources/homeDetail/ic_suite_balcony7.png' data-index='18'></image>
+        <a data-index='18'>花园</a>
+      </view>
+    </view>
+  </view>
+
+  <!-- ------ -->
+
+  <view class='greeting'>
+    <text>房屋介绍</text>
+    <textarea placeholder="介绍一下您的房子吧" maxlength="100" bindinput="textareaInput" value='{{textareaVal}}' />
+  </view>
+    <!-- ------ -->
+  <view class='sumitBtn' bindtap='submitTap'>提交申请</view>
+    <!-- ------ -->
+
+
+ <!--"调起城市组件开始-->
+<view class="dialog-mask " style="z-index:11;visibility:{{addressMenuIsShow ? 'visible': 'hidden'}}" bindtap="hideCitySelected" />
+<view class="picker-view" animation="{{animationAddressMenu}}" style="visibility:{{addressMenuIsShow ? 'visible':'hidden'}}">
+  <view style="height:15% ;width:95%;margin-top:10rpx;margin-bottom:10rpx;">
+    <text catchtap="cityCancel">取消</text>
+    <text style="float: right;color:#F5A623" catchtap="citySure" >确定</text>
+  </view>
+  <!--"可以显示默认的城市，使用后级联选择城市反应很慢就不使用了-->
+  <picker-view wx:if="{{activeShow == 0}}" style="width: 100%; height: 300px;" bindchange="cityChange" value="{{array1}}" wx:key="">
+    <picker-view-column>
+      <view  wx:for="{{arrayCity}}" wx:key="key" class="picker-item"  style="text-align: center;line-height:34px">
+        {{item}}</view>
+    </picker-view-column>
+  </picker-view>
+  <!-- 预算 -->
+  <picker-view wx:if="{{activeShow == 1}}" style="width: 100%; height: 300px;" bindchange="cityChange" value="{{array2}}" wx:key="">
+    <picker-view-column>
+         <view wx:for="{{budgetLitter}}" wx:key="key" class="picker-item"  style="text-align: center;line-height:34px">
+        {{item}}</view>
+    </picker-view-column>
+  </picker-view>
+    <picker-view wx:if="{{activeShow == 2}}" style="width: 100%; height: 300px;" bindchange="cityChange" value="{{array3}}" wx:key="">
+    <picker-view-column>
+        <view wx:for="{{budgetbig}}" wx:key="key" class="picker-item"  style="text-align: center;line-height:34px">
+        {{item}}</view>
+    </picker-view-column>
+  </picker-view>
+  <!-- 装修 -->
+    <picker-view wx:if="{{activeShow == 3}}" style="width: 100%; height: 300px;" bindchange="cityChange" value="{{array4}}" wx:key="">
+    <picker-view-column>
+         <view  wx:for="{{styleFishs}}" wx:key="key" class="picker-item"  style="text-align: center;line-height:34px">
+        {{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+         <view  wx:for="{{relationArr}}" wx:key="key" class="picker-item"  style="text-align: center;line-height:34px">
+        {{item}}</view>
+    </picker-view-column>
+  </picker-view>
+  <!-- 关系 -->
+    <picker-view wx:if="{{activeShow == 4}}" style="width: 100%; height: 300px;" bindchange="cityChange" value="{{array5}}" wx:key="">
+    <picker-view-column>
+         <view  wx:for="{{styleFishs}}" wx:key="key" class="picker-item"  style="text-align: center;line-height:34px">
+        {{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+         <view  wx:for="{{relationArr}}" wx:key="key" class="picker-item"  style="text-align: center;line-height:34px">
+        {{item}}</view>
+    </picker-view-column>
+  </picker-view> 
+  <!-- 最大预约数 -->
+  <picker-view wx:if="{{activeShow == 5}}" style="width: 100%; height: 300px;" bindchange="cityChange" value="{{array6}}" wx:key="">
+    <picker-view-column>
+         <view wx:for="{{linkOnline}}" wx:key="key" class="picker-item"  style="text-align: center;line-height:34px">
+        {{item}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>
+        <!--"调起城市组件结束-->
+
+</view>

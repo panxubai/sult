@@ -1,0 +1,9 @@
+<!--pages/login/login.wxml-->
+<view class="container" style='margin-top: {{height}}px'> 
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+      <view class='loginSum'>
+         <image src='../../resources/restImg/ic_login_logo.png'></image>
+         <text>登陆后享受更多权限~</text>
+         <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">微信快捷登陆</button>
+      </view>
+</view>

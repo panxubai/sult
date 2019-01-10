@@ -1,20 +1,30 @@
-<!--index.wxml-->
-<view class="container">
+<!--index.wxml--> 
+<view class="container"  style='margin-top: {{height}}px'>
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar> 
   <view class='home_hander'>
       <view class='mine_icon' bindtap='tapmine'>
-        <image src='../../resources/ic_topbar_me.png'></image>
+             <a wx:if="{{Rentin && arrNumber1.visit_num != 0 && arrNumber1 != ''}}"></a>
+             <a wx:if="{{Rentin && arrNumber1.disc_num != 0 && arrNumber1 != ''}}"></a>
+             <a wx:if="{{landlord && arrNumber1.visit_num != 0 && arrNumber1 != ''}}"></a>
+        <image src='https://www.suitius.com/image/resources/ic_topbar_me.png'></image>
         <p></p>
       </view>
       <view class="mine_renting {{Rentin?'active_color':''}}" bindtap='tapRentin'>
-          <text>我要租房</text>
+          <text>我是客户</text>
+   
            <p class="{{Rentin?'active_home':''}}"></p>
       </view>
       <view class="mine_landlord {{landlord?'active_color':''}}" bindtap='tapLandlord'>
-          <text>我是房东</text>
+          <text>我是业主</text>
+        
            <p class="{{landlord?'active_home':''}}"></p>
       </view>
-      <view class='mine_new'>
-        <image src='../../resources/ic_topbar_information.png'></image>
+      <view class='mine_new' bindtap='tapMessage'>
+        <a wx:if="{{arrNumber2.suit != 0 && arrNumber2 != ''}}"></a>
+        <a wx:if="{{Rentin && arrNumber2.trip != 0 && arrNumber2 != ''}}"></a>
+        <a wx:if="{{Rentin && arrNumber2.disc != 0 && arrNumber2 != ''}}"></a>
+        <a wx:if="{{landlord && arrNumber2.visit != 0 && arrNumber2 != ''}}"></a>
+        <image src='https://www.suitius.com/image/resources/ic_topbar_information.png'></image>
         <p></p>
       </view>
   </view>
@@ -30,7 +40,8 @@
                 </view>
                 <view class='searchMain' bindtap='searchPage'>
                     <icon type="search" size="14"/>
-                    <view class='searchTiao'>{{addressId}}</view>
+                    <view class='searchTiao'>{{addressId}}</view> 
+                    <image src='https://www.suitius.com/image/resources/ic_search_closs.png' catchtap='eliminateTap'></image>
                 </view>
             </view>
         </view>
@@ -83,12 +94,12 @@
                       </view>
                   </view>
               </view>
-              <button class='searchEnd'>搜 索</button>
+              <button class='searchEnd' bindtap='tapSearchEnd'>搜 索</button>
           </view>
       </view>
 <!-- bannr图 -->
-    <view class='bannerSurvey'>
-        <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1517217508462&di=d0271ad68ff45f876cd3adca6067b190&imgtype=0&src=http%3A%2F%2Fpfile.righthere.com.cn%2FTRFiles%2FCommunityFiles%2F116%2FTrainingDynamic%2Ff6eb2228-4264-480e-9c7f-892fa04f511520160128160907.jpg'></image>
+    <view class='bannerSurvey' bindtap='questionnaireTap'>
+        <image src='../../resources/banner.png'></image>
     </view>
     <!-- 攻略提示 -->
     <view class='strategyPrompts'>
@@ -98,21 +109,21 @@
             </view>
             <view class='articleList'>
                 <!-- 第一种样式有图片 -->
-                <view wx:for="{{showArticleList}}" data-id='{{item.id}}' wx:key="key" class="{{item.picture?'articleImg':'articleNoImg'}}" bindtap='articleTap'>
+                <view wx:for="{{showArticleList}}" data-id='{{item.id}}' data-img='{{item.image}}' wx:key="key" class="{{item.image?'articleImg':'articleNoImg'}}" bindtap='articleTap' >
                     <view class='articleImg_left'>
                         <span>{{item.title}}</span>
-                        <p>大家喀什角动量卡就打开啦到喀什角动量卡什角动量卡就打开啦到喀什角动量卡上就打什角动量卡就打开啦到喀什角动量卡上就打上就打开拉萨就多久撒可见度卢卡斯就</p>
+                        <p>{{item.content}}</p>
                         <view class='commentIcon'>
-                          <image src='../../resources/ic_comment_n.png'></image>
-                          <text>100</text>
+                          <image src='https://www.suitius.com/image/resources/ic_comment_n.png'></image>
+                          <text>{{item.com_num}}</text>
                         </view>
                         <view class='transmitIcon' bindtap='transmitTap'>
-                            <image src='../../resources/ic_transpond_n.png'></image>
-                            <text>100</text>
+                            <image src='https://www.suitius.com/image/resources/ic_transpond_n.png'></image>
+                            <text>{{item.forward}}</text>
                         </view>
                     </view>
-                    <view wx:if="{{item.picture}}" class='articleImg_right'>
-                        <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1517220223009&di=a8b73ab14c1c938d23b86085be71b5e4&imgtype=0&src=http%3A%2F%2Fuploads.xuexila.com%2Fallimg%2F1609%2F805-160923101P0-50.jpg'></image>
+                    <view wx:if="{{item.image}}" class='articleImg_right'>
+                        <image mode="aspectFill" src='{{item.image}}'></image>
                     </view>
                 </view>
                
@@ -133,48 +144,48 @@
     <text style="float: right;color:#F5A623" catchtap="citySure" >确定</text>
   </view>
   <!--"可以显示默认的城市，使用后级联选择城市反应很慢就不使用了-->
-  <picker-view wx:if="{{activeShow == 0}}" style="width: 100%; height: 300px;" bindchange="cityChange" value="{{value}}" wx:key="">
+  <picker-view wx:if="{{activeShow == 0}}" style="width: 100%; height: 300px;" bindchange="cityChange" value="{{array1}}" wx:key="">
     <picker-view-column>
       <view  wx:for="{{arrayCity}}" wx:key="key" class="picker-item"  style="text-align: center;line-height:34px">
         {{item}}</view>
     </picker-view-column>
   </picker-view>
   <!-- 预算 -->
-  <picker-view wx:if="{{activeShow == 1}}" style="width: 100%; height: 300px;" bindchange="cityChange" value="{{value}}" wx:key="">
+  <picker-view wx:if="{{activeShow == 1}}" style="width: 100%; height: 300px;" bindchange="cityChange" value="{{array2}}" wx:key="">
     <picker-view-column>
          <view wx:for="{{budgetLitter}}" wx:key="key" class="picker-item"  style="text-align: center;line-height:34px">
         {{item}}</view>
     </picker-view-column>
   </picker-view>
-    <picker-view wx:if="{{activeShow == 2}}" style="width: 100%; height: 300px;" bindchange="cityChange" value="{{value}}" wx:key="">
+    <picker-view wx:if="{{activeShow == 2}}" style="width: 100%; height: 300px;" bindchange="cityChange" value="{{array3}}" wx:key="">
     <picker-view-column>
         <view wx:for="{{budgetbig}}" wx:key="key" class="picker-item"  style="text-align: center;line-height:34px">
         {{item}}</view>
     </picker-view-column>
   </picker-view>
   <!-- 装修 -->
-    <picker-view wx:if="{{activeShow == 3}}" style="width: 100%; height: 300px;" bindchange="cityChange" value="{{value}}" wx:key="">
+    <picker-view wx:if="{{activeShow == 3}}" style="width: 100%; height: 300px;" bindchange="cityChange" value="{{array4}}" wx:key="">
     <picker-view-column>
          <view  wx:for="{{styleFishs}}" wx:key="key" class="picker-item"  style="text-align: center;line-height:34px">
         {{item}}</view>
     </picker-view-column>
   </picker-view>
   <!-- 关系 -->
-    <picker-view wx:if="{{activeShow == 4}}" style="width: 100%; height: 300px;" bindchange="cityChange" value="{{value}}" wx:key="">
+    <picker-view wx:if="{{activeShow == 4}}" style="width: 100%; height: 300px;" bindchange="cityChange" value="{{array5}}" wx:key="">
     <picker-view-column>
          <view  wx:for="{{relationArr}}" wx:key="key" class="picker-item"  style="text-align: center;line-height:34px">
         {{item}}</view>
     </picker-view-column>
   </picker-view>
    <!-- 成人 -->
-    <picker-view wx:if="{{activeShow == 5}}" style="width: 100%; height: 300px;" bindchange="cityChange" value="{{value}}" wx:key="">
+    <picker-view wx:if="{{activeShow == 5}}" style="width: 100%; height: 300px;" bindchange="cityChange" value="{{array6}}" wx:key="">
     <picker-view-column>
          <view  wx:for="{{numberArr1}}" wx:key="key" class="picker-item"  style="text-align: center;line-height:34px">
         {{item}}</view>
     </picker-view-column>
   </picker-view>
    <!-- 儿童-->
-    <picker-view wx:if="{{activeShow == 6}}" style="width: 100%; height: 300px;" bindchange="cityChange" value="{{value}}" wx:key="">
+    <picker-view wx:if="{{activeShow == 6}}" style="width: 100%; height: 300px;" bindchange="cityChange" value="{{array7}}" wx:key="">
     <picker-view-column>
          <view  wx:for="{{numberArr2}}" wx:key="key" class="picker-item"  style="text-align: center;line-height:34px">
         {{item}}</view>
@@ -189,9 +200,76 @@
 </view>
 
      <view  class="home_mine_landlord {{landlord?'home_mine_landlord_renting':''}}">
-        我是房东
-        <view animation="{{animationData}}" style="background:red;height:100rpx;width:100rpx;position: absolute;left:100rpx;" bindtap='tap'></view>
+        <view class='noticeImg' bindtap='noticeShadowTap'>
+            <image src='https://www.suitius.com/image/resources/img_cooperation.png'></image>
+        </view>
+        <view class='checkHome' bindtap='checkHomeTap'>
+            <view class='iconImg'>
+                <image src='https://www.suitius.com/image/resources/ic_home_register.png'></image>
+            </view>
+            <view class='checkName'>
+                <text>登记房屋</text>
+                <p>免费发布房源，海量客源等你来</p>
+            </view>
+            <view class='checkJT'>
+                 <image src='https://www.suitius.com/image/resources/homeDetail/ic_more_down.png'></image>
+            </view>
+        </view>
+        <view class='checkHome' bindtap='homeMainTap'>
+            <view class='iconImg'>
+                <image src='https://www.suitius.com/image/resources/ic_home_house.png'></image>
+            </view>
+            <view class='checkName'>
+                <text>我的房屋</text>
+                <p>智能管理,安全的线上交易</p>
+            </view>
+            <view class='checkJT'>
+                 <image src='https://www.suitius.com/image/resources/homeDetail/ic_more_down.png'></image>
+            </view>
+        </view>
+        
+        <view class='checkHome' bindtap='auditStatusTap'>
+            <view class='iconImg'>
+                <image src='../../resources/restImg/ic_home_check.png'></image>
+            </view>
+            <view class='checkName'>
+                <text>审核状态</text>
+                <p>正在审核中</p>
+            </view>
+            <view class='checkJT'>
+                 <image src='https://www.suitius.com/image/resources/homeDetail/ic_more_down.png'></image>
+            </view>
+        </view>
      </view>
+      <view class='noticeShadow'  style="visibility:{{noticeShadowShow ? 'visible':'hidden'}}">
+          <image src='https://www.suitius.com/image/resources/ic_close.png' bindtap='noticeShadowHideTap'></image>
+          <view class='text'>
+              <p>合作须知</p>
+             <text>
+                1.出租信息应遵循真实、准确、有效的原则。
+                2.厨房、卫生间、阳台和地下储藏室等非居住空间，不得单独作为出租信息发布。
+                3.自愿公开或隐藏联系方式信息。
+                4.平台不承诺对出租信息进行无期限保留。
+             </text>  
+          </view>
+          <view class='yeess' bindtap='noticeShadowHideTap'>知道了</view>
+      </view>
 
 
+      <!-- 点击我是房东跳出弹出框 -->
+<view class='tipsWindown' style="visibility:{{ownerFirstShow ? 'visible':'hidden'}}" bindtap='hidenTipTap'></view> 
+    <view class='expectationss' style="visibility:{{ownerFirstShow ? 'visible':'hidden'}}" >
+         <p>请进行业主身份验证</p>
+         <image class='chahao' src='https://www.suitius.com/image/resources/homeDetail/ic_pop_close.png' bindtap='hidenTipTap'></image>
+          <view class='fillList fillPhoto'>
+    <image src='../../resources/restImg/ic_landlord_phone.png'></image>
+      <input type='number' placeholder='请输入手机号' maxlength='11' placeholder-style="color:#9B9B9B" value='{{photoNumber}}' bindinput='photoInput'></input>
+      <view class="codeTap {{photoTap?'activeCode':''}}" bindtap='gainCodeTap'>{{codeText}}</view>
+    </view>
+    <view class='fillList fillCode'>
+    <image src='../../resources/restImg/ic_landlord_verify.png' ></image>
+      <input type='number' placeholder='验证码' maxlength='6' placeholder-style="color:#9B9B9B" value='{{codeNumber}}' bindinput='codeInput'></input>
+    </view>
+           <view class='buttonsumss' bindtap='yesTapCh'>确定</view>
+    </view>
 </view>

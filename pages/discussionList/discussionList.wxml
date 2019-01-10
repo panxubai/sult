@@ -1,0 +1,49 @@
+<!--pages/discussionList/discussionList.wxml-->
+<view class="container" style='margin-top: {{height}}px'> 
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+
+<view class='noHome' style="display:{{dataArr.length == 0 &&showKong?'block':'none'}}">
+     <image src='../../resources/restImg/img_missing_card2.png'></image>
+        <text>哦哟~列表为空</text>
+    </view> 
+
+<scroll-view scroll-y style="display:{{dataArr.length != 0 &&showKong?'block':'none'}};" >
+    <view class='routeList' wx:for="{{dataArr}}"  wx:key="key"   style="left:{{listLeft[index]}}px">
+        <view class='routeTop' data-group_id='{{item.group_id}}' data-index='{{index}}' data-id='{{item.house_info.id}}' bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd">
+         <view wx:if="{{item.head.length == 2}}"   class="imgsum imgsumtwo"> 
+             <image wx:for="{{item.head}}" wx:for-item="head" wx:key="head" src='{{head}}'></image>
+              
+        </view> 
+         <view wx:if="{{item.head.length == 3}}"  class='imgsum imgsumthree'>
+             <image wx:for="{{item.head}}" wx:for-item="head" wx:key="head" src='{{head}}'></image>
+        </view> 
+        <view wx:if="{{item.head.length == 4}}" class='imgsum' >
+             <image wx:for="{{item.head}}" wx:for-item="head" wx:key="head" src='{{head}}'></image>
+        </view>
+        <view wx:if="{{item.head.length == 1}}" class='imgsum' >
+             <image wx:for="{{item.head}}" wx:for-item="head" wx:key="head" src='{{head}}'></image>
+        </view>
+           
+            <view class='routeRight'>
+              <p>{{item.house_info.ward}}-{{item.house_info.village}}</p>
+              <span wx:if="{{item.no_read != 0}}">{{item.no_read}}</span>
+              <view class='routeTime'>
+                  <text>{{item.house_info.type}}-{{item.house_info.area}} ㎡</text>
+                  <b>{{item.house_info.rent}}<a>元/月</a></b>
+              </view>
+            </view>
+        </view>
+         <!-- <view class='routeBottom'>
+            <span>查看详情</span>
+            <image src='https://www.suitius.com/image/resources/ic_more.png'></image>
+         </view> -->
+
+         <view class="del" bindtap ="delTap" data-group_id='{{item.group_id}}' data-id='{{item.house_info.id}}'>退出</view>
+       
+    </view>
+
+  </scroll-view>
+
+
+
+</view>

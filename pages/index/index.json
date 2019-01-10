@@ -1,3 +1,5 @@
 {
-  "navigationBarTitleText": "SULT"
+  "usingComponents": {
+    "nav-bar": "/commpents/navber/navber"
+  }
 }

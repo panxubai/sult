@@ -1,0 +1,92 @@
+<!--pages/searchEnd/searchEnd.wxml-->
+<view class="container" style='margin-top: {{height}}px'> 
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+    <view class='screenEnd' style='margin-top: {{height}}px'>
+        <view class='searchsum' style="z-index:25;">
+        <view class='searchs' bindtap='searchPages'> {{addressEnd}}</view>
+        <image src='https://www.suitius.com/image/resources/ic_search_closs.png' catchtap='eliminateTap'></image>
+        </view>
+        <view class='screenMain' style="z-index:25;">
+            <view class="screenLeft {{selectIndex == 1? 'activeSolt' : ''}}" bindtap='soltTap'>
+                排序
+                <p></p>
+            </view>
+            <view class="screenRight {{selectIndex == 2? 'activeSolt' : ''}}" bindtap='screenTap'>
+                  筛选
+                <p></p>
+            </view>
+            <view class='gang'></view>
+        </view>
+        <!-- 阴影 -->
+        <view class="dialog-mask " style="z-index:11;visibility:{{soltMenuIsShow ? 'visible': 'hidden'}}" bindtap='maskTap' />
+        <!-- 排序 --> 
+        <view class='soltEnd' animation="{{animationSoltMenu}}">
+              <p wx:for="{{sortArr}}" wx:key="key" data-index="{{index}}" data-mian="{{item}}" bindtap='soltTapSure' class="{{soltIndex == index? 'activeSolt' : ''}}">{{item}}</p>
+        </view>
+         <!-- 阴影 -->
+        <view class="dialog-mask " style="z-index:11;visibility:{{screenMenuIsShow ? 'visible': 'hidden'}}" bindtap='maskTapScreen' />
+        <!-- 筛选 -->
+        <view class='screenEndShow' animation="{{animationScreenMenu}}" catchtouchmove="ture">
+            <view class='screenScroll'>
+                 <scroll-view scroll-y style="height: 580rpx;">
+                      <view class='composite composite1'>
+                          <p>综合</p>
+                          <span wx:for="{{compositeArr1}}"  wx:key="key" data-index="{{index}}" data-mian="{{item}}" bindtap='screenTapSure1' class="{{soltIndex1 == index? 'activeScreen' : ''}}">{{item}}</span>
+                      </view>
+                       <view class='composite composite2'>
+                          <p>预算</p>
+                          <span wx:for="{{compositeArr2}}" wx:key="key" data-index="{{index}}" data-mian="{{item}}" bindtap='screenTapSure2' class="{{soltIndex2 == index? 'activeScreen' : ''}}">{{item}}</span>
+                      </view>
+                       <view class='composite composite3'>
+                          <p>装修风格</p>
+                           <span wx:for="{{compositeArr3}}" wx:key="key" data-index="{{index}}" data-mian="{{item}}" bindtap='screenTapSure3' class="{{soltIndex3 == index? 'activeScreen' : ''}}">{{item}}</span>
+                      </view>
+                       <view class='composite composite4'>
+                          <p>户型</p>
+                           <span wx:for="{{compositeArr4}}" wx:key="key" data-index="{{index}}" data-mian="{{item}}" bindtap='screenTapSure4' class="{{soltIndex4[index] == index? 'activeScreen' : ''}}">{{item}}</span>
+                      </view>
+                      <view class='composite composite5'>
+                          <p>偏好</p>
+                          <span wx:for="{{compositeArr5}}" wx:key="key" data-index="{{index}}" data-mian="{{item}}" bindtap='screenTapSure5' class="{{soltIndex5[index] == index? 'activeScreen' : ''}}">{{item}}</span>
+                      </view>
+                  </scroll-view>
+                  <view class='bottomSareen'>
+                      <view class='NoConditions' bindtap="hidenUnlimited">条件不限</view>
+                      <view class='confirm'  bindtap="showConfirm">确定</view>
+                  </view>
+            </view>
+        </view>
+    </view>
+
+      <view class='noHome' style="display:{{homeArray.length == 0 &&showKong?'block':'none'}}">
+     <image src='../../resources/restImg/img_missing_card2.png'></image>
+        <text>哦哟~列表为空</text>
+    </view>  
+
+    <view class='searchEndBox'>
+        <!-- 开始 -->
+        <view class='searchEndList' wx:for="{{homeArray}}" wx:key="key" data-id="{{item.id}}" bindtap='homeDetailTap'>
+            <view class='leftImg'>
+              <image mode="aspectFill" src='{{item.image}}'></image>
+            </view>
+            <view class='rightMain'>
+              <p>{{item.ward}}-{{item.village}}-{{item.share}}</p>
+              <view class='nameImgPic'>
+                  <image  src='{{item.head}}'></image>
+                  <span>{{item.callers}}</span>
+                  <b>{{item.rent}} <a>元/月</a></b>
+                 
+              </view>
+              <text wx:if="{{item.area == ''}}">{{item.type}}</text>
+              <text wx:else>{{item.type}}-{{item.area}} ㎡</text>
+               <view class='addessSum' wx:if="{{item.metro !=''}}">
+                  <image src='https://www.suitius.com/image/resources/ic_list_sign.png'></image>
+                  <span>{{item.metro}}</span>
+               </view>
+            </view>
+        </view>
+        <!-- 结束 -->
+        
+    </view>
+
+</view>

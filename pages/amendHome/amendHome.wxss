@@ -1,0 +1,456 @@
+/*pages/amendHome/amendHome.wxss */
+.swiperTop{
+  width: 100%;
+  height: 550rpx;
+}
+.swiperTop swiper{
+  height: 100%;
+}
+.swiperTop swiper swiper-item{
+  height: 100%;
+}
+.swiperTop swiper swiper-item image{
+  width: 100%;
+  height: 100%;
+}
+
+.filloutMes{
+  width: 100%;
+  border-bottom: 20rpx solid #eff3f6;
+  padding-bottom: 40rpx;
+}
+.filloutMes .fillList{
+  width: 670rpx;
+  height: 85rpx;
+  margin: 0 auto 17rpx;
+  padding-top: 28rpx;
+  border-bottom: 1px solid #E5E5E5;
+  display: flex;
+}
+.filloutMes .fillList image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 20rpx;
+}
+.filloutMes .fillList input{
+  height: 80rpx;
+  flex: 1;
+  font-size: 32rpx;
+margin-left: 32rpx;
+color: #000;
+}
+.filloutMes .fillSelect{
+   width: 670rpx;
+  margin: 0 auto;
+  display: flex;
+  padding-top: 16rpx;
+}
+.filloutMes .fillSelect .rightSelect{
+  width: 240rpx;
+
+}
+.filloutMes .fillSelect text{
+  font-size: 32rpx;
+color: #222222;
+font-weight: 600;
+line-height: 93rpx;
+}
+
+
+.leftSelectBox{
+  width: 100%;
+  height: 64rpx;
+  background: #F8F8F8;
+  border-radius: 16rpx;
+  line-height: 64rpx;
+  box-sizing: border-box;
+  padding-left:28rpx;
+  font-size: 30rpx;
+  font-family: PingFangSC-Regular;
+  color: #555555;
+  position: relative;
+ border: none;
+}
+.leftSelectBox p{
+   width:0; 
+    height:0;
+    border-width:10rpx;
+    border-style:solid;
+    border-color:#999 transparent transparent transparent;   
+    position: absolute;
+    top:27rpx;
+    right: 23rpx;
+}
+.filloutMes .fillSelect .leftSelect{
+  width: 397rpx;
+    margin-right: 32rpx;
+}
+
+.linkOnline{
+  width: 100%;
+  margin-bottom: 42rpx;
+  }
+.linkOnline text{
+  font-size: 32rpx;
+color: #222222;
+font-weight: 600;
+line-height: 93rpx;
+}
+.linkOnline .leftSelectBox{
+  display: inline-block;
+  width: 220rpx;
+  margin-left:55rpx;
+
+}
+.settingHome{
+  width: 100%;
+  border-bottom: 20rpx solid #eff3f6;
+}
+.settingHome .settingWidth{
+  width: 670rpx;
+  margin: 0 auto;
+} 
+.settingHome .settingWidth .tittleTop{
+  font-size: 32rpx;
+  color: #222222;
+  font-weight: 600;
+  line-height: 109rpx;
+}
+.settingHome .fillList{
+  width: 670rpx;
+  height: 85rpx;
+  margin: 0 auto 17rpx;
+  padding-top: 28rpx;
+  border-bottom: 1px solid #E5E5E5;
+  display: flex;
+}
+.settingHome .fillList image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 20rpx;
+}
+.settingHome .fillList input{
+  height: 80rpx;
+  flex: 1;
+  font-size: 32rpx;
+margin-left: 32rpx;
+color: #000;
+}
+.settingHome .fillList a{
+  font-size: 32rpx;
+color: #222222;
+font-weight: 600;
+line-height: 80rpx;
+}
+
+.settingHome .fillSelect{
+   width: 100%;
+  display: flex;
+  padding-top: 16rpx;
+}
+.settingHome .fillSelect .leftSelect{
+  width: 240rpx;
+  margin-right: 32rpx;
+}
+.settingHome .fillSelect text{
+  font-size: 32rpx;
+color: #222222;
+display: block;
+font-weight: 600;
+line-height: 93rpx;
+}
+.settingHome .fillSelect .rightSelect{
+  width: 397rpx;
+}
+.settingHome .rightSelect .leftSelectBox{
+      width: 190rpx;
+      display: inline-block;
+}
+.settingHome .rightSelect .leftSelectMargin{
+  margin-right: 17rpx;
+}
+.settingHome .petWhat{
+  width: 100%;
+  height: 125rpx;
+  padding: 42rpx 0;
+  box-sizing: border-box;
+}
+.settingHome .petWhat text{
+  line-height: 41rpx;
+  font-size: 32rpx;
+color: #222222;
+font-weight: 600;
+margin-right: 80rpx;
+}
+.settingHome .petWhat .petYes,.settingHome .petWhat .petNo{
+  width: 90rpx;
+  height: 40rpx;
+  font-size: 28rpx;
+color: #555555;
+line-height: 36rpx;
+display: inline-block;
+margin-right: 90rpx;
+}
+.settingHome .petWhat .petNo{
+  margin-right: 0;
+}
+.settingHome .petWhat .petYes image,.settingHome .petWhat .petNo image{
+  width: 32rpx;
+  height: 32rpx;
+  margin-right:20rpx; 
+  float: left;
+  margin-top: 2rpx;
+}
+
+
+.settingHome .rentingWhat{
+  width: 100%;
+
+ margin-bottom: 40rpx;
+}
+.settingHome .rentingWhat text{
+  line-height: 41rpx;
+  font-size: 32rpx;
+color: #222222;
+font-weight: 600;
+margin-right: 80rpx;
+display: block;
+margin-bottom: 32rpx;
+}
+.settingHome .rentingWhat .rentingYes,.settingHome .rentingWhat .rentingNo,.settingHome .rentingWhat .rentingNoYes{
+  width: 120rpx;
+  height: 40rpx;
+  font-size: 28rpx;
+color: #555555;
+line-height: 36rpx;
+display: inline-block;
+margin-right: 60rpx;
+}
+.settingHome .rentingWhat .rentingNoYes{
+  margin-right: 0;
+}
+.settingHome .rentingWhat .rentingYes image,.settingHome .rentingWhat .rentingNo image,.settingHome .rentingWhat .rentingNoYes image{
+  width: 32rpx;
+  height: 32rpx;
+  margin-right:20rpx; 
+  float: left;
+  margin-top: 2rpx;
+}
+
+
+
+
+.lesseeType{
+  width: 100%;
+}
+.lesseeType text{
+  display: block;
+  font-size: 32rpx;
+color: #222222;
+font-weight: 600;
+margin-bottom: 24rpx;
+}
+.lesseeType .typeFlex{
+  width: 100%;
+  display: flex;
+}
+.lesseeType .typeList{
+  width: 120rpx;
+  padding-right: 60rpx;
+  box-sizing: border-box;
+  text-align: center;
+} 
+.lesseeType .typeList p{
+  display: block;
+  font-size: 28rpx;
+color: #555555;
+}
+.lesseeType .typeList image{
+  width: 32rpx;
+  height: 32rpx;
+  margin-top: 10rpx;
+}
+.settingTime{
+  width: 100%;
+  margin-bottom: 40rpx;
+}
+.settingTime text{
+    display: block;
+  font-size: 32rpx;
+color: #222222;
+font-weight: 600;
+margin-bottom: 24rpx;
+  
+}
+.settingTime .selectTime{
+  width: 100%;
+  display: flex;
+}
+.settingTime .selectTime .leftSelectBox{
+  width: 316rpx;
+}
+.settingTime .selectTime a{
+  display: block;
+  width: 39rpx;
+  text-align: center;
+  line-height: 64rpx;
+}
+
+
+.facilitiesSelect{
+  width: 100%;
+   border-bottom: 20rpx solid #eff3f6;
+}
+.facilitiesSelect .facilities{
+  width: 670rpx;
+  margin: 0 auto;
+}
+.facilitiesSelect .facilities text{
+  font-size: 32rpx;
+color: #222222;
+font-weight: 600;
+line-height: 106rpx;
+margin-right: 16rpx;
+}
+.facilitiesSelect .facilities a{
+  font-size: 24rpx;
+color: #555555;
+line-height: 106rpx;
+}
+.facilitiesSelect .facilityImg{
+  width: 670rpx;
+  margin: 0 auto;
+}
+.facilitiesSelect .facilityImg .imgList{
+width: 80rpx;
+text-align: center;
+  display: inline-block;
+    margin-right: 65rpx;
+  margin-bottom: 60rpx;
+
+}
+.facilitiesSelect .facilityImg .imgList a{
+font-size: 24rpx;
+color: #222222;
+}
+.facilitiesSelect .facilityImg .imgList image{
+  width: 64rpx;
+  height: 64rpx;
+}
+.facilitiesSelect .facilityImg .imgList:nth-child(5){
+margin-right:0;
+}
+.facilitiesSelect .facilityImg .imgList:nth-child(10){
+margin-right:0;
+}
+.facilitiesSelect .facilityImg .imgList:nth-child(15){
+margin-right:0;
+}
+.facilitiesSelect .facilityImg .imgList:nth-child(20){
+margin-right:0;
+}
+
+.greeting{
+  width: 670rpx;
+  margin:  0 auto;
+}
+.greeting text{
+  font-size: 32rpx;
+color: #222222;
+line-height: 109rpx;
+}
+.photos input{
+  width: 100%;
+  height: 64rpx;
+  background: #F8F8F8;
+border-radius: 8rpx;
+  font-size: 28rpx;
+  padding:0 32rpx;
+  box-sizing: border-box;
+  color: #222222;
+  z-index: 10;
+}
+.greeting textarea{
+  width: 100%;
+  height: 220rpx;
+  background: #F8F8F8;
+border-radius: 8rpx;
+  font-size: 28rpx;
+  padding: 32rpx;
+  box-sizing: border-box;
+  color: #222222;
+  z-index: 10;
+}
+.sumitBtn{
+  width: 670rpx;
+  height: 80rpx;
+  background: #F5A623;
+border-radius: 60px;
+margin: 64rpx auto;
+font-size: 28rpx;
+color: #FFFFFF;
+text-align: center;
+line-height: 80rpx;
+
+}
+.settingHome .timeShijian{
+  width: 100%;
+}
+.settingHome .timeShijian text{
+  display: block;
+  font-size: 32rpx;
+  color: #222222;
+  font-weight: 600;
+  line-height: 106rpx;
+}
+.settingHome .timeShijian .mainNumber{
+  width:50%;
+height:64rpx;
+
+display:inline-block;
+}
+.settingHome .timeShijian .mainNumber p{
+font-size:28rpx;
+color:#555555;
+margin-top: 10rpx;
+float:left;
+}
+.settingHome .timeShijian .mainNumber input{
+  display: inline-block;
+  width: 220rpx;
+  margin-left: 20rpx;
+  font-size:30rpx;
+color:#222222;
+line-height:64rpx;
+background: #F8F8F8;
+border-radius:16rpx;
+box-sizing:border-box;
+padding:0 28rpx;
+}
+
+
+.picker-view {
+  transform:translateY(40vh);
+  width: 100%;
+  display: flex;
+  z-index:12;
+  background-color: #fff;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0rpx;
+  left: 0rpx;
+  height: 40vh;
+}
+.dialog-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 8;
+  background: rgba(0, 0, 0, 0.3);
+}

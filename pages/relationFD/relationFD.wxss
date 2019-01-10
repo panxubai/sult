@@ -1,0 +1,215 @@
+/* pages/relationFD/relationFD.wxss */
+.container{
+  box-shadow: 0 4rpx 8rpx 0 rgba(0,0,0,0.10) inset;
+}
+.fdEndBox{
+  width: 100%;
+    border-bottom: 1px solid #E5E5E5;
+}
+ .fdEndBox .searchEndList{
+  width: 690rpx;
+  height: 321rpx;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 40rpx 0;
+
+}
+.fdEndBox .searchEndList .leftImg{
+  width: 240rpx;
+  height: 240rpx;
+  float: left;
+}
+.fdEndBox .searchEndList .leftImg image{
+  width: 240rpx;
+  height: 240rpx;
+}
+.fdEndBox .searchEndList .rightMain{
+  width: 418rpx;
+  height: 240rpx;
+  float: right;
+}
+.fdEndBox .searchEndList .rightMain p{
+  display: block;
+  font-size: 32rpx;
+  color: #222222;
+  font-weight: 700;
+  margin-bottom: 25rpx;
+}
+.fdEndBox .searchEndList .rightMain text{
+  font-size: 28rpx;
+color: #9B9B9B;
+line-height: 76rpx;
+display: block;
+margin-top: 10rpx;
+
+}
+.fdEndBox .searchEndList .rightMain .nameImgPic image{
+  width: 40rpx;
+  height: 40rpx;
+  background: #D8D8D8;
+  border-radius: 50%;
+  border: 1px solid #979797;
+  float: left;
+  margin-top: 11rpx;
+  margin-right: 16rpx;
+}
+.fdEndBox .searchEndList .rightMain .nameImgPic span{
+font-size: 28rpx;
+color: #222222;
+line-height: 62rpx;
+}
+.fdEndBox .searchEndList .rightMain .nameImgPic b{
+float: right;
+font-size: 44rpx;
+color: #FE8B25;
+line-height: 62rpx;
+}
+.fdEndBox .searchEndList .rightMain .nameImgPic a{
+float: right;
+font-size: 28rpx;
+color: #FE8B25;
+line-height: 68rpx;
+}
+.fdEndBox .searchEndList .addessSum image{
+  width: 40rpx;
+  height: 40rpx;
+  float: left;
+}
+.fdEndBox .searchEndList .addessSum span{
+   font-size: 28rpx;
+color: #9B9B9B;
+ float: left;
+ line-height: 40rpx;
+}
+.visitTime{
+  width: 670rpx;
+  margin:  0 auto;
+  height: 229rpx;
+  border-bottom: 1px solid #E5E5E5;
+}
+.visitTime text{
+  font-size: 32rpx;
+color: #222222;
+line-height: 109rpx;
+}
+.visitTime .selectTime{
+  width: 100%;
+}
+.visitTime .selectTime .selectDay{
+  width: 260rpx;
+  height: 64rpx;
+  background: #F8F8F8;
+  border-radius: 8rpx;
+  float: left;
+  font-size: 28rpx;
+color: #555555;
+line-height: 64rpx;
+padding-left: 50rpx;
+box-sizing: border-box;
+position: relative;
+}
+.visitTime .selectTime .selectHour{
+  width: 378rpx;
+  height: 64rpx;
+  background: #F8F8F8;
+border-radius: 8rpx;
+float: right;
+font-size: 28rpx;
+color: #555555;
+line-height: 64rpx;
+padding-left: 50rpx;
+box-sizing: border-box;
+position: relative;
+}
+.visitTime .selectTime p{
+        width:0; 
+        height:0;
+        border-width:10rpx;
+        border-style:solid;
+        border-color:#999 transparent transparent transparent;   
+        position: absolute;
+        top:27rpx;
+        right: 32rpx;
+}
+.photos{
+  padding-bottom: 32rpx;
+  border-bottom:1px solid #E5E5E5;
+}
+.greeting,.photos{
+  width: 670rpx;
+  margin:  0 auto;
+}
+.greeting text,.photos text{
+  font-size: 32rpx;
+color: #222222;
+line-height: 109rpx;
+}
+.photos .phoNumb{
+  display: flex;
+  width: 100%;
+}
+.photos .phoNumb b{
+   font-size: 28rpx;
+   line-height: 64rpx;
+    color: #555555;
+    margin-right: 20rpx;
+}
+.photos .phoNumb input{
+  flex: 1;
+  height: 64rpx;
+  background: #F8F8F8;
+border-radius: 8rpx;
+  font-size: 28rpx;
+  padding:0 32rpx;
+  box-sizing: border-box;
+  color: #222222;
+  z-index: 10;
+}
+.greeting textarea{
+  width: 100%;
+  height: 220rpx;
+  background: #F8F8F8;
+border-radius: 8rpx;
+  font-size: 28rpx;
+  padding: 32rpx;
+  box-sizing: border-box;
+  color: #222222;
+  z-index: 10;
+}
+.sumitBtn{
+  width: 670rpx;
+  height: 80rpx;
+  background: #F5A623;
+border-radius: 60px;
+margin: 64rpx auto;
+font-size: 28rpx;
+color: #FFFFFF;
+text-align: center;
+line-height: 80rpx;
+
+}
+.dialog-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 8;
+  background: rgba(0, 0, 0, 0.3);
+}
+.picker-view {
+  transform:translateY(40vh);
+  width: 100%;
+  display: flex;
+  z-index:12;
+  background-color: #fff;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0rpx;
+  left: 0rpx;
+  height: 40vh;
+}

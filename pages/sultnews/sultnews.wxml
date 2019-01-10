@@ -1,0 +1,23 @@
+<!--pages/sultnews/sultnews.wxml-->
+<view class="container" style='margin-top: {{height}}px'> 
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+     <view class='newsList'>
+        <view class='keyList' wx:for="{{newsArray}}" wx:key="key">
+            <view class='imgs'>
+                <image src='https://www.suitius.com/image/resources/img_suit_picture.png'></image>
+            </view>
+            <view class='newsBox'>
+               <p>SUIT小秘书</p>
+               <text>{{item.time}}</text>
+               <span>{{item.msg_con}}</span>
+            </view>
+        </view>
+    </view> 
+
+     <view class='noneNew' style="display:{{newsArray.length == 0 && showKong?'block':'none'}}">
+        <image src='../../resources/restImg/img_missing_card3.png'></image>
+        <text>哦哟~消息为空</text>
+    </view> 
+
+
+</view>

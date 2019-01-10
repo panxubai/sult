@@ -1,0 +1,32 @@
+/* pages/sultSetting/sultSetting.wxss */
+.container{
+  box-shadow: 0 4rpx 8rpx 0 rgba(0,0,0,0.10) inset;
+}
+.mine_bottom{
+  width: 100%;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+.mine_bottom .mine_list{
+  width: 100%;
+  padding: 30rpx 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e5e5e5; 
+}
+.mine_bottom .mine_list .icon{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 39rpx;
+  float:left;
+margin-top:10rpx;
+
+}
+.mine_bottom .mine_list .arrows{
+  width: 40rpx;
+  height: 40rpx;
+  float: right;
+  margin-top: 10rpx;
+}
+.mine_bottom .mine_list text{
+  font-size: 32rpx;
+}

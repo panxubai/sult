@@ -1,0 +1,37 @@
+<!--pages/checkData/checkData.wxml-->
+<view class="container" style='margin-top: {{height}}px'> 
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+   <view class='checkTop'>
+        <view class='checkSum'>
+            <view class='checkImg'>
+              <image src='https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTILaybAfrFF6Dz3xicIQVFJCAhK1JW4z6QwxnlmibS43MTEZbJWWJhDT5D6PQicRmrht9pUz5qn3eyqQ/132'></image>
+            </view>
+
+            <view class='checkName'>
+                <p>你是大大双</p>
+                <text>处女座</text>
+            </view>
+        </view>
+   </view> 
+
+   <view class='checkBtm'>
+      <view class='checkBtmSum'>
+          <p>在租房源</p>
+          <view class='list'>
+                <view class='listImg'>
+                      <image src='../../resources/restImg/timgs.jpg'></image>
+                </view>
+                <view class='listRighe'>
+                    <span>宝山区-好日子大家园</span>
+                    <view class='routeTime'>
+                        <text>三室一厅-128 ㎡</text>
+                        <b>6000<a>元/月</a></b>
+                    </view>
+                </view>
+          </view>
+      </view>
+   </view>  
+
+
+</view>
+

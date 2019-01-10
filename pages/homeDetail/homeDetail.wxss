@@ -1,0 +1,615 @@
+/* pages/homeDetail/homeDetail.wxss */
+.swiperTop{
+  width: 100%;
+  height: 550rpx;
+}
+.swiperTop swiper{
+  height: 100%;
+}
+.swiperTop swiper swiper-item{
+  height: 100%;
+}
+.swiperTop swiper swiper-item image{
+  width: 100%;
+  height: 100%;
+}
+.namePic{
+  width: 100%;
+  padding-top: 23rpx;
+  height: 150rpx;
+  overflow: hidden;
+  border-bottom: 20rpx solid #eff3f6;
+}
+.namePic .topName,.namePic .bottomName{
+  width: 690rpx;
+  margin: 0 auto;
+}
+.namePic .topName span{
+  font-size: 32rpx;
+  color: #222222;
+  font-weight: 700;
+ line-height: 78rpx;
+}
+.namePic .topName b{
+  font-size: 44rpx;
+  color: #FE8B25;
+  float: right;
+}
+.namePic .topName b a{
+  font-size: 28rpx;
+  color: #FE8B25;
+}
+.namePic .bottomName span{
+font-size: 28rpx;
+color: #9B9B9B;
+}
+.namePic .bottomName b{
+ font-size: 28rpx;
+color: #9B9B9B;
+  float: right;
+}
+.ownerHome{
+  width: 100%;
+  border-bottom: 20rpx solid #eff3f6;
+  padding-bottom:20rpx; 
+}
+.ownerHome .ownerPhone{
+  width: 690rpx;
+  height: 142rpx;
+  margin: 0 auto;
+  border-bottom: 2rpx solid #E5E5E5;
+}
+.ownerHome .ownerPhone .imageFace{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin-right: 32rpx;
+  margin-top: 32rpx;
+  float: left;
+}
+.ownerHome .ownerPhone span{
+  line-height: 142rpx;
+  font-size: 32rpx;
+color: #222222;
+}
+.ownerHome .ownerPhone p{
+  float: right;
+  font-size: 28rpx;
+color: #FE8B25;
+line-height: 142rpx;
+}
+.ownerHome .ownerPhone p image{
+  height: 40rpx;
+  width: 40rpx;
+  float: left;
+  margin-top: 52rpx;
+  margin-right: 16rpx;
+}
+.ownerHome .homeReferral{
+    width: 690rpx;
+  margin: 0 auto;
+  padding-top: 20rpx;
+   padding-bottom: 32rpx;
+    border-bottom: 2rpx solid #E5E5E5;
+}
+.ownerHome .homeReferral p{
+  display: block;
+  font-size: 32rpx;
+color: #222222;
+  line-height: 80rpx;
+  font-weight: 600;
+}
+.ownerHome .homeReferral .presentations{
+  width: 100%;
+}
+.ownerHome .homeReferral .presentationList{
+  display: inline-block;
+  width: 50%;
+}
+.ownerHome .homeReferral .presentationList span{
+  font-size:28rpx;
+  color:#555555;
+  line-height: 50rpx;
+}
+.ownerHome .homeReferral .presentationList text{
+  font-size:28rpx;
+  color:#000;
+   line-height: 50rpx;
+}
+/* .ownerHome .homeReferral span{
+font-size: 28rpx;
+color: #555555;
+} */
+.ownerHome .attestation{
+      width: 690rpx;
+  margin: 0 auto;
+  border-bottom: 2rpx solid #E5E5E5;
+}
+.ownerHome .attestation p{
+  display: block;
+  font-size: 32rpx;
+color: #222222;
+  margin-top: 20rpx;
+  font-weight: 600;
+}
+.ownerHome .attestation .imgRz{
+  width: 100%;
+  display: flex;
+}
+.ownerHome .attestation .imgRz image{
+  height:40rpx;
+  width:40rpx;
+  margin-top:10rpx;
+margin-right: 10rpx;
+}
+.ownerHome .attestation .imgRz text{
+  font-size:28rpx;
+color:#555555;
+line-height:60rpx;
+ margin-bottom: 20rpx;
+}
+
+
+.ownerHome .facility{
+      width: 690rpx;
+  margin: 0 auto;
+}
+
+.ownerHome .facility p{
+   display: block;
+  font-size: 32rpx;
+color: #222222;
+  line-height: 105rpx;
+  font-weight: 600;
+}
+.ownerHome .facility .facilityImg{
+  width: 100%;
+}
+.ownerHome .facility .facilityImg .imgList{
+width: 80rpx;
+text-align: center;
+  display: inline-block;
+    margin-right: 70rpx;
+  margin-bottom: 60rpx;
+}
+.ownerHome .facility .facilityImg .imgList a{
+font-size: 24rpx;
+color: #222222;
+}
+.ownerHome .facility .facilityImg .imgList image{
+  width: 64rpx;
+  height: 64rpx;
+}
+.ownerHome .facility .facilityImg .imgList:nth-child(5){
+margin-right:0;
+}
+.ownerHome .facility .facilityImg .imgList:nth-child(10){
+margin-right:0;
+}
+.ownerHome .facility .facilityImg .imgList:nth-child(15){
+margin-right:0;
+}
+.ownerHome .facility .facilityImg .imgList:nth-child(20){
+margin-right:0;
+}
+.flatmate{
+  width: 100%;
+  border-bottom: 20rpx solid #eff3f6;
+    padding-top: 20rpx;
+      padding-bottom: 27rpx;
+}
+.flatmate .flatTop{
+ width: 690rpx;
+ margin: 0 auto;
+  font-size: 32rpx;
+color: #222222;
+  line-height: 80rpx;
+  font-weight: 600;
+  
+
+}
+.flatmate .flatTop .questionDiv{
+  display: inline-block;
+  height: 80rpx;
+  width: 32rpx;
+}
+.flatmate .flatTop .question{
+  width: 32rpx;
+  height: 32rpx;
+  position: relative;
+  top:5rpx;
+  left: 10rpx;
+}
+.flatmate .flatTop b{
+  float: right;
+  font-size: 28rpx;
+color: #FE8B25;
+}
+.flatmate .flatTop b image{
+width: 32rpx;
+height: 32rpx;
+float: right;
+margin-top: 24rpx;
+margin-left: 10rpx;
+}
+.flatmate p{
+  display: block;
+  width: 690rpx;
+  margin: 0 auto;
+  font-size: 28rpx;
+color: #555555;
+}
+.mapMain{
+   width: 100%;
+   padding-top: 20rpx;
+}
+.mapMain p{
+     display: block;
+     width: 690rpx;
+     margin: 0 auto;
+  font-size: 32rpx;
+color: #222222;
+  line-height: 80rpx;
+  font-weight: 600;
+}
+.mapMain>span{
+   display: block;
+     width: 690rpx;
+     margin: 0 auto;
+     font-size: 28rpx;
+color: #555555;
+margin-bottom: 19rpx;
+line-height: 41rpx;
+}
+.mapMain span image{
+  width: 41rpx;
+  height: 41rpx;
+  float: left;
+}
+
+.plotIntroduce{
+   width: 100%;
+   padding-top: 20rpx;
+   padding-bottom: 50rpx;
+}
+.plotIntroduce p{
+     display: block;
+     width: 690rpx;
+     margin: 0 auto;
+  font-size: 32rpx;
+color: #222222;
+  line-height: 80rpx;
+  font-weight: 600;
+}
+.plotIntroduce span{
+  display: block;
+     width: 690rpx;
+     margin: 0 auto;
+     font-size: 28rpx;
+    color: #555555;
+}
+
+
+
+.tipsWindown{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(00, 00, 00, .5);
+  z-index: 9;
+
+}
+.expectation{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 580rpx;
+  height: 404rpx;
+  background: #fff;
+  padding-top: 64rpx;
+  border-radius: 8px;
+  padding-bottom: 32rpx;
+  z-index: 20;
+}
+.expectation p{
+  display: block;
+  width: 100%;
+  font-size: 28rpx;
+  color: #555555;
+  text-align: center;
+  margin-bottom: 32rpx;
+}
+.expectation .sumList{
+  width: 400rpx;
+  margin: 0 auto;
+}
+ .expectation .sumList .margins{
+  margin-bottom: 32rpx;
+  height: 52rpx;
+}
+ .expectation .sumList .gender{
+  width: 100%;
+  height: 52rpx;
+}
+ .expectation .sumList span{
+  float: left;
+  font-size: 28rpx;
+  line-height: 52rpx;
+  color: #222222;
+}
+ .expectation .sumList .gender a, .expectation .sumList .pet a{
+  display: inline-block;
+  width: 140rpx;
+  height: 52rpx;
+  text-align: center;
+  line-height: 52rpx;
+  background: #F5F5F5;
+  border-radius: 4rpx;
+  font-size: 24rpx;
+  color: #555555;
+  margin-left: 32rpx;
+}
+ .expectation .sumList .gender .activeGender{
+  background: rgba(254,139,37,0.20);
+  color: #FE8B25;
+}
+ .expectation .sumList .pet .activePet{
+  background: rgba(254,139,37,0.20);
+  color: #FE8B25;
+}
+ .expectation .sumList .age a{
+  display:block;
+  text-align: center;
+   width: 32rpx;
+  line-height: 52rpx;
+color: #555555;
+float: left;
+}
+.expectation .sumList .age input{
+   width: 140rpx;
+  height: 52rpx;
+   background: #F5F5F5;
+  border-radius: 4rpx;
+  font-size: 24rpx;
+  color: #555555;
+  text-align: center;
+  float: left;
+}
+ .expectation .sumList .age .first1{
+   margin-left: 32rpx;
+}
+ .buttonsum{
+  width: 358rpx;
+  height: 80rpx;
+  background: #F5A623;
+border-radius: 60rpx;
+font-size: 28rpx;
+color: #FFFFFF;
+text-align: center;
+line-height: 80rpx;
+margin: 37rpx auto 0;
+}
+.expectationss{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 580rpx;
+  height: 290rpx;
+  background: #fff;
+  padding-top: 64rpx;
+  border-radius: 8px;
+  padding-bottom: 32rpx;
+  z-index: 20;
+}
+.expectationss p{
+  display: block;
+  width: 100%;
+  font-size: 28rpx;
+  color: #555555;
+  text-align: center;
+  margin-bottom: 32rpx;
+}
+.expectationss .chahao{
+  height: 48rpx;
+  width: 48rpx;
+  position: absolute;
+  top:22rpx;
+  right: 22rpx;
+}
+.expectationss text{
+  display: block;
+  width: 500rpx;
+  margin: 0 auto;
+  font-size: 28rpx;
+  color: #9B9B9B;
+}
+ .buttonsumss{
+  width: 358rpx;
+  height: 80rpx;
+  background: #F5A623;
+border-radius: 60rpx;
+font-size: 28rpx;
+color: #FFFFFF;
+text-align: center;
+line-height: 80rpx;
+margin: 37rpx auto 0;
+}
+
+.chumMain{
+  width: 690rpx;
+  margin: 0 auto;
+}
+.chumMain text{
+  font-size: 28rpx;
+color: #555555;
+}
+.chumMain .chumList{
+  height: 200rpx;
+  padding-top: 36rpx;
+  box-sizing: border-box;
+}
+.chumMain .chumList .headList{ 
+  width: 160rpx;
+   height: 200rpx;
+   display: inline-block;
+  text-align: center;
+  padding-right: 40rpx;
+  box-sizing: border-box;
+  font-size: 24rpx;
+  color: #555555;
+  position: relative;
+}
+.chumMain .chumList .headList span{ 
+ display: block;
+ width: 100%;
+ overflow: hidden;
+  white-space: nowrap;
+   text-overflow:ellipsis;
+}
+.chumMain .chumList p{
+  text-align: center;
+  font-size: 27rpx;
+  color: #555555;
+  line-height:192rpx;
+
+}
+.chumMain .chumList .headList .shadow{
+width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  background: rgba(00, 00, 00, .5);
+  position: absolute;
+  top: 0;left: 0;
+}
+.chumMain .chumList .headList .shadow>image{
+  width: 32rpx;
+  height: 32rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.chumMain .chumList .headList>image{
+    width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+.report{
+  text-align: center;
+  color: #555555;
+  font-size:28rpx;
+  line-height: 100rpx;
+}
+.reporttionss{
+  width: 100%;
+  height: 800rpx;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+.reporttionss .topSow{
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  font-size: 32rpx;
+}
+.reporttionss .topSow p{
+  line-height:90rpx;
+  color: #525252;
+}
+.reporttionss .topSow .confirm{
+  color: #FE8B25;
+}
+.reporttionss .listSowSum{
+ width: 100%;
+ border-top: 1px solid #f9f9f9;
+ height: 90rpx;
+}
+.reporttionss .listSow{
+   width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+
+}
+.reporttionss .listSow text{
+  font-size: 32rpx;
+  line-height: 90rpx;
+  color: #525252;
+}
+
+.reporttionss .listSow image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 25rpx;
+}
+.reporttionss .section{
+  width: 90%;
+  margin: 60rpx auto 0;
+}
+.reporttionss .section textarea{
+  width: 100%;
+  height: 240rpx;
+  padding: 32rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  color: #000;
+  background: #F8F8F8;
+  border-radius: 4rpx;
+}
+.flexBottom{
+  width: 100%;
+  height: 100rpx;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+}
+
+.flexBottom .collect{
+ flex: 1;
+ height: 100%;
+ text-align: center
+}
+.flexBottom .collect .img{
+  margin-top: 15rpx;
+  width: 70rpx;
+  height: 70rpx;
+  margin-right: 10rpx;
+}
+.flexBottom .collect1{
+  display: flex;
+  justify-content: center;
+
+}
+.flexBottom .collect1 .text{
+  color:#555555;
+  font-size: 36rpx;
+  line-height: 100rpx;
+}
+.flexBottom .photos{
+  width: 70%;
+  height: 80rpx;
+  margin-top: 10rpx;
+  border-radius: 40rpx;
+  background: #F5A623;
+  color: #fff;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 36rpx;
+  margin-left: 20rpx;
+}

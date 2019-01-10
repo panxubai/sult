@@ -1,39 +1,66 @@
 <!--pages/mine/mine.wxml-->
-<view class="container">
+<view class="container" style='margin-top: {{height}}px'> 
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
     <view class='mine_top'>
-      <image class='headImg' src="{{userInfo.avatarUrl}}"></image>
+      <image class='headImg' src="{{userInfo.data.avatar}}"></image>
       <view class='mine_name'>
-        <span>{{userInfo.nickName}}</span>
-         <image wx:if="{{userInfo.gender == 1}}" class='iconfont' src="../../resources/location.png"></image>
-         <image class='iconfont' wx:else src="../../resources/others.png"></image>
+        <span>{{userInfo.data.name}}</span>
+         <image wx:if="{{userInfo.data.sex == 1}}" class='iconfont' src="../../resources/restImg/ic_boy_blue1.png"></image>
+         <image class='iconfont' wx:else src="../../resources/restImg/ic_boy_blue1.png"></image>
       </view>     
-    </view>
+    </view> 
     <view class='mine_bottom'>
-         <view class='mine_list'>
-              <image class='icon' src='../../resources/others.png'></image>
-              <text>我的行程</text>
-              <image class='arrows' src='../../resources/others.png'></image>
-         </view>
-         <view class='mine_list'>
-              <image class='icon' src=''></image>
+    <view class='mine_list' bindtap='personalTap'>
+              <image class='icon' src='../../resources/restImg/ic_landlord_bag2.png'></image>
               <text>个人资料</text>
-              <image class='arrows' src=''></image>
+              <image class='arrows' src='https://www.suitius.com/image/resources/ic_more.png'></image>
          </view>
-         <view class='mine_list'>
-              <image class='icon' src=''></image>
+         <view class='mine_list' bindtap='newsTap'>
+              <image class='icon' src='../../resources/restImg/ic_landlord_bag3.png'></image>
+              <text>我的消息</text>
+              <image class='arrows' src='https://www.suitius.com/image/resources/ic_more.png'></image>
+         </view>
+         <view class='mine_list' bindtap='shoucangTap' wx:if="{{indexPd == 0}}">
+              <image class='icon' src='../../resources/me_ic_heart@3x.png' ></image>
+              <text>我的收藏</text>
+              <image class='arrows' src='https://www.suitius.com/image/resources/ic_more.png'></image>
+         </view>
+         <view class='mine_list' bindtap='xingchengTap' wx:if="{{indexPd == 0}}">
+              <image class='icon' src='../../resources/restImg/ic_set_about3.png' ></image>
+              <text>我的行程</text>
+              <a wx:if="{{indexPd == 0 && arrNumber.visit_num != 0}}"></a> 
+              <image class='arrows' src='https://www.suitius.com/image/resources/ic_more.png'></image>
+         </view>
+         <view class='mine_list' bindtap='taolunzuTap' wx:if="{{indexPd == 0}}">
+              <image class='icon' src='../../resources/restImg/ic_set_about1.png' ></image>
+              <text>我的讨论组</text>
+              <a wx:if="{{arrNumber.disc_num != 0}}"></a>
+              <image class='arrows' src='https://www.suitius.com/image/resources/ic_more.png'></image>
+         </view>
+         <view class='mine_list' bindtap='daofangTap' wx:if="{{indexPd == 1}}">
+              <image class='icon' src='../../resources/restImg/ic_set_about3.png' ></image>
+              <text>我的到访</text>
+              <a wx:if="{{indexPd == 1 && arrNumber.visit_num != 0}}"></a>
+              <image class='arrows' src='https://www.suitius.com/image/resources/ic_more.png'></image>
+         </view>
+         <!-- <view class='mine_list' bindtap='cardBagTap'>
+              <image class='icon' src='../../resources/restImg/ic_landlord_bag1.png' ></image>
               <text>我的卡包</text>
-              <image class='arrows' src=''></image>
+              <image class='arrows' src='https://www.suitius.com/image/resources/ic_more.png'></image>
+         </view> -->
+         
+         <view class='mine_list' bindtap='myHomeTap' wx:if="{{indexPd == 1}}">
+              <image class='icon' src='../../resources/restImg/ic_landlord_hous.png'></image>
+              <text>我的房屋</text>
+              <image class='arrows' src='https://www.suitius.com/image/resources/ic_more.png'></image>
          </view>
-         <view class='mine_list'>
-              <image class='icon' src=''></image>
+         <view class='mine_list' bindtap='sultSettingTap'>
+              <image class='icon' src='../../resources/restImg/ic_landlord_bag5.png'></image>
               <text>系统设置</text>
-              <image class='arrows' src=''></image>
+              <image class='arrows' src='https://www.suitius.com/image/resources/ic_more.png'></image>
          </view>
     </view>
-    <view class='input'>
-     <input placeholder='sdasd'></input>
-     发不
-    </view>
+
    
 
 </view>

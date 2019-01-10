@@ -1,0 +1,41 @@
+<!--pages/auditStatus/auditStatus.wxml-->
+<view class="container" style='margin-top: {{height}}px'> 
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+
+      <view class='noHome' style="display:{{auditArr.waited.length == 0 && auditArr.waiting.length == 0 && showKong?'block':'none'}}">
+     <image src='../../resources/restImg/img_missing_card3.png'></image>
+        <text>哦哟~列表为空</text>
+    </view>  
+      <view class='routeList' wx:for="{{auditArr.waiting}}" wx:key="key" data-id='{{item.id}}'>
+        <view class='routeTop'>
+            <image mode='aspectFill' src='{{item.image}}'></image>
+            <view class='routeRight'>
+              <p>{{item.village}}</p>
+              <view class='routeBottomDs'>
+                  <span>待审核</span> 
+              </view>
+              <view class='routeTime'>
+                  <text>{{item.address}}</text>
+              </view>
+            </view>
+        </view>
+         
+    </view>
+
+    <view class='routeList' wx:for="{{auditArr.waited}}" wx:key="key">
+        <view class='routeTop'>
+            <image src='https://www.suitius.com/tp5/public/uploads/apply/{{item.image}}'></image>
+            <view class='routeRight'> 
+              <p>{{item.village}}</p>
+              <view class='routeBottom'>
+            <span>已拒绝</span>
+         </view>
+              <view class='routeTime'>
+                  <text>{{item.address}}</text>
+              </view>
+            </view>
+        </view>
+         
+    </view>
+
+</view>

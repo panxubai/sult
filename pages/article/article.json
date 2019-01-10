@@ -1,3 +1,7 @@
 {
-  "navigationBarTitleText": "文章"
+  
+  "usingComponents": {
+    "nav-bar": "/commpents/navber/navber"
+  }
+ 
 }
