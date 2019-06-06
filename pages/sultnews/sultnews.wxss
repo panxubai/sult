@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* pages/sultnews/sultnews.wxss */
 .container{
   width: 100%;
@@ -62,4 +63,70 @@ color: #555555;
   font-size: 32rpx;
 color: #9B9B9B;
 margin-top: 48rpx;
+=======
+/* pages/sultnews/sultnews.wxss */
+.container{
+  width: 100%;
+   box-shadow: 0 4rpx 8rpx 0 rgba(0,0,0,0.10) inset;
+}
+.newsList{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 40rpx;
+}
+.keyList{
+  width: 100%;
+  display:flex;
+  padding: 40rpx 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid #E5E5E5;
+}
+.keyList .imgs{
+  width: 90rpx;
+  margin-right: 32rpx;
+}
+.keyList .imgs image{
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+  float: left;
+}
+.keyList .newsBox{
+  width: 548rpx;
+}
+.keyList .newsBox p{
+  display: block;
+  font-size: 28rpx;
+color: #222222;
+font-weight: 400;
+}
+.keyList .newsBox text{
+   display: block;
+  font-size: 24rpx;
+  margin: 8rpx 0;
+color: #C0C0C0;
+}
+.keyList .newsBox span{
+  font-size: 28rpx;
+color: #555555;
+
+}
+
+
+
+.noneNew{
+  width: 100%;
+  text-align: center;
+}
+.noneNew image{
+  width: 260rpx;
+  height: 260rpx;
+  margin-top: 120rpx;
+}
+.noneNew text{
+  display: block;
+  font-size: 32rpx;
+color: #9B9B9B;
+margin-top: 48rpx;
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
 }

@@ -109,6 +109,7 @@ Page({
           'content-type': 'application/json' // 默认值
         },
         success: function (res) {
+<<<<<<< HEAD
           console.log(res)
           if (res.data.isForbidden == false) {
             wx.hideLoading();
@@ -123,6 +124,10 @@ Page({
             },1500)
            
           } else {
+=======
+          //console.log(res)
+        
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
           that.setData({
             homeArray: res.data,
             collectIndex: res.data.isCollected,
@@ -130,7 +135,11 @@ Page({
           })
           wx.hideLoading();
           that.coordinate();
+<<<<<<< HEAD
           }
+=======
+         
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
         }
       })
     },

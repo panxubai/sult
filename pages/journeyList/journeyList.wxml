@@ -6,8 +6,13 @@
         <text>哦哟~列表为空</text>
     </view>  
 
+<<<<<<< HEAD
      
     <view class='routeList' catchtap='routeTap' bindlongtap="longTap" wx:for="{{dataArr}}" wx:key="key" data-status='{{item.status}}' data-id="{{item.id}}" data-visit_id='{{item.visit_id}}'> 
+=======
+    
+    <view class='routeList' bindtap='routeTap' wx:for="{{dataArr}}" wx:key="key" data-status='{{item.status}}' data-id="{{item.id}}" data-visit_id='{{item.visit_id}}'> 
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
         <view class='routeTop'>
             <image mode="aspectFill" src='{{item.image}}'></image>
             <view class='routeRight'>

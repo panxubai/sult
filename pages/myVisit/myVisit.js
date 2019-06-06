@@ -5,7 +5,11 @@ Page({
   /**
    * 页面的初始数据
    */
+<<<<<<< HEAD
   data: { 
+=======
+  data: {
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
     nvabarData: {
       showCapsule: true, //是否显示左上角图标
       title: 'SUIT-我的到访', //导航栏 中间的标题
@@ -14,8 +18,12 @@ Page({
     userInfo: {},//获取用户姓名和头像
     dataArr: [],
     showKong: false,
+<<<<<<< HEAD
     showFanhui:true,
     lock:true
+=======
+    showFanhui:true
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
   },
 
   /**
@@ -63,6 +71,7 @@ Page({
   },
   routeTap:function(e){
     let that = this;
+<<<<<<< HEAD
     if (that.data.lock){
       if (e.currentTarget.dataset.status == 3) {
         return;
@@ -78,6 +87,20 @@ Page({
       }
     }
     
+=======
+    if (e.currentTarget.dataset.status == 3){
+      return;
+    } else if (e.currentTarget.dataset.status == 1) {
+      that.dataJujue(e.currentTarget.dataset.id, e.currentTarget.dataset.visit_id, e.currentTarget.dataset.status);
+    } else {
+      that.setData({
+        showFanhui:false
+      })
+      wx.navigateTo({
+        url: '../visitChat/visitChat?id=' + e.currentTarget.dataset.id + '-' + e.currentTarget.dataset.visit_id + '-' + e.currentTarget.dataset.status,
+      })
+    }
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
 
 
   },
@@ -104,6 +127,7 @@ Page({
       }
     })
   },
+<<<<<<< HEAD
   //长按删除
   longTap: function (e) {
     let that = this;
@@ -158,6 +182,9 @@ Page({
       }
     })
   },
+=======
+
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

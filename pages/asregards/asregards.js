@@ -11,7 +11,10 @@ Page({
       title: 'SUIT-关于', //导航栏 中间的标题
     },
     height: app.globalData.height + 44, 
+<<<<<<< HEAD
     banbenV: 'v 0.1.9', //版本号
+=======
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
   },
 
   /**

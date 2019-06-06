@@ -60,6 +60,7 @@ Page({
         var tempFilePaths = res.tempFilePaths;
         var arra = that.data.tempFilePaths;
         for (var i = 0; i < tempFilePaths.length; i++) {
+<<<<<<< HEAD
           if (res.tempFiles[i].size <= 2000000) {
             var arrs = arra.push(tempFilePaths[i])
           } else {
@@ -69,6 +70,9 @@ Page({
             })
           }
           
+=======
+          var arrs = arra.push(tempFilePaths[i])
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
         }
         that.setData({
           tempFilePaths: arra,

@@ -136,7 +136,11 @@ Page({
           });
         }
         
+<<<<<<< HEAD
         //that.indexJiekou1()
+=======
+        that.indexJiekou1()
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
         that.tapRentin()
       }
     })
@@ -155,7 +159,11 @@ indexJiekou1:function(){
       'content-type': 'application/json' // 默认值
     },
     success: function (res) {
+<<<<<<< HEAD
     // console.log(res)
+=======
+     //console.log(res)
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
       that.setData({ 
         arrNumber1: res.data
       });
@@ -286,7 +294,10 @@ sultAddress:function(){
              Rentin: true,
              landlord: false
            })
+<<<<<<< HEAD
            that.indexJiekou1()
+=======
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
          }
        })
       
@@ -329,6 +340,7 @@ sultAddress:function(){
         'content-type': 'application/json' // 默认值
       },
       success: function (res) {
+<<<<<<< HEAD
        console.log(res);//0是没有认证房东 否则已经认证
         if (res.data.isForbidden == false) {
           wx.showToast({
@@ -338,10 +350,17 @@ sultAddress:function(){
             mask: true
           })
         } else {
+=======
+    //    console.log(res);//0是没有认证房东 否则已经认证
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
         if (res.data.owner == 0) {
           that.setData({
             ownerFirstShow: true
           })
+<<<<<<< HEAD
+=======
+
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
         } else {
           if (res.data.code == "false"){
             wx.showToast({
@@ -356,16 +375,27 @@ sultAddress:function(){
               Rentin: false,
               landlord: true,
             })
+<<<<<<< HEAD
             that.indexJiekou1()
           }
           
         }
         }
+=======
+          }
+          
+        }
+
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
       }
     })
   },
   //点击跳到个人中心
+<<<<<<< HEAD
   tapmine:function(){ 
+=======
+  tapmine:function(){
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
     //判断本地有没有openid。是否是第一次进来
     wx.getStorage({
       key: 'sultOpenId',
@@ -669,7 +699,11 @@ sultAddress:function(){
   //点击文章进入详情页
   articleTap:function(e){
     wx.navigateTo({
+<<<<<<< HEAD
       url: '../article/article?id=' + e.currentTarget.dataset.id
+=======
+      url: '../article/article?id=' + e.currentTarget.dataset.id + '&img=' + e.currentTarget.dataset.img,
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
     })
   },
   //请求文章列表页
@@ -681,7 +715,11 @@ sultAddress:function(){
         'content-type': 'application/json' // 默认值
       },
       success: function (res) {
+<<<<<<< HEAD
         // console.log(res)
+=======
+         //console.log(res)
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
         that.setData({
           showArticleList: res.data
         });
@@ -754,6 +792,7 @@ sultAddress:function(){
       },
       success: function (res) {
          //console.log(res)
+<<<<<<< HEAD
         if (res.data.isForbidden == false) {
           wx.showToast({
             title: '你的账号状态异常,请联系客服',
@@ -762,6 +801,8 @@ sultAddress:function(){
             mask: true
           })
         } else {
+=======
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
          if (res.data.question == 1){
            wx.showModal({
              title: '提示',
@@ -773,7 +814,11 @@ sultAddress:function(){
              url: '../questionnaire/questionnaire',
            })
          }
+<<<<<<< HEAD
         }
+=======
+        
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
       }
     })
     

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* pages/myHome/myHome.wxss */
 .container{
   box-shadow: 0 4rpx 8rpx 0 rgba(0,0,0,0.10) inset;
@@ -94,4 +95,102 @@ color: #9B9B9B;
   font-size: 32rpx;
 color: #9B9B9B;
 margin-top: 48rpx;
+=======
+/* pages/myHome/myHome.wxss */
+.container{
+  box-shadow: 0 4rpx 8rpx 0 rgba(0,0,0,0.10) inset;
+}
+.fdEndBox{
+  width: 100%;
+    border-bottom: 1px solid #E5E5E5;
+}
+ .fdEndBox .searchEndList{
+  width: 690rpx;
+  height: 321rpx;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 40rpx 0;
+
+}
+.fdEndBox .searchEndList .leftImg{
+  width: 240rpx;
+  height: 240rpx;
+  float: left;
+}
+.fdEndBox .searchEndList .leftImg image{
+  width: 240rpx;
+  height: 240rpx;
+}
+.fdEndBox .searchEndList .rightMain{
+  width: 418rpx;
+  height: 240rpx;
+  float: right;
+}
+.fdEndBox .searchEndList .rightMain p{
+  display: block;
+  font-size: 32rpx;
+  color: #222222;
+  font-weight: 700;
+  margin-bottom: 25rpx;
+}
+.fdEndBox .searchEndList .rightMain .texts{
+  font-size: 28rpx;
+color: #9B9B9B;
+line-height: 76rpx;
+margin-top:6rpx;
+
+}
+.fdEndBox .searchEndList .rightMain .nameImgPic image{
+  width: 40rpx;
+  height: 40rpx;
+  background: #D8D8D8;
+  border-radius: 50%;
+  border: 1px solid #979797;
+  float: left;
+  margin-top: 11rpx;
+  margin-right: 16rpx;
+}
+.fdEndBox .searchEndList .rightMain .nameImgPic span{
+font-size: 28rpx;
+color: #222222;
+line-height: 62rpx;
+}
+.fdEndBox .searchEndList .rightMain .nameImgPic b{
+float: right;
+font-size: 44rpx;
+color: #FE8B25;
+line-height: 62rpx;
+}
+.fdEndBox .searchEndList .rightMain .nameImgPic a{
+float: right;
+font-size: 28rpx;
+color: #FE8B25;
+line-height: 68rpx;
+}
+.fdEndBox .searchEndList .addessSum image{
+  width: 40rpx;
+  height: 40rpx;
+  float: left;
+}
+.fdEndBox .searchEndList .addessSum span{
+   font-size: 28rpx;
+color: #9B9B9B;
+ float: left;
+ line-height: 40rpx;
+}
+.noHome{
+  width: 100%;
+  text-align: center;
+}
+.noHome image{
+  width: 260rpx;
+  height: 260rpx;
+  margin-top: 120rpx;
+}
+.noHome text{
+  display: block;
+  font-size: 32rpx;
+color: #9B9B9B;
+margin-top: 48rpx;
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
 }

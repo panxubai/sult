@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* pages/discussion/discussion.wxss */
 .container{
   box-shadow: 0 4rpx 8rpx 0 rgba(0,0,0,0.10) inset;
@@ -253,3 +254,260 @@ float: left;
   color: #fff;
   border-radius: 30rpx;
 }
+=======
+/* pages/discussion/discussion.wxss */
+.container{
+  box-shadow: 0 4rpx 8rpx 0 rgba(0,0,0,0.10) inset;
+  display: flex;
+		flex-direction:column;
+}
+.fdEndBox{
+  width: 100%;
+  border-bottom: 1px solid #E5E5E5;
+}
+ .fdEndBox .searchEndList{
+  width: 690rpx;
+  height: 321rpx;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 40rpx 0;
+
+}
+.fdEndBox .searchEndList .leftImg{
+  width: 240rpx;
+  height: 240rpx;
+  float: left;
+}
+.fdEndBox .searchEndList .leftImg image{
+  width: 240rpx;
+  height: 240rpx;
+}
+.fdEndBox .searchEndList .rightMain{
+  width: 418rpx;
+  height: 240rpx;
+  float: right;
+}
+.fdEndBox .searchEndList .rightMain p{
+  display: block;
+  width: 100%;
+  font-size: 32rpx;
+  color: #222222;
+  font-weight: 700;
+  margin-bottom: 25rpx; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+.fdEndBox .searchEndList .rightMain text{
+  display: block;
+  width: 100%;
+  font-size: 28rpx;
+color: #9B9B9B;
+line-height: 76rpx;
+}
+.fdEndBox .searchEndList .rightMain .nameImgPic{
+  height: 70rpx;
+}
+.fdEndBox .searchEndList .rightMain .nameImgPic image{
+  width: 40rpx;
+  height: 40rpx;
+  background: #D8D8D8;
+  border-radius: 50%;
+  border: 1px solid #979797;
+  float: left;
+  margin-top: 13rpx;
+  margin-right: 16rpx;
+}
+.fdEndBox .searchEndList .rightMain .nameImgPic span{
+  display: block;
+  width: 30%;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  float: left;
+  font-size: 28rpx;
+  color: #222222;
+  line-height: 62rpx;
+}
+.fdEndBox .searchEndList .rightMain .nameImgPic b{
+float: right;
+font-size: 44rpx;
+color: #FE8B25;
+line-height: 62rpx;
+}
+.fdEndBox .searchEndList .rightMain .nameImgPic a{
+float: right;
+font-size: 28rpx;
+color: #FE8B25;
+line-height: 68rpx;
+}
+.fdEndBox .searchEndList .addessSum image{
+  width: 40rpx;
+  height: 40rpx;
+  float: left;
+}
+.fdEndBox .searchEndList .addessSum span{
+   font-size: 28rpx;
+color: #9B9B9B;
+ float: left;
+ line-height: 40rpx;
+ display: block;
+ width: 370rpx;
+ overflow: hidden;
+ text-overflow: ellipsis;
+ white-space:nowrap;
+}
+
+/* 自己发送的消息 */
+.chatBoxes{
+  width: 690rpx;
+  flex: 1;
+  margin: 0 auto;
+}
+.chatBoxes .oneselfId{
+  width: 568rpx;
+  float: right;
+  text-align: right;
+}
+.chatBoxes .oneselfId .content{
+    display: inline-block;
+    text-align: right;
+    width: 440rpx;
+    margin-right: 34rpx;
+}
+.chatBoxes .oneselfId .content span{
+   margin-bottom: 10rpx;
+   display: block;
+  font-size: 24rpx;
+  color: #555555;
+}
+.chatBoxes .oneselfId .content .contentText{
+  padding: 20rpx 32rpx;
+  background-image: linear-gradient(52deg, #F3AC53 0%, #FE8B24 100%);
+  box-sizing: border-box;
+  margin-right: 16rpx;
+  position: relative;
+  border-radius: 5rpx;
+  display: inline-block;
+}
+.chatBoxes .oneselfId .content .contentText p{
+  display: block;
+   width:0; 
+  height:0;
+  border-width:20rpx;
+  border-style:solid;
+  border-color:#FE8B24 transparent transparent transparent;   
+  position: absolute;
+  top:0;
+  right:-10rpx;
+}
+.chatBoxes .oneselfId .content .contentText text{
+  font-size: 28rpx;
+color: #FFFFFF;
+ word-break: break-all;
+}
+.chatBoxes .oneselfId .headPortrait{
+  width: 90rpx;
+  height: 90rpx;
+  float:right;
+}
+.chatBoxes .oneselfId .headPortrait image{
+ width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+}
+
+/* 其他人发送的消息 */
+
+.chatBoxes .otherId{
+  width: 568rpx;
+  float: left;
+}
+.chatBoxes .otherId .headPortrait{
+    width: 90rpx;
+  height: 90rpx;
+  float:left;
+}
+.chatBoxes .otherId .headPortrait image{
+ width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+}
+.chatBoxes .otherId .content{
+    display: inline-block;
+    width: 440rpx;
+    margin-left: 34rpx;
+}
+.chatBoxes .otherId .content span{
+  display: block;
+  font-size: 24rpx;
+  color: #555555;
+  margin-bottom: 10rpx;
+}
+.chatBoxes .otherId .content .contentText{
+  padding: 20rpx 32rpx;
+  background: #EFF3F6;
+  box-sizing: border-box;
+  margin-left: 16rpx;
+  position: relative;
+  border-radius: 5rpx;
+  display: inline-block;
+}
+.chatBoxes .otherId .content .contentText p{
+  display: block;
+   width:0; 
+  height:0;
+  border-width:20rpx;
+  border-style:solid;
+  border-color:#EFF3F6 transparent transparent transparent;   
+  position: absolute;
+  top:0;
+  left:-10rpx;
+}
+.chatBoxes .otherId .content .contentText text{
+  font-size: 28rpx;
+  color: #222222;
+   word-break: break-all;
+}
+.chatBoxes .commons{
+  margin-top: 30rpx;
+  padding-bottom: 20rpx;
+}
+
+
+.inputBox{
+  width: 100%;
+  height: 100rpx;
+  box-shadow: 0 -4px 6px 0 rgba(0,0,0,0.08);
+  position: fixed;
+  bottom: 0;left: 0;
+}
+.inputBox .inputWidth{
+  width: 690rpx;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 16rpx 0;
+}
+.inputBox .inputWidth input{
+width: 578rpx;
+  height: 70rpx;
+  background: #F8F8F8;
+border: 1px solid #E2E2E2;
+border-radius: 60rpx;
+padding: 0 20rpx;
+box-sizing: border-box;
+font-size: 28rpx;
+float: left;
+}
+.inputBox .inputWidth p{
+  display: block;
+  float: right;
+  width: 100rpx;
+  text-align: center;
+  line-height: 70rpx;
+  font-size: 28rpx;
+  background: #FE8B24;
+  color: #fff;
+  border-radius: 30rpx;
+}
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb

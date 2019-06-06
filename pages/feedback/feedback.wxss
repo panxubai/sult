@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* pages/feedback/feedback.wxss */
 .container{
   box-shadow: 0 4rpx 8rpx 0 rgba(0,0,0,0.10) inset;
@@ -140,3 +141,147 @@ line-height: 80rpx;
 font-size: 28rpx;
 color: #FFFFFF;
 }
+=======
+/* pages/feedback/feedback.wxss */
+.container{
+  box-shadow: 0 4rpx 8rpx 0 rgba(0,0,0,0.10) inset;
+}
+.feedMain{
+  width: 670rpx;
+  margin: 0 auto;
+}
+.feedMain .rentingWhat{
+  width: 100%;
+ padding-top: 40rpx;
+}
+.feedMain .rentingWhat text{
+  line-height: 41rpx;
+  font-size: 32rpx;
+color: #222222;
+font-weight: 600;
+margin-right: 80rpx;
+display: block;
+margin-bottom: 32rpx;
+}
+.feedMain .rentingWhat .rentingYes,.feedMain .rentingWhat .rentingNo,.feedMain .rentingWhat .rentingNoYes{
+  width: 120rpx;
+  height: 40rpx;
+  font-size: 28rpx;
+color: #555555;
+line-height: 36rpx;
+display: inline-block;
+margin-right: 60rpx;
+}
+.feedMain .rentingWhat .rentingYes{
+  width: 180rpx;
+}
+.feedMain .rentingWhat .rentingNoYes{
+  margin-right: 0;
+}
+.feedMain .rentingWhat .rentingYes image,.feedMain .rentingWhat .rentingNo image,.feedMain .rentingWhat .rentingNoYes image{
+  width: 32rpx;
+  height: 32rpx;
+  margin-right:20rpx; 
+  float: left;
+  margin-top: 2rpx;
+}
+
+.section{
+  width: 100%;
+  margin-top: 60rpx;
+}
+.section textarea{
+  width: 100%;
+  height: 340rpx;
+  padding: 32rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  color: #000;
+  background: #F8F8F8;
+  border-radius: 4rpx;
+}
+
+
+.homeImg{
+  width: 670rpx;
+  margin: 0 auto;
+}
+ .homeImg p{
+  display: block;
+  font-size: 32rpx;
+color: #222222;
+font-weight: 400;
+padding-top: 40rpx;
+}
+.homeImg p a{
+  font-size: 24rpx;
+color: #555555;
+margin-left: 16rpx;
+}
+.homeImg .chumList{
+  height: 140rpx;
+}
+.homeImg .chumList .headList{
+  width: 156rpx;
+  height: 140rpx;
+  display: inline-block;
+  position: relative;
+}
+ .homeImg .chumList .headList .images{
+  width: 140rpx;
+  height: 140rpx;
+}
+.homeImg .chumList .headList .delImg{
+width: 64rpx;
+height: 64rpx;
+position: absolute;
+top: -10rpx;
+right:10rpx;
+}
+.homeImg .tapPhoto{
+  width: 140rpx;
+  height: 140rpx;
+  background: #E7E7E7;
+  position: relative;
+  display: inline-block;
+}
+.homeImg .tapPhoto .absoloatImg{
+  width: 58rpx;
+  height: 48rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 999;
+}
+
+
+.inputBox{
+  width: 670rpx;
+  margin: 40rpx auto;
+}
+.inputBox input{
+  width: 100%;
+  height: 104rpx;
+  background: #F8F8F8;
+border-radius: 4rpx;
+font-size: 28rpx;
+color: #000;
+padding: 0 32rpx;
+box-sizing: border-box;
+}
+
+.btnSumBox{
+  width: 670rpx;
+  height: 80rpx;
+  margin: 24rpx auto;
+  background: #F5A623;
+border-radius: 60rpx;
+text-align: center;
+line-height: 80rpx;
+font-size: 28rpx;
+color: #FFFFFF;
+}
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb

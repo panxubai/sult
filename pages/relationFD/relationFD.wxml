@@ -24,7 +24,11 @@
     </view>
 
     <view class='visitTime'>
+<<<<<<< HEAD
       <text>到访时间</text><span>（设置一下,对方回复更及时哦~）</span>
+=======
+      <text>到访时间</text>
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
       <view class='selectTime'>
           <view class='selectDay' bindtap='dayTap'>
               {{dayText}}
@@ -52,7 +56,11 @@
 
     <view class='greeting'>
       <text>打个招呼</text>
+<<<<<<< HEAD
       <textarea style="display:{{DayIsShow ? 'none': 'block'}}"  placeholder="例如：业主您好，想跟几个小伙伴租您的房子，望沟通" maxlength="100"  value='{{textareaVal}}' bindinput="textareaInput"/>
+=======
+      <textarea style="display:{{DayIsShow ? 'none': 'block'}}"  placeholder="业主您好，想跟几个小伙伴租您的房子，望沟通" maxlength="100"  value='{{textareaVal}}' bindinput="textareaInput"/>
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
     </view>
       <view class='sumitBtn' bindtap='submitTap'>提交申请</view>
 

@@ -56,7 +56,11 @@
 
       <view class='fillSelect'>
         <view class='leftSelect'>
+<<<<<<< HEAD
           <p>出租状态<span>*</span></p>
+=======
+          <text>状态</text>
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
           <view class='leftSelectBox' bindtap='leftSelectTap'>
             {{cityYes}}
             <p></p>
@@ -78,7 +82,11 @@
       <view class='petWhat'>
         <text>是否接受宠物</text>
         <view class='petYes' data-index = '0' bindtap='petWhatTap'>
+<<<<<<< HEAD
           <image wx:if="{{petIndex == 0}}" src='https://www.suitius.com/image/resources/questionnaire/ic_boy6.png' data-index = '0'></image>
+=======
+          <image wx:if="{{petIndex == 0}}" src='https://www.suitius.com/image/resources/questionnaire/ic_boy6.png' data-index = '1'></image>
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
           <image wx:else src='https://www.suitius.com/image/resources/questionnaire/ic_boy5.png' data-index = '0'></image>
           是
         </view>
@@ -89,6 +97,7 @@
         </view>
       </view>
 
+<<<<<<< HEAD
       <view class='petWhat'>
         <text>是否有电梯　</text>
         <view class='petYes' data-index = '1' bindtap='elevatorTap'>
@@ -103,6 +112,8 @@
         </view>
       </view>
 
+=======
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
      <view class='linkOnline'> 
           <text>每日用户申请上限</text>
           <view class='leftSelectBox' bindtap='linkOnlineTap'>
@@ -170,11 +181,16 @@
             <input type='number' maxlength='2' value='' bindinput='adultInput' value='{{adultText}}'></input>
           </view>
           <view class='mainNumber'>
+<<<<<<< HEAD
             <p>儿童　</p>
+=======
+            <p>儿童</p>
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
             <input type='number' maxlength='2' value='' bindinput='childInput' value='{{childText}}'></input>
           </view>
       </view>
 
+<<<<<<< HEAD
       <view class='timeShijian'>
           <text>楼层信息</text>
           <view class='mainNumber'>
@@ -187,6 +203,8 @@
           </view>
       </view>
 
+=======
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
 
       <view class='settingTime'>
         <text>能接受的预约时间点</text>
@@ -316,8 +334,13 @@
   <!-- ------ -->
 
   <view class='greeting'>
+<<<<<<< HEAD
     <text>房源描述</text>
     <textarea style="display:{{addressMenuIsShow ? 'none':'block'}}" placeholder="介绍一下您的房子吧" maxlength="100" bindinput="textareaInput" value='{{textareaVal}}' />
+=======
+    <text>房屋介绍</text>
+    <textarea placeholder="介绍一下您的房子吧" maxlength="100" bindinput="textareaInput" value='{{textareaVal}}' />
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
   </view>
     <!-- ------ -->
   <view class='sumitBtn' bindtap='submitTap'>提交申请</view>

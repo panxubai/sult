@@ -29,11 +29,18 @@
     <view class='ownerPhone'>
         <image class='imageFace' src='{{homeArray.head}}'></image>
         <span>{{homeArray.callers}}</span>
+<<<<<<< HEAD
         <p bindtap='relationTap' data-id="{{homeArray.house_info.id}}"><image src='https://www.suitius.com/image/resources/homeDetail/ic_suite_contact.png'></image>私信联系</p>
         
     </view>
     <view class='homeReferral'>
         <p>房屋信息</p>
+=======
+        <p bindtap='relationTap' data-id="{{homeArray.house_info.id}}"><image src='https://www.suitius.com/image/resources/homeDetail/ic_suite_contact.png'></image>联系业主</p>
+    </view>
+    <view class='homeReferral'>
+        <p>房屋介绍</p>
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
          <view class='presentations'>
               <view class='presentationList'>
                   <span>风格：</span>
@@ -54,6 +61,7 @@
                   <span>用途：</span>
                   <text>普通住宅</text>
               </view>
+<<<<<<< HEAD
               <view class='presentationList' wx:if="{{homeArray.house_info.floor != 0}}">
                   <span>楼层：</span>
                   <text>{{homeArray.house_info.floor}}/{{homeArray.house_info.tfloor}}</text>
@@ -66,6 +74,15 @@
       <view class='imgRz'>
           <image src='../../resources/renzheng.png'></image>
           <text>此房源已通过SUIT真实性审核</text>
+=======
+         </view>
+    </view>
+    <view class='attestation' wx:if="{{homeArray.house_info.authentic == 1}}">
+      <p>平台保障</p>
+      <view class='imgRz'>
+          <image src='../../resources/renzheng.png'></image>
+          <text>此房源得到SUIT平台认证</text>
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
       </view>
     </view>
     <view class='facility'>
@@ -161,15 +178,25 @@
 <view class='flatmate' style="display:{{homeArray.house_info.share == 0?'none':'block'}}">
     <view class='flatTop'>
         合租室友推荐
+<<<<<<< HEAD
         <!-- <view class='questionDiv' bindtap='questionTap'>
         <image class='question' src='https://www.suitius.com/image/resources/homeDetail/ic_suit_question.png'></image>
         </view> -->
+=======
+        <view class='questionDiv' bindtap='questionTap'>
+        <image class='question' src='https://www.suitius.com/image/resources/homeDetail/ic_suit_question.png'></image>
+        </view>
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
       <b bindtap='showtapSd'>
         搜索
         <image src='https://www.suitius.com/image/resources/homeDetail/ic_more_down.png'></image>
       </b>
     </view>
+<<<<<<< HEAD
     <p style="display:{{taolunzuShow ? 'block':'none'}}">收藏房源之后更容易找到室友哦</p>
+=======
+    <p style="display:{{taolunzuShow ? 'block':'none'}}">你对室友的期望是？</p>
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
     <view class='chumMain' style="display:{{taolunzuShow ? 'none':'block'}}">
       <text>选择推荐室友加入讨论组</text>
       <scroll-view scroll-x style="width: 100%;">
@@ -202,7 +229,11 @@
 
 
 <view class='plotIntroduce'>
+<<<<<<< HEAD
    <p>房源描述</p>
+=======
+   <p>小区介绍</p>
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
   <span>{{homeArray.house_info.describes}}</span>
 </view>
 
@@ -212,7 +243,11 @@
         <p>你对室友的期望是？</p>
         <view class='sumList'>
           <view class='gender margins'>
+<<<<<<< HEAD
               <span>姓别</span>
+=======
+              <span>姓名</span>
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
               <a class="{{genderIndex == 1? 'activeGender' : ''}}" bindtap='genderTap' data-index="1">男</a>
               <a class="{{genderIndex == 0? 'activeGender' : ''}}" bindtap='genderTap' data-index="0">女</a>
           </view>
@@ -276,7 +311,11 @@
             <cover-view class='text'>收藏</cover-view>
         </cover-view>
         <cover-view class='collect'>
+<<<<<<< HEAD
              <cover-view class='photos' bindtap='relationTap' data-id="{{homeArray.house_info.id}}">私信联系</cover-view>
+=======
+             <cover-view class='photos' bindtap='relationTap' data-id="{{homeArray.house_info.id}}">联系业主</cover-view>
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
         </cover-view>
     </cover-view>
 

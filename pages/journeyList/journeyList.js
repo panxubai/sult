@@ -14,8 +14,12 @@ Page({
     userInfo: {},//获取用户姓名和头像
     dataArr:[],
     showKong: false,
+<<<<<<< HEAD
     showFanhui: true,
     lock:true
+=======
+    showFanhui: true
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
   },
 
   /**
@@ -61,6 +65,7 @@ Page({
       }
     })
   },
+<<<<<<< HEAD
   //长按删除
   longTap: function (e) {
     var that = this;
@@ -138,6 +143,28 @@ Page({
       }
     }
    
+=======
+  //点击跳到行程 详情
+  routeTap:function(e){
+    let that = this;
+    console.log(e.currentTarget.dataset.status)
+    if (e.currentTarget.dataset.status == 0){ 
+      wx.showModal({
+        title: '提示',
+        content: '该行程等待房东处理',
+      })
+
+    } else if (e.currentTarget.dataset.status == 1){
+      that.dataJujue(e.currentTarget.dataset.id, e.currentTarget.dataset.visit_id, e.currentTarget.dataset.status);
+    }else{
+      that.setData({
+        showFanhui: false
+      })
+      wx.navigateTo({
+        url: '../routeChat/routeChat?id=' + e.currentTarget.dataset.id + '-' + e.currentTarget.dataset.visit_id + '-' + e.currentTarget.dataset.status,
+      })
+    }
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
     
   },
   dataJujue: function (id, visit_id, status) {

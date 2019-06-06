@@ -19,6 +19,7 @@
  </view>
 
 
+<<<<<<< HEAD
      <view class='homeImg'>
         <p>房产证图片（或现租赁合同）</p>
         <scroll-view scroll-x style="width: 100%;margin-top:24rpx;">
@@ -34,6 +35,21 @@
     </scroll-view>
 </view>
 
+=======
+     <view class='propertyHome'>
+        <text>房产证图片</text>
+        <view class='propertyImg'>
+             
+        <view  class='headList' style="display:{{propertyImg == ''?'none':'block'}}">
+            <image src='{{propertyImg}}'   class='images'  ></image>
+            <image class='delImg' src='https://www.suitius.com/image/resources/ic_search_closs.png' bindtap='delImgPyTap'></image>
+        </view>
+<view class='tapPhoto' style="visibility:{{propertyImg == ''?'visible':'hidden'}}" bindtap='tapproperty'>
+    <image class='absoloatImg' src='../../resources/restImg/ic_user_camera.png'></image>
+</view>
+     </view>
+</view>
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
 </view>
 
 
@@ -127,6 +143,7 @@
 </view>
         <!--"调起城市组件结束-->
 
+<<<<<<< HEAD
 <!-- 点击问号跳出弹出框 -->
 <view class='tipsWindown' style="visibility:{{questionShow ? 'visible':'hidden'}}" bindtap='hidenTipTap'></view> 
     <view class='expectationss' style="visibility:{{questionShow ? 'visible':'hidden'}}" >
@@ -139,5 +156,8 @@
          </text>
            <view class='buttonsumss' bindtap='bindYesTap'>知道了</view>
     </view>
+=======
+
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
 
 </view>

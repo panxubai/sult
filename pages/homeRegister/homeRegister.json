@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 {"usingComponents": {
     "nav-bar": "/commpents/navber/navber"
   },
     "navigationBarTitleText": "SUIT-房屋登记"
+=======
+{"usingComponents": {
+    "nav-bar": "/commpents/navber/navber"
+  },
+    "navigationBarTitleText": "SUIT-房屋登记"
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
 }

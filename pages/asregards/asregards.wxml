@@ -4,7 +4,11 @@
     <view class='box'>
         <image src='../../resources/restImg/img_suit_picture.png'></image>
         <text>SULT</text>
+<<<<<<< HEAD
         <p>{{banbenV}}</p>
+=======
+        <p>v 0.1.2</p>
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
     </view>
     <view class='copyright'>上海劢极信息科技公司版权所有</view>
 </view>

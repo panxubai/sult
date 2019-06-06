@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* pages/journeyNews/journeyNews.wxss */
 .container{
   position: absolute;
@@ -79,4 +80,87 @@ margin-top: 48rpx;
 }
 .zhihuiList .journeyBottom a{
   color: #9B9B9B;
+=======
+/* pages/journeyNews/journeyNews.wxss */
+.container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #eff3f6;
+  box-shadow: 0 4rpx 8rpx 0 rgba(0,0,0,0.10) inset;
+}
+ .journeyList:first-child{
+  box-shadow: 0 4rpx 8rpx 0 rgba(0,0,0,0.10) inset;
+} 
+.journeyList{
+  width: 100%;
+  padding: 40rpx 40rpx 0;
+  box-sizing: border-box;
+  background: #fff;
+  border-bottom: 20rpx solid  #eff3f6;
+}
+.journeyList .journeyTop{
+    width: 100%;
+    border-bottom: 1px solid #E5E5E5;
+}
+.journeyList .journeyTop p{
+  display: block;
+  font-size: 28rpx;
+color: #000000;
+font-weight: 400; 
+}
+.journeyList .journeyTop text{
+  display: block;
+  font-size: 24rpx;
+color: #C0C0C0;
+margin-bottom: 10rpx;
+}
+.journeyList .journeyTop span{
+font-size: 28rpx;
+color: #555555;
+display: block;
+padding-bottom:40rpx; 
+}
+.journeyBottom{
+  width: 100%;
+  height: 80rpx;
+}
+.journeyBottom a{
+  font-size: 28rpx;
+color: #222222;
+line-height: 80rpx;
+}
+.journeyBottom image{
+  width: 32rpx;
+  height: 32rpx;
+  float: right;
+  margin-top: 24rpx;
+}
+
+.noneNew{
+  width: 100%;
+  text-align: center;
+}
+.noneNew image{
+  width: 260rpx;
+  height: 260rpx;
+  margin-top: 120rpx;
+}
+.noneNew text{
+  display: block;
+  font-size: 32rpx;
+color: #9B9B9B;
+margin-top: 48rpx;
+}
+.zhihuiList .journeyTop p,text{
+  color: #9B9B9B;
+}
+.zhihuiList .journeyTop span{
+  color: #9B9B9B;
+}
+.zhihuiList .journeyBottom a{
+  color: #9B9B9B;
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
 }

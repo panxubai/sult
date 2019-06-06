@@ -41,6 +41,7 @@ Page({
     
   
   },
+<<<<<<< HEAD
   //点击审核房源
   lodingTap:function(){
     wx.showToast({
@@ -59,6 +60,8 @@ Page({
       mask: true
     })
   },
+=======
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
   onLoadSh:function(){
     let that = this;
    

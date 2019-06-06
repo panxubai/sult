@@ -263,7 +263,11 @@ Page({
       },
       data: that.data.searchData,
       success: function (res) {
+<<<<<<< HEAD
          console.log(res)
+=======
+        // console.log(res)
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
         // console.log(that.data.searchData);
         that.setData({
           homeArray: res.data,
@@ -448,9 +452,13 @@ Page({
   //点击差号取消地址搜索
   eliminateTap:function(){
     var that = this;
+<<<<<<< HEAD
     wx.removeStorage({
       key: 'addressYes',
     });
+=======
+   
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
     that.quchu6();
     that.setData({
       addressEnd: "请输入地址地名关键字"

@@ -37,16 +37,24 @@ Page({
     //days: days,//数组日
     value1: [0],
     value2: [30, 0],//value2: [0, 0],
+<<<<<<< HEAD
     value3:[0],
+=======
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
     year: 30,
     month: 0, 
     //day: 0,
     occupationVal: 0,
+<<<<<<< HEAD
     scrollVal: 0,
     arrayDay: ["金融", "销售", "IT互联网", "教育培训", "电商", "硬件", "学生", "老板", "其他"],
     scrollArr: ['中专', '大专', '本科', '硕士', '博士', '其它'],
     occupationText: "",//选择职业
     schoollText:"",//学历
+=======
+    arrayDay: ["金融", "销售", "IT互联网", "教育培训", "电商", "硬件", "学生", "老板", "其他"],
+    occupationText: "",//选择职业
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
     yearText: "",//选择年
     monthText: "",//选择月
     //dayText: "",//选择日
@@ -92,7 +100,11 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       success: function (res) {
+<<<<<<< HEAD
         //console.log(res)
+=======
+        console.log(res.data.info.lenh)
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
         if (res.data.info.sex == undefined){
 
         }else{
@@ -111,7 +123,11 @@ Page({
   //调用动画
   startAddressAnimation: function (isShow) {
     //console.log(isShow)
+<<<<<<< HEAD
     //console.log(111)
+=======
+    console.log(111)
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
     var that = this
     if (isShow) {
       that.animation.translateY(0 + 'vh').step()
@@ -131,6 +147,7 @@ Page({
     });
     that.startAddressAnimation(true)
   },
+<<<<<<< HEAD
   //点击学历
   schoollTap: function () {
     var that = this;
@@ -139,6 +156,8 @@ Page({
     });
     that.startAddressAnimation(true)
   },
+=======
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
   //点击生日
   birthdayTap: function () {
     var that = this;
@@ -173,10 +192,13 @@ Page({
         month: val[1],
         // day: val[2],
       })
+<<<<<<< HEAD
     } else if (that.data.timeVal == 3) {
       that.setData({
         scrollVal: val[0]
       })
+=======
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
     }
   },
   //点击确定
@@ -198,12 +220,15 @@ Page({
         //dayText: that.data.days[that.data.day],
         value2: array2
       })
+<<<<<<< HEAD
     } else if (that.data.timeVal == 3) {
      // console.log(that.data.scrollArr[that.data.scrollVal])
       that.setData({
         schoollText: that.data.scrollArr[that.data.scrollVal],
         value3: [that.data.scrollVal]
       })
+=======
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
     }
     this.startAddressAnimation(false)
   },
@@ -240,17 +265,26 @@ Page({
   //提交
   submitWjTap: function () {
     let that = this;
+<<<<<<< HEAD
    // console.log(that.data.dataArr.info)
     if (that.data.dataArr.info == undefined){
       if (that.data.occupationText == "" || that.data.yearText == "" || that.data.schoollText == "" ) {
         //|| that.data.inputVal.match(/^[ ]*$/)
+=======
+    console.log(this.data.dataArr.info)
+    if (that.data.dataArr.info == undefined){
+if (that.data.occupationText == "" || that.data.yearText == "" || that.data.inputVal == "" || that.data.inputVal.match(/^[ ]*$/)) {
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
       wx.showModal({
         title: '提示',
         content: '请把信息填写完整',
       })
 
     } else {
+<<<<<<< HEAD
         console.log(that.data.schoollText)
+=======
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
       wx.request({
         url: 'https://www.suitius.com/tp5/public/changeInfo',
         data: {
@@ -258,7 +292,11 @@ Page({
           birth: that.data.yearText + '年' + that.data.monthText + '月',
           sex: that.data.genderIndex,
           job: that.data.occupationText,
+<<<<<<< HEAD
           school: that.data.schoollText,
+=======
+          school: that.data.inputVal,
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
           pet: that.data.restsIndex
 
         },
@@ -297,7 +335,10 @@ Page({
     }else{
       let occupationText;
       let birth;
+<<<<<<< HEAD
       let school;
+=======
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
       if (that.data.occupationText == ""){
         occupationText = that.data.dataArr.info.job
       } else {
@@ -308,11 +349,20 @@ Page({
       }else{
         birth = that.data.yearText + '年' + that.data.monthText + '月'
       }
+<<<<<<< HEAD
       if (that.data.schoollText == ""){
         school = that.data.dataArr.info.school
       }else{
         school = that.data.schoollText
       }
+=======
+      if (that.data.inputVal == "" || that.data.inputVal.match(/^[ ]*$/)){
+  wx.showModal({
+        title: '提示',
+        content: '请把信息填写完整',
+      })
+      }else{
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
         wx.request({
           url: 'https://www.suitius.com/tp5/public/changeInfo',
           data: {
@@ -320,7 +370,11 @@ Page({
             birth: birth,
             sex: that.data.genderIndex,
             job: occupationText,
+<<<<<<< HEAD
             school: school,
+=======
+            school: that.data.inputVal,
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
             pet: that.data.restsIndex
 
           },
@@ -329,7 +383,11 @@ Page({
             'content-type': 'application/x-www-form-urlencoded' // 默认值
           },
           success: function (res) {
+<<<<<<< HEAD
            // console.log(res);
+=======
+            console.log(res);
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
             if (res.data.code) {
               wx.showToast({
                 title: res.data.info,
@@ -354,6 +412,11 @@ Page({
         })
       }
        
+<<<<<<< HEAD
+=======
+
+    }
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
     
   },
   /**

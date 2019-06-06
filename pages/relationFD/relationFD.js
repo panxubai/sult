@@ -19,15 +19,25 @@ Page({
     arrayDay:["不设定","今天","明天"],
     arrayTime1: [],
     arrayTime3: [],
+<<<<<<< HEAD
     arrayTime2: ["00"],
+=======
+    arrayTime2: ["00", "30"],
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
     timeVal:1,//1调用day,2调用time
     dayVal1:0,//day的索引
     dayVal2: 0,//time小时的索引
     dayVal3:0,//分钟的索引
     dayText:"不设定",//默认今天 *
+<<<<<<< HEAD
     timeHour:"08",//小时* 
     timeMinute:"00",//分钟*
     textareaVal:"",//用户输入内容
+=======
+    timeHour:"08",//小时*
+    timeMinute:"00",//分钟*
+    textareaVal:"业主您好，想跟几个小伙伴租您的房子，望沟通",//用户输入内容
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
     value1:[0],
     value2: [0,0],
    // phptoInput:"",//用户手机号
@@ -300,7 +310,11 @@ Page({
     if (that.data.textareaVal == ""){
       wx.showModal({
         title: '提示',
+<<<<<<< HEAD
         content: '请给对方打个招呼',
+=======
+        content: '请给业主打个招呼',
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
       })
     }else{
      let data;

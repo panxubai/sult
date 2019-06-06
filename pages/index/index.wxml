@@ -10,12 +10,20 @@
         <p></p>
       </view>
       <view class="mine_renting {{Rentin?'active_color':''}}" bindtap='tapRentin'>
+<<<<<<< HEAD
           <text>我要租房</text>
+=======
+          <text>我是客户</text>
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
    
            <p class="{{Rentin?'active_home':''}}"></p>
       </view>
       <view class="mine_landlord {{landlord?'active_color':''}}" bindtap='tapLandlord'>
+<<<<<<< HEAD
           <text>发布房源</text>
+=======
+          <text>我是业主</text>
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
         
            <p class="{{landlord?'active_home':''}}"></p>
       </view>
@@ -109,7 +117,11 @@
             </view>
             <view class='articleList'>
                 <!-- 第一种样式有图片 -->
+<<<<<<< HEAD
                 <view wx:for="{{showArticleList}}" data-id='{{item.id}}' wx:key="key" class="{{item.image?'articleImg':'articleNoImg'}}" bindtap='articleTap' >
+=======
+                <view wx:for="{{showArticleList}}" data-id='{{item.id}}' data-img='{{item.image}}' wx:key="key" class="{{item.image?'articleImg':'articleNoImg'}}" bindtap='articleTap' >
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
                     <view class='articleImg_left'>
                         <span>{{item.title}}</span>
                         <p>{{item.content}}</p>
@@ -123,7 +135,11 @@
                         </view>
                     </view>
                     <view wx:if="{{item.image}}" class='articleImg_right'>
+<<<<<<< HEAD
                         <image mode="aspectFill" mode="aspectFill" src='{{item.image}}'></image>
+=======
+                        <image mode="aspectFill" src='{{item.image}}'></image>
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
                     </view>
                 </view>
                
@@ -221,7 +237,11 @@
             </view>
             <view class='checkName'>
                 <text>我的房屋</text>
+<<<<<<< HEAD
                 <p>自主管理,我的地盘我做主</p>
+=======
+                <p>智能管理,安全的线上交易</p>
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
             </view>
             <view class='checkJT'>
                  <image src='https://www.suitius.com/image/resources/homeDetail/ic_more_down.png'></image>
@@ -234,7 +254,11 @@
             </view>
             <view class='checkName'>
                 <text>审核状态</text>
+<<<<<<< HEAD
                 <p>审核通过，即可管理房源</p>
+=======
+                <p>正在审核中</p>
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
             </view>
             <view class='checkJT'>
                  <image src='https://www.suitius.com/image/resources/homeDetail/ic_more_down.png'></image>
@@ -248,7 +272,12 @@
              <text>
                 1.出租信息应遵循真实、准确、有效的原则。
                 2.厨房、卫生间、阳台和地下储藏室等非居住空间，不得单独作为出租信息发布。
+<<<<<<< HEAD
                 3.平台不承诺对出租信息进行无期限保留。
+=======
+                3.自愿公开或隐藏联系方式信息。
+                4.平台不承诺对出租信息进行无期限保留。
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
              </text>  
           </view>
           <view class='yeess' bindtap='noticeShadowHideTap'>知道了</view>
@@ -258,7 +287,11 @@
       <!-- 点击我是房东跳出弹出框 -->
 <view class='tipsWindown' style="visibility:{{ownerFirstShow ? 'visible':'hidden'}}" bindtap='hidenTipTap'></view> 
     <view class='expectationss' style="visibility:{{ownerFirstShow ? 'visible':'hidden'}}" >
+<<<<<<< HEAD
          <p>请进行身份验证</p>
+=======
+         <p>请进行业主身份验证</p>
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
          <image class='chahao' src='https://www.suitius.com/image/resources/homeDetail/ic_pop_close.png' bindtap='hidenTipTap'></image>
           <view class='fillList fillPhoto'>
     <image src='../../resources/restImg/ic_landlord_phone.png'></image>

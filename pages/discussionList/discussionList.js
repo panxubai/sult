@@ -18,14 +18,22 @@ Page({
     hoverKey: [],//true是没显示删除，false显示删除
     dataArr:[],
     showKong:false,
+<<<<<<< HEAD
     showFanhui: true,
     lock:true
+=======
+    showFanhui: true
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
+<<<<<<< HEAD
   onLoad: function (options) { 
+=======
+  onLoad: function (options) {
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
     let that = this;
     wx.showLoading({
       title: '正在加载...',
@@ -82,6 +90,7 @@ Page({
   //   })
   // },
   //按下
+<<<<<<< HEAD
   // drawStart:function(e){
   //   //console.log(e.touches[0].clientX, 1)
   //   let that = this;
@@ -142,6 +151,123 @@ Page({
       success: function (res) {
         if (res.confirm) {
           console.log('用户点击确定')
+=======
+  drawStart:function(e){
+    //console.log(e.touches[0].clientX, 1)
+    let that = this;
+    that.setData({
+      clientXStart: e.touches[0].clientX
+    })
+  },
+    //移动
+  drawMove: function (e) {
+    let that = this;
+    let listLeft = that.data.listLeft;
+    let hoverKey = that.data.hoverKey;
+   // console.log(e.touches[0].clientX - that.data.clientXStart, 2)
+    if (that.data.hoverKey[e.currentTarget.dataset.index]){
+      if (-100 <= e.touches[0].clientX - that.data.clientXStart && e.touches[0].clientX - that.data.clientXStart <= 0) {
+        listLeft[e.currentTarget.dataset.index] = e.touches[0].clientX - that.data.clientXStart
+        that.setData({
+          clientXMove: e.touches[0].clientX,
+          listLeft: listLeft
+        })
+      } else {
+        //console.log("不满足",111111)
+      }
+    }else{
+      if (0 <= e.touches[0].clientX - that.data.clientXStart && e.touches[0].clientX - that.data.clientXStart <= 100) {
+        listLeft[e.currentTarget.dataset.index] = e.touches[0].clientX - that.data.clientXStart - 100
+        that.setData({
+          clientXMove: e.touches[0].clientX,
+          listLeft: listLeft
+        })
+      } else {
+       // console.log("不满足")
+      }
+    }
+ 
+   
+    
+   },
+    //抬起
+  drawEnd: function (e) { 
+  //  console.log(e.currentTarget.dataset.group_id)
+    let that = this;
+    //console.log(that.data.clientXStart, that.data.clientXMove);
+    let listLeft = that.data.listLeft;
+    let hoverKey = that.data.hoverKey;
+    if (that.data.hoverKey[e.currentTarget.dataset.index]){
+      if (that.data.clientXMove == 0) {
+        that.setData({
+          showFanhui: false
+        })
+        wx.navigateTo({
+          url: '../discussion/discussion?group_id=' + e.currentTarget.dataset.group_id,
+        })
+        return;
+      }
+      if (Math.abs(that.data.clientXStart - that.data.clientXMove) > 100 / 2) {
+        listLeft[e.currentTarget.dataset.index] = -100;
+        hoverKey[e.currentTarget.dataset.index] = false;
+        that.setData({
+          listLeft: listLeft,
+          hoverKey: hoverKey,
+          clientXMove: 100
+        })
+      } else {
+        listLeft[e.currentTarget.dataset.index] = 0;
+        hoverKey[e.currentTarget.dataset.index] = true;
+        that.setData({
+          listLeft: listLeft,
+          hoverKey: hoverKey,
+          clientXMove:0
+        })
+      }
+    }else{
+      if (that.data.clientXMove == 100) {
+        listLeft[e.currentTarget.dataset.index] = 0;
+        hoverKey[e.currentTarget.dataset.index] = true;
+        that.setData({
+          listLeft: listLeft,
+          hoverKey: hoverKey,
+          clientXMove: 0
+        })
+        return;
+      }
+      if (Math.abs(that.data.clientXStart - that.data.clientXMove) < 100 / 2) {
+        listLeft[e.currentTarget.dataset.index] = -100;
+        hoverKey[e.currentTarget.dataset.index] = false;
+        that.setData({
+          listLeft: listLeft,
+          hoverKey: hoverKey,
+          clientXMove: 100
+        })
+      } else {
+        listLeft[e.currentTarget.dataset.index] = 0;
+        hoverKey[e.currentTarget.dataset.index] = true;
+        that.setData({
+          listLeft: listLeft,
+          hoverKey: hoverKey,
+          clientXMove: 0
+        })
+      }
+    }
+   
+
+  },
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  delTap:function(e){
+    let that= this;
+    console.log(e.currentTarget.dataset.group_id);
+    wx.showModal({
+      title: '提示',
+      content: '您确定要退出讨论组',
+      success: function (res) {
+        if (res.confirm) {
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
           wx.request({
             url: 'https://www.suitius.com/tp5/public/quitdis',
             header: {
@@ -153,7 +279,11 @@ Page({
             },
             success: function (res) {
               console.log(res)
+<<<<<<< HEAD
               if (res.data.code) {
+=======
+              if (res.data.code){
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
                 wx.showToast({
                   title: res.data.info,
                   icon: 'succes',
@@ -161,7 +291,11 @@ Page({
                   mask: true
                 });
                 that.onLoadData();
+<<<<<<< HEAD
               } else {
+=======
+              }else{
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
                 wx.showToast({
                   title: res.data.info,
                   icon: 'succes',
@@ -169,6 +303,7 @@ Page({
                   mask: true
                 });
               }
+<<<<<<< HEAD
               that.setData({
                 lock: true
               });
@@ -252,6 +387,20 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
+=======
+              // that.coordinate();
+            }
+          })
+        } else {
+          console.log('用户点击取消')
+        }
+
+      }
+    })
+   
+   
+  },
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
   onReady: function () {
   
   },

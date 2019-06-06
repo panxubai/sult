@@ -3,7 +3,11 @@
 <nav-bar navbar-data='{{nvabarData}}'></nav-bar>
       <view class='backTop'>
           <image src='https://www.suitius.com/image/resources/questionnaire/ic_boy_back.png'></image>
+<<<<<<< HEAD
           <p> SUIT是为帮助你寻找最适合的住房而诞生，并将不断完善。如需获得更好的服务体验，建议填写以下内容，感谢你的支持！</p>
+=======
+          <p> SUIT小程序是为了解决业主出租房和客户租房问题而诞生的。若你想体验更有效的服务,请花点时间填写以下内容。</p>
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
       </view>
 
       <view class='questMain'>
@@ -32,6 +36,7 @@
                 <span wx:if="{{occupationText}}" bindtap="occupationTap">{{occupationText}}</span>
                  <span wx:else bindtap='occupationTap'>请选择职业</span>
             </view>
+<<<<<<< HEAD
             <view class='birthday' style='margin-top:24rpx;'>
                 <p>学历</p>
                 <span wx:if="{{schoollText}}" bindtap="schoollTap">{{schoollText}}</span>
@@ -41,6 +46,12 @@
                 <p>学校</p>
                 <input type='text' placeholder='请填写学校' bindinput='inputVal' value='{{inputVal}}'/>
             </view> -->
+=======
+             <view class='schools'>
+                <p>学校</p>
+                <input type='text' placeholder='请填写学校' bindinput='inputVal' value='{{inputVal}}'/>
+            </view>
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
 
             <view class='rests'>
                 <p>宠物</p>
@@ -90,6 +101,7 @@
         {{item}}日</view>
     </picker-view-column> -->
   </picker-view>
+<<<<<<< HEAD
 
   <!-- 学历-->
     <picker-view wx:if="{{timeVal == 3}}" style="width: 100%; height: 300px;" bindchange="cityChange" value="{{value3}}" wx:key="">
@@ -98,6 +110,8 @@
         {{item}}</view>
     </picker-view-column>
   </picker-view>
+=======
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
    
 </view>
         <!--"调起城市组件结束-->

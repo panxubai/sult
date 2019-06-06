@@ -84,6 +84,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+<<<<<<< HEAD
     let that = this;
     //获取用户信息
     wx.getStorage({
@@ -96,6 +97,9 @@ Page({
         that.dataArr();
       }
     }) 
+=======
+
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
   },
 
   /**

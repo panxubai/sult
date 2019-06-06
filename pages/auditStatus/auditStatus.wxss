@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* pages/auditStatus/auditStatus.wxss */
 page{
   background: #eff3f6;
@@ -95,4 +96,103 @@ border-radius: 40rpx;
   font-size: 32rpx;
 color: #9B9B9B;
 margin-top: 48rpx;
+=======
+/* pages/auditStatus/auditStatus.wxss */
+page{
+  background: #eff3f6;
+}
+.container{
+  box-shadow: 0 4rpx 8rpx 0 rgba(0,0,0,0.10) inset;
+}
+.routeList:first-child{
+   box-shadow: 0 4rpx 8rpx 0 rgba(0,0,0,0.10) inset; 
+}
+.routeList{
+  border-top: 1px solid #eff3f6;
+  width: 100%;
+  height: 213rpx;
+  padding: 40rpx 40rpx 0;
+  box-sizing: border-box;
+  background: #fff;
+  margin-bottom: 22rpx;
+}
+.routeList .routeTop{
+   width: 100%;
+  height: 170rpx;
+  display: flex;
+}
+.routeList .routeTop image{
+   width: 172rpx;
+  height: 130rpx;
+}
+.routeList .routeTop .routeRight{
+    margin-left: 32rpx;
+ height: 170rpx; 
+ width: 100%;
+}
+.routeList .routeTop .routeRight p{
+ display: inline-block;
+ font-size: 32rpx;
+color: #222222;
+font-weight: 500;
+margin-bottom: 40rpx;
+}
+.routeList .routeTop .routeRight .routeTime{
+  width: 100%;
+}
+.routeList .routeTop .routeRight .routeTime text{
+  display: block;
+  font-size: 28rpx;
+color: #9B9B9B;
+width: 506rpx;
+white-space:nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+
+.routeList .routeBottom,.routeBottomDs{
+  display: inline-block;
+  height: 80rpx;
+  float: right;
+}
+.routeList .routeBottom span{
+  display: block;
+  width: 130rpx;
+  height: 50rpx;
+  background: #C0C0C0;
+border-radius: 40rpx;
+   font-size: 24rpx;
+color: #FFFFFF;
+   line-height: 50rpx;
+   margin-top: 15rpx;
+   text-align: center;
+}
+.routeList .routeBottomDs span{
+  display: block;
+  width: 130rpx;
+  height: 50rpx;
+border-radius: 40rpx;
+   font-size: 24rpx;
+   line-height: 50rpx;
+   margin-top: 15rpx;
+   text-align: center;
+  background: #fff;
+  color: #AADD76;
+}
+
+.noHome{
+  width: 100%;
+  text-align: center;
+}
+.noHome image{
+  width: 260rpx;
+  height: 260rpx;
+  margin-top: 120rpx;
+}
+.noHome text{
+  display: block;
+  font-size: 32rpx;
+color: #9B9B9B;
+margin-top: 48rpx;
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
 }

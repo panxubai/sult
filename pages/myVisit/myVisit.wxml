@@ -8,7 +8,11 @@
     </view> 
 
     
+<<<<<<< HEAD
     <view class='routeList' bindlongtap="longTap" bindtap='routeTap' wx:for="{{dataArr}}" wx:key="key" data-status='{{item.status}}' data-id="{{item.id}}" data-visit_id='{{item.visit_id}}'> 
+=======
+    <view class='routeList' bindtap='routeTap' wx:for="{{dataArr}}" wx:key="key" data-status='{{item.status}}' data-id="{{item.id}}" data-visit_id='{{item.visit_id}}'> 
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
         <view class='routeTop'>
         <view class='imgName'>
         <image src='{{item.head}}'></image>

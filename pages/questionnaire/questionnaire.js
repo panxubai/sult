@@ -29,7 +29,11 @@ Page({
     height: app.globalData.height + 44, 
     userInfo:{},
     DayIsShow: false,//显示选择框
+<<<<<<< HEAD
     timeVal: 1,//1调用职业,2调用生日,3调用学历
+=======
+    timeVal: 1,//1调用职业,2调用生日
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
     animationDay: {},//动画
     years: years,//数组年
     months: months,//数组月
@@ -40,11 +44,16 @@ Page({
     month: 0,
     //day: 0,
     occupationVal:0,
+<<<<<<< HEAD
     scrollVal:0,
     arrayDay: ["金融", "销售", "IT互联网", "教育培训", "电商", "硬件", "学生", "老板", "其他"],
     scrollArr: ['中专','大专','本科','硕士','博士','其它'],
     occupationText:"",//选择职业
     schoollText:"",//选择学校
+=======
+    arrayDay: ["金融", "销售", "IT互联网", "教育培训", "电商", "硬件", "学生", "老板", "其他"],
+    occupationText:"",//选择职业
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
     yearText:"",//选择年
     monthText: "",//选择月
     //dayText: "",//选择日
@@ -60,7 +69,11 @@ Page({
     let that = this;
     // 初始化动画变量
     var animation = wx.createAnimation({
+<<<<<<< HEAD
       duration: 300,
+=======
+      duration: 500,
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
       timingFunction: 'ease',
     });
     this.animation = animation;
@@ -78,7 +91,11 @@ Page({
   //调用动画
   startAddressAnimation: function (isShow) {
     //console.log(isShow)
+<<<<<<< HEAD
     //console.log(111)
+=======
+    console.log(111)
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
     var that = this
     if (isShow) {
       that.animation.translateY(0 + 'vh').step()
@@ -98,6 +115,7 @@ Page({
     });
     that.startAddressAnimation(true)
   },
+<<<<<<< HEAD
   //点击学历
   schoollTap: function () {
     var that = this;
@@ -106,6 +124,8 @@ Page({
     });
     that.startAddressAnimation(true)
   },
+=======
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
   //点击生日
   birthdayTap: function () {
     var that = this;
@@ -140,10 +160,13 @@ Page({
         month: val[1],
        // day: val[2],
       })
+<<<<<<< HEAD
     } else if (that.data.timeVal == 3){
       that.setData({
         scrollVal: val[0]
       })
+=======
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
     }
   },
   //点击确定
@@ -165,12 +188,15 @@ Page({
         //dayText: that.data.days[that.data.day],
         value2: array2
       })
+<<<<<<< HEAD
     } else if (that.data.timeVal == 3){
       console.log(that.data.scrollArr[that.data.scrollVal])
       that.setData({
         schoollText: that.data.scrollArr[that.data.scrollVal],
         value3: [that.data.scrollVal]
       })
+=======
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
     }
     this.startAddressAnimation(false)
   },
@@ -191,8 +217,12 @@ Page({
   //提交
   submitWjTap:function(){
       let that = this;
+<<<<<<< HEAD
     if (that.data.occupationText == "" || that.data.yearText == "" || that.data.schoollText == "" ){
       //|| that.data.inputVal.match(/^[ ]*$/)
+=======
+      if (that.data.occupationText == "" || that.data.yearText == "" || that.data.inputVal == "" || that.data.inputVal.match(/^[ ]*$/)){
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
         wx.showModal({
           title: '提示',
           content: '请把信息填写完整',
@@ -206,7 +236,11 @@ Page({
             birth: that.data.yearText + '年'+that.data.monthText+'月',
             sex: that.data.genderIndex,
             job: that.data.occupationText,
+<<<<<<< HEAD
             school: that.data.schoollText,
+=======
+            school: that.data.inputVal,
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
             pet: that.data.restsIndex
             
             },

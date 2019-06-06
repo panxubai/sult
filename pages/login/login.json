@@ -1,3 +1,8 @@
+<<<<<<< HEAD
 {"usingComponents": {
     "nav-bar": "/commpents/navber/navber"
+=======
+{"usingComponents": {
+    "nav-bar": "/commpents/navber/navber"
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
   }}

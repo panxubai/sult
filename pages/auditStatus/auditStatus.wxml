@@ -6,7 +6,11 @@
      <image src='../../resources/restImg/img_missing_card3.png'></image>
         <text>哦哟~列表为空</text>
     </view>  
+<<<<<<< HEAD
       <view class='routeList' wx:for="{{auditArr.waiting}}" bindtap='lodingTap' wx:key="key" data-id='{{item.id}}'>
+=======
+      <view class='routeList' wx:for="{{auditArr.waiting}}" wx:key="key" data-id='{{item.id}}'>
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
         <view class='routeTop'>
             <image mode='aspectFill' src='{{item.image}}'></image>
             <view class='routeRight'>
@@ -22,9 +26,15 @@
          
     </view>
 
+<<<<<<< HEAD
     <view class='routeList' wx:for="{{auditArr.waited}}" bindtap='baibaiTap' data-toast="{{item.reason}}" wx:key="key">
         <view class='routeTop'>
             <image src='{{item.image}}'></image>
+=======
+    <view class='routeList' wx:for="{{auditArr.waited}}" wx:key="key">
+        <view class='routeTop'>
+            <image src='https://www.suitius.com/tp5/public/uploads/apply/{{item.image}}'></image>
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
             <view class='routeRight'> 
               <p>{{item.village}}</p>
               <view class='routeBottom'>

@@ -46,6 +46,7 @@ Page({
       },
       success: function (res) {
     //    console.log(res)
+<<<<<<< HEAD
         if (res.data.isForbidden == false) {
           wx.showToast({
             title: '你的账号状态异常,请联系客服',
@@ -57,11 +58,16 @@ Page({
             wx.navigateBack()
           }, 1500)
         } else {
+=======
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
         that.setData({
           indexPd: res.data.identity,
         });
         that.dataArrNew()
+<<<<<<< HEAD
         }
+=======
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
       }
     })
   },

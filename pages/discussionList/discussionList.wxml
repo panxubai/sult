@@ -7,9 +7,15 @@
         <text>哦哟~列表为空</text>
     </view> 
 
+<<<<<<< HEAD
 
     <view class='routeList' wx:for="{{dataArr}}"  wx:key="key" >
         <view class='routeTop' data-group_id='{{item.group_id}}' data-index='{{index}}' data-id='{{item.house_info.id}}' bindlongtap="longTap"  bindtap="drawEnd">
+=======
+<scroll-view scroll-y style="display:{{dataArr.length != 0 &&showKong?'block':'none'}};" >
+    <view class='routeList' wx:for="{{dataArr}}"  wx:key="key"   style="left:{{listLeft[index]}}px">
+        <view class='routeTop' data-group_id='{{item.group_id}}' data-index='{{index}}' data-id='{{item.house_info.id}}' bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd">
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
          <view wx:if="{{item.head.length == 2}}"   class="imgsum imgsumtwo"> 
              <image wx:for="{{item.head}}" wx:for-item="head" wx:key="head" src='{{head}}'></image>
               
@@ -38,10 +44,18 @@
             <image src='https://www.suitius.com/image/resources/ic_more.png'></image>
          </view> -->
 
+<<<<<<< HEAD
        
     </view>
 
 
+=======
+         <view class="del" bindtap ="delTap" data-group_id='{{item.group_id}}' data-id='{{item.house_info.id}}'>退出</view>
+       
+    </view>
+
+  </scroll-view>
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
 
 
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import "../../wxParse/wxParse.wxss";
 
 .container{
@@ -219,4 +220,227 @@ float: left;
   text-align: center;
   font-size: 32rpx;
 color: #C0C0C0;
+=======
+@import "../../wxParse/wxParse.wxss";
+
+.container{
+  box-shadow: 0 4rpx 8rpx 0 rgba(0,0,0,0.10) inset;
+}
+.articleMain{
+  width: 100%;
+}
+.articleMain{
+  width: 670rpx;
+  margin: 0 auto;
+  padding-bottom: 100rpx;
+}
+.articleMain .headline{
+  padding: 30rpx 0;
+  width: 100%;
+  color: #000000;
+  font:500 40rpx/50rpx "";
+}
+.articleMain .headTime{
+  height: 90rpx;
+  width: 100%;
+  border-bottom: 1px solid #E5E5E5;
+  margin-bottom: 40rpx;
+}
+.articleMain .headTime .nameImg{
+  width: 50%;
+  float: left;
+}
+.articleMain .headTime .nameImg image{
+  width:60rpx;
+  height:60rpx;
+  float: left;
+  margin-right: 20rpx;
+}
+.articleMain .headTime .nameImg text{
+  font-size: 32rpx;
+color: #9B9B9B;
+}
+.articleMain .headTime .times{
+  width: 50%;
+  float: right;
+  font-size: 26rpx;
+color: #9B9B9B;
+text-align: right;
+}
+.articleContent{
+  width: 100%;
+}
+.articleContent .articleList{
+  width: 100%;
+  margin-top: 40rpx;
+  font-size: 32rpx;
+color: #222222;
+letter-spacing: 1px;
+line-height: 54rpx;
+}
+/* .articleContent .articleList image{
+  width: 100%;
+  height: auto;
+} */
+
+.commentSum{
+  position: relative;
+  margin-top: 20rpx;
+}
+.commentSum .shadeo{
+  width: 750rpx;
+  height: 20rpx;
+  background: #eff3f6;
+  position: absolute;
+  top: 0;
+  left: -40rpx;
+}
+.newsList{
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 52rpx;
+}
+.newsList .topic{
+  font-size: 32rpx;
+color: #222222;
+font-weight: 600;
+}
+.keyList{
+  width: 100%;
+  display:flex;
+  box-sizing: border-box;
+  border-bottom: 1px solid #E5E5E5;
+  /* margin-top: 40rpx; */
+}
+.keyList .imgs{
+  width: 90rpx;
+  margin-right: 32rpx;
+}
+.keyList .imgs image{
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+  float: left;
+}
+.keyList .newsBox{
+  width: 548rpx;
+}
+.keyList .newsBox p{
+  display:inline-block;
+font-size: 24rpx;
+color: #555555;
+font-weight: 400;
+}
+.keyList .newsBox text{
+    float: right;
+  font-size: 24rpx;
+  margin: 8rpx 0;
+color: #C0C0C0;
+}
+.keyList .newsBox span{
+  display: block;
+  font-size: 32rpx;
+  color: #222222;
+  margin-top: 20rpx;
+  margin-bottom: 32rpx;
+}
+
+.bottomPl{
+  position:fixed;
+  bottom: 0;left: 0;
+  width: 100%;
+  height: 100rpx;
+  background: #fff;
+  box-shadow: 0 -4px 6px 0 rgba(0,0,0,0.08);
+}
+.bottomPl .plMain{
+    width: 670rpx;
+    margin: 0 auto;
+    padding: 15rpx 0;
+}
+.bottomPl .plMain .comment{
+  width: 453rpx;
+  height: 70rpx;
+  background: #F8F8F8;
+  box-sizing: border-box;
+border: 1px solid #E2E2E2;
+padding-left: 32rpx;
+line-height: 68rpx;
+font-family: PingFangSC-Regular;
+font-size: 28rpx;
+color: #C0C0C0;
+letter-spacing: 0;
+border-radius: 60px;
+float: left;
+}
+.bottomPl .plMain .tapComment{
+  height: 48rpx;
+  width: 52rpx;
+  margin-top: 11rpx;
+  margin-left: 32rpx;
+  float: left;
+}
+.bottomPl .plMain .tapComment image{
+  height: 48rpx;
+  width: 52rpx;
+}
+.bottomPl .plMain a{
+  font-size: 28rpx;
+color: #C0C0C0;
+line-height: 70rpx;
+margin-left:10rpx;
+
+}
+.bottomPl .plMain button{
+  width: 52rpx;
+  height: 52rpx;
+  float: right;
+  position: relative;
+  margin-top: 9rpx;
+  border: none;
+}
+.bottomPl .plMain button image{
+  width: 52rpx;
+  height: 52rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.bottomPl .inputWidth{
+  width: 670rpx;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 15rpx 0;
+}
+.bottomPl .inputWidth input{
+width: 558rpx;
+  height: 70rpx;
+  background: #F8F8F8;
+border: 1px solid #E2E2E2;
+border-radius: 60rpx;
+padding: 0 20rpx;
+box-sizing: border-box;
+font-size: 28rpx;
+float: left;
+}
+.bottomPl .inputWidth p{
+  display: block;
+  float: right;
+  width: 100rpx;
+  text-align: center;
+  line-height: 70rpx;
+  font-size: 28rpx;
+  background: #FE8B24;
+  color: #fff;
+  border-radius: 30rpx;
+}
+.neComment{
+  width: 100%;
+  height: 250rpx;
+  line-height: 250rpx;
+  text-align: center;
+  font-size: 32rpx;
+color: #C0C0C0;
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
 }

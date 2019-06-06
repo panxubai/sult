@@ -28,11 +28,14 @@ Page({
    */
   onLoad: function (options) {
     let that = this;
+<<<<<<< HEAD
     wx.showLoading({
       title: '正在加载...',
       icon: 'loading',
       mask: true,
     })
+=======
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
     console.log(options);
     let addressId = options.id.split("-");
     this.setData({
@@ -108,7 +111,11 @@ Page({
             array: res.data.comment
           });
         }
+<<<<<<< HEAD
         wx.hideLoading()
+=======
+        
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
         clearInterval(that.data.timer)
         that.setTimeOut();
       }

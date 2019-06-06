@@ -21,17 +21,28 @@ Page({
     // plotText: "",//小区
     // addessText: "",//详细地址
     adultText:"",//成人数量
+<<<<<<< HEAD
     childText: "",//儿童数量 
     floorText:1,//楼层
     cfloorSumText:6,//总楼层
     moneyText:"",//租金
     textareaVal:"",//房屋介绍
     arrayCity: ["待出租", "已出租"],
+=======
+    childText: "",//儿童数量
+    moneyText:"",//租金
+    textareaVal:"",//房屋介绍
+    arrayCity: ["待租", "已租"],
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
     budgetLitter: ["押一", "押二", "押三"],
     budgetbig: ["付一", "付二", "付三"],
     styleFishs: ["08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22"],
     linkOnline:[3,5,10,"不限"],
+<<<<<<< HEAD
     relationArr: ["00"],
+=======
+    relationArr: ["00", "30"],
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
     cityYes: "待租",//待租状态*
     budgetMinrYes: "押一",//押一*
     budgetMaxrYes: "付一",//付一*
@@ -56,8 +67,12 @@ Page({
     array4: [0, 0],
     array5: [99, 0],
     array6: [3],//预约人数上限
+<<<<<<< HEAD
     petIndex:0,//0,是，1否宠物
     elevatorIndex: 0,//0,是，1否电梯
+=======
+    petIndex:0,//0,是，1否
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
     rentingIndex:0,//0整租，1合租2,皆可
     facilitiesArr: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],//设施顺序排列0未选中，1选中
     typeArray: [0, 0, 0, 0, 0],//租客类型顺序排列0未选中，1选中
@@ -83,7 +98,11 @@ Page({
       method: "POST",
       data:{
         dataSum: {
+<<<<<<< HEAD
           'rent': that.data.moneyText, 'status': that.data.cityVal, 'pet': that.data.petIndex, 'share': that.data.rentingIndex, 'children': that.data.childText, 'adult': that.data.adultText, "describes": that.data.textareaVal, "pledges": this.data.budgetMinrYes + this.data.budgetMaxrYes, "orderTimeMin": this.data.styleFishYes1 + ':' + this.data.styleFishYes2, "orderTimeMax": this.data.relationYes1 + ":" + this.data.relationYes2, "userMax": this.data.linkOnlineYes == "不限" ? 0 : this.data.linkOnlineYes, "floor": that.data.floorText, "tfloor": that.data.cfloorSumText, "elevator": that.data.elevatorIndex
+=======
+          'rent': that.data.moneyText, 'status': that.data.cityVal, 'pet': that.data.petIndex, 'share': that.data.rentingIndex, 'children': that.data.childText, 'adult': that.data.adultText, "describes": that.data.textareaVal, "pledges": this.data.budgetMinrYes + this.data.budgetMaxrYes, "orderTimeMin": this.data.styleFishYes1 + ':' + this.data.styleFishYes2, "orderTimeMax": this.data.relationYes1 + ":" + this.data.relationYes2, "userMax": this.data.linkOnlineYes == "不限" ? 0 : this.data.linkOnlineYes
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
         },
         id: that.data.optionsId,
         pay_way: {0:that.data.budgetMinVal, 1:that.data.budgetMaxVal},//0~3 
@@ -117,7 +136,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+<<<<<<< HEAD
     //console.log(options.id)
+=======
+    console.log(options.id)
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
     this.setData({
       optionsId: options.id,
     })
@@ -141,6 +164,7 @@ Page({
         id: id
       },
       success: function (res) {
+<<<<<<< HEAD
         console.log(res, res.data.visit_time.split(0))
         let budgetMinrYes = parseInt(res.data.pay_way.slice(0, 1));
         let budgetMaxrYes = parseInt(res.data.pay_way.slice(1, 2));
@@ -171,6 +195,15 @@ Page({
         
        
         
+=======
+        console.log(res)
+        let budgetMinrYes = parseInt(res.data.pay_way.slice(0, 1));
+        let budgetMaxrYes = parseInt(res.data.pay_way.slice(1, 2));
+        let styleVal1 = parseInt(res.data.visit_time.slice(0, 1));
+        let styleVal2 = parseInt(res.data.visit_time.slice(1, 2));
+        let relationVal1 = parseInt(res.data.visit_time.slice(2, 3));
+        let relationVal2 = parseInt(res.data.visit_time.slice(3, 4));
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
         let linkOnlineYes = res.data.userMax == 0 ? "不限" : res.data.userMax;
         let array6;
          if (res.data.userMax == 3){
@@ -212,10 +245,14 @@ Page({
           adultText: res.data.adult,
           childText: res.data.children,
           linkOnlineYes: linkOnlineYes,
+<<<<<<< HEAD
           array6: array6,
           elevatorIndex: res.data.elevator,
           floorText: res.data.floor,
           cfloorSumText: res.data.tfloor
+=======
+          array6: array6
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
         });
       
       }
@@ -246,6 +283,7 @@ Page({
       childText: e.detail.value
     })
   },
+<<<<<<< HEAD
   //楼层
   floorInput: function (e) {
     this.setData({
@@ -258,6 +296,8 @@ Page({
       cfloorSumText: e.detail.value
     })
   },
+=======
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
   // //面积
   // areaInput: function (e) {
   //   this.setData({
@@ -473,6 +513,7 @@ Page({
       petIndex: e.target.dataset.index
     })
   },
+<<<<<<< HEAD
   //点击选是否有电梯
   elevatorTap: function (e) {
     console.log(e.target.dataset.index)
@@ -480,6 +521,8 @@ Page({
       elevatorIndex: e.target.dataset.index
     })
   },
+=======
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
   
   //点击选是否有整租
   rentingWhatTap:function(e) {

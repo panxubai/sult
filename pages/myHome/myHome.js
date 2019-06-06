@@ -59,7 +59,11 @@ Page({
         id: that.data.userInfo.user_id
       },
       success: function (res) {
+<<<<<<< HEAD
        // console.log(res)
+=======
+        console.log(res)
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
         that.setData({
           arrList: res.data,
           showKong: true

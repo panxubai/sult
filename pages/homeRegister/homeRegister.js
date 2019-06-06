@@ -13,7 +13,10 @@ Page({
     },
     height: app.globalData.height + 44, 
     DayIsShow: false,//显示选择框
+<<<<<<< HEAD
     questionShow:false,//房屋提醒
+=======
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
     animationDay: {},//动画
     arrayDay: ["简装", "精装", "毛坯"],
     arrayTime1: ['1室', '2室', '3室', '4室', '5室', '6室', '7室', '8室','9室'],
@@ -31,10 +34,17 @@ Page({
     value1: [0],
     value2: [0, 0,0],
     userInfo:{},
+<<<<<<< HEAD
     tempFilePaths:[],//房屋图片propertyImg
     propertyImg: [],//房产证图片
     serverImg:[],//存放服务器上的图片
     serverProImg:[],//存放服务器上的房产证图片
+=======
+    tempFilePaths:[],//房屋图片
+    propertyImg:"",//房产证图片
+    serverImg:[],//存放服务器上的图片
+    serverProImg:"",//存放服务器上的房产证图片
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
     chumListWidth:0,
     codeText:"获取验证码",
     areaText:"",//面积
@@ -163,6 +173,7 @@ Page({
     wx.chooseImage({
       success: function (res) {
         // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
+<<<<<<< HEAD
         console.log(res)
         var tempFilePaths = res.tempFilePaths;
         var arra = that.data.tempFilePaths;
@@ -176,6 +187,12 @@ Page({
             })
           }
           
+=======
+        var tempFilePaths = res.tempFilePaths;
+        var arra = that.data.tempFilePaths;
+        for (var i = 0; i < tempFilePaths.length;i++){
+          var arrs = arra.push(tempFilePaths[i])
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
         }
        // console.log(arra);
         that.setData({
@@ -188,6 +205,7 @@ Page({
   //点击上传房产证
   tapproperty:function(){
     let that = this;
+<<<<<<< HEAD
     if (that.data.propertyImg.length == 0){
       that.setData({
         questionShow: true,
@@ -225,16 +243,31 @@ Page({
         // console.log(arra);
         that.setData({
           propertyImg: arra1
+=======
+    wx.chooseImage({
+      count: 1, 
+      success: function (res) {
+     //   console.log(res)
+        // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
+        that.setData({
+          propertyImg: res.tempFilePaths[0],
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
         })
       }
     })
   },
   //删除房产证
+<<<<<<< HEAD
   delImgPyTap:function(e){
     var arr1 = this.data.propertyImg;
     arr1.splice(e.currentTarget.dataset.index, 1);
     this.setData({
       propertyImg: arr1
+=======
+  delImgPyTap:function(){
+    this.setData({
+      propertyImg: ''
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
     })
   },
 //姓名
@@ -351,7 +384,11 @@ Page({
     let that = this;
     let myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/;
  
+<<<<<<< HEAD
     if (that.data.plotText == "" || that.data.addessText == "" || that.data.photoInput == "" || that.data.nameText == "" || that.data.codeNumber == "" || that.data.propertyImg.length == 0 || that.data.areaText == "" || that.data.tempFilePaths.length == 0){
+=======
+    if (that.data.plotText == "" || that.data.addessText == "" || that.data.photoInput == "" || that.data.nameText == "" || that.data.codeNumber == "" || that.data.propertyImg == "" || that.data.areaText == "" || that.data.tempFilePaths.length == 0){
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
       wx.showToast({
         title: '请把信息填写完整',
         icon: 'none',
@@ -376,7 +413,11 @@ Page({
         success: function (res) {
           if (res.confirm) {
             wx.showLoading({
+<<<<<<< HEAD
               title: '正在提交...',
+=======
+              title: '正在加载...',
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
               icon: 'loading',
               mask: true,
             })
@@ -417,8 +458,11 @@ Page({
   xinxiJiokou:function(){
     let that = this;
     console.log(that.data.serverImg);
+<<<<<<< HEAD
     if (that.data.serverProImg.length == that.data.propertyImg.length) {
     //console.log(that.data.serverImg);
+=======
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
           wx.request({
             url: 'https://www.suitius.com/tp5/public/savehouse',
       data: {
@@ -460,13 +504,17 @@ Page({
         // })
       }
     })
+<<<<<<< HEAD
     }
+=======
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
   },
   //房产证图片
   propertyImg:function(){
     let that =this;
     console.log(that.data.serverImg);
     if (that.data.serverImg.length == that.data.tempFilePaths.length){
+<<<<<<< HEAD
       for (let i = 0; i < that.data.propertyImg.length; i++) {
         wx.uploadFile({
           url: 'https://www.suitius.com/tp5/public/upload',
@@ -486,6 +534,22 @@ Page({
         })
       }
       
+=======
+      wx.uploadFile({
+        url: 'https://www.suitius.com/tp5/public/upload',
+        filePath: that.data.propertyImg,
+        name: 'ownership',
+        formData: {
+          'user': 'test'
+        },
+        success: function (res) {
+          that.setData({
+            serverProImg: res.data
+          })
+          that.xinxiJiokou()
+        }
+      })
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
     }else{
       return;
     }
@@ -493,6 +557,7 @@ Page({
   },
   //点击上传到服务器
 
+<<<<<<< HEAD
 
   //点击阴影消失
   hidenTipTap: function () {
@@ -502,6 +567,8 @@ Page({
       questionShow: false
     })
   },
+=======
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

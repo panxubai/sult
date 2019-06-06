@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* pages/mine/mine.wxss */
 
 .mine_top{
@@ -67,4 +68,75 @@ margin-top:10rpx;
 }
 .mine_bottom .mine_list text{
   font-size: 32rpx;
+=======
+/* pages/mine/mine.wxss */
+
+.mine_top{
+  width: 100%;
+  padding: 100rpx 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  text-align: center;
+}
+.mine_top .headImg{
+  width: 180rpx;
+  height: 180rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.mine_top .mine_name{
+  width: 100%;
+}
+.mine_top .mine_name span{
+  margin-left: 20rpx;
+  font-size: 40rpx;
+color: #222222;
+}
+.mine_top .mine_name image{
+    width: 40rpx;
+    height: 40rpx;
+    margin-left: 20rpx;
+}
+.mine_bottom{
+  border-top:20rpx solid #eff3f6;
+  width: 100%;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+.mine_bottom .mine_list{
+  width: 100%;
+  padding: 30rpx 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e5e5e5; 
+  position: relative;
+}
+.mine_bottom .mine_list a{
+  display: block;
+  height: 20rpx;
+  width: 20rpx;
+  background: red;
+  border-radius: 50%;
+  position: absolute;
+  right: 60rpx;
+  top: 50rpx;
+}
+.mine_bottom .mine_list .icon{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 39rpx;
+  float:left;
+margin-top:10rpx;
+
+}
+.mine_bottom .mine_list .arrows{
+  width: 40rpx;
+  height: 40rpx;
+  float: right;
+  margin-top: 10rpx;
+}
+.mine_bottom .mine_list text{
+  font-size: 32rpx;
+>>>>>>> d45642134ce9ca2e58d911eaee66668059754bfb
 }
