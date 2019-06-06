@@ -1,0 +1,16 @@
+<!--pages/sultSetting/sultSetting.wxml-->
+<view class="container" style='margin-top: {{height}}px'> 
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+    <view class='mine_bottom'>
+    <view class='mine_list' bindtap='opinionTap'> 
+              <image class='icon' src='../../resources/restImg/ic_set_about.png'></image>
+              <text>意见反馈</text>
+              <image class='arrows' src='https://www.suitius.com/image/resources/ic_more.png'></image>
+         </view>
+         <view class='mine_list' bindtap='regardTap'>
+              <image class='icon' src='../../resources/restImg/ic_set_about2.png'></image>
+              <text>关于</text>
+              <image class='arrows' src='https://www.suitius.com/image/resources/ic_more.png'></image>
+         </view>
+    </view>
+</view>

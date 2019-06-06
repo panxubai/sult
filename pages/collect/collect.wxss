@@ -1,0 +1,113 @@
+/* pages/collect/collect.wxss */
+.searchEndBox{
+  width: 100%;
+}
+.searchEndBox .searchEndList{
+  width: 690rpx;
+  height: 321rpx;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 40rpx 0;
+  border-bottom: 1px solid #E5E5E5;
+}
+.searchEndBox .searchEndList .leftImg{
+  width: 240rpx;
+  height: 240rpx;
+  float: left;
+}
+.searchEndBox .searchEndList .leftImg image{
+  width: 240rpx;
+  height: 240rpx;
+}
+.searchEndBox .searchEndList .rightMain{
+  width: 418rpx;
+  height: 240rpx;
+  float: right;
+}
+.searchEndBox .searchEndList .rightMain p{
+  display: block;
+  width: 100%;
+  font-size: 32rpx;
+  color: #222222;
+  font-weight: 700;
+  margin-bottom: 25rpx; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+.searchEndBox .searchEndList .rightMain text{
+  display: block;
+  width: 100%;
+  font-size: 28rpx;
+color: #9B9B9B;
+line-height: 76rpx;
+}
+.searchEndBox .searchEndList .rightMain .nameImgPic{
+  height: 70rpx;
+}
+.searchEndBox .searchEndList .rightMain .nameImgPic image{
+  width: 40rpx;
+  height: 40rpx;
+  background: #D8D8D8;
+  border-radius: 50%;
+  border: 1px solid #979797;
+  float: left;
+  margin-top: 13rpx;
+  margin-right: 16rpx;
+}
+.searchEndBox .searchEndList .rightMain .nameImgPic span{
+  display: block;
+  width: 30%;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  float: left;
+  font-size: 28rpx;
+  color: #222222;
+  line-height: 62rpx;
+}
+.searchEndBox .searchEndList .rightMain .nameImgPic b{
+float: right;
+font-size: 44rpx;
+color: #FE8B25;
+line-height: 62rpx;
+}
+.searchEndBox .searchEndList .rightMain .nameImgPic a{
+float: right;
+font-size: 28rpx;
+color: #FE8B25;
+line-height: 68rpx;
+}
+.searchEndBox .searchEndList .addessSum image{
+  width: 40rpx;
+  height: 40rpx;
+  float: left;
+}
+.searchEndBox .searchEndList .addessSum span{
+   font-size: 28rpx;
+color: #9B9B9B;
+ float: left;
+ line-height: 40rpx;
+ display: block;
+ width: 370rpx;
+ overflow: hidden;
+ text-overflow: ellipsis;
+ white-space:nowrap;
+}
+
+
+.noHome{
+  width: 100%;
+  text-align: center;
+}
+.noHome image{
+  width: 260rpx;
+  height: 260rpx;
+  margin-top: 250rpx;
+}
+.noHome text{
+  display: block;
+  font-size: 32rpx;
+color: #9B9B9B;
+margin-top: 48rpx;
+}

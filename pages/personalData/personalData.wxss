@@ -1,0 +1,201 @@
+/* pages/personalData/personalData.wxss */
+.container{
+  box-shadow: 0 4rpx 8rpx 0 rgba(0,0,0,0.10) inset;
+  overflow: hidden;
+}
+.topPhoto{
+  width: 100%;
+  height: 332rpx;
+  text-align: center;
+  padding-top: 64rpx;
+  box-sizing: border-box;
+}
+.topPhoto .images{
+  width: 160rpx;
+  height: 160rpx;
+  margin: 0 auto;
+  position: relative;
+}
+.topPhoto .images .headImg{
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  z-index: 10;
+}
+.topPhoto .images .absoloatImg{
+  width: 58rpx;
+  height: 48rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 999;
+}
+.topPhoto text{
+  font-size: 24rpx;
+color: #9B9B9B;
+}
+
+.questMain{
+  width: 590rpx;
+  margin: 0 auto;
+}
+.questMain .birthday{
+  width: 100%;
+  height: 97rpx;
+  margin-top: 32rpx;
+  border-bottom: 1px solid #E5E5E5;
+}
+.questMain .birthday p{
+  font-size: 32rpx;
+color: #222222;
+font-weight: 600;
+line-height: 97rpx;
+float: left;
+}
+.questMain .birthday span{
+font-size: 32rpx;
+color: #222222;
+float: right;
+line-height: 97rpx;
+}
+
+.questMain .gender{
+  margin-top: 50rpx;
+   margin-bottom: 32rpx;
+  width: 100%;
+  height: 80rpx;
+}
+.questMain .gender p{
+  font-size: 32rpx;
+color: #222222;
+font-weight: 600;
+line-height: 80rpx;
+float: left;
+margin-right: 40rpx;
+}
+.questMain .gender .genderMan,.genderWoman{
+  width: 203rpx;
+  height: 80rpx;
+  background: #F5F5F5;
+  border-radius: 40px;
+  float: left;
+  padding: 20rpx 56rpx;
+  box-sizing: border-box;
+}
+.questMain .gender .genderWoman{
+  float: right;
+}
+.questMain .gender .genderMan image,.questMain .gender .genderWoman image{
+  width: 40rpx;
+  height: 40rpx;
+  float: left;
+}
+.questMain .gender .genderMan a,.questMain .gender .genderWoman a{
+ font-size: 28rpx;
+color: #555555;
+float: right;
+line-height: 40rpx;
+}
+.schools{
+  width: 100%;
+  height: 97rpx;
+  margin-top: 32rpx;
+  border-bottom: 1px solid #E5E5E5;
+}
+.nickname{
+  width: 100%;
+  height: 97rpx;
+  border-bottom: 1px solid #E5E5E5;
+}
+.schools p,.nickname p{
+    font-size: 32rpx;
+color: #222222;
+font-weight: 600;
+line-height: 97rpx;
+float: left;
+}
+.schools input,.nickname input{
+  width: 450rpx;
+  float: right;
+  height: 97rpx;
+ text-align: right;
+  font-size: 32rpx;
+color: #222222;
+}
+.rests{
+  width: 100%;
+  height: 97rpx;
+  margin-top: 32rpx;
+}
+.rests p{
+  font-size: 32rpx;
+  color: #222222;
+  font-weight: 600;
+  line-height: 100rpx;
+  float: left;
+  margin-right: 20rpx;
+}
+.questMain .rests .restsYes,.restsNo{
+  width: 80rpx;
+  height: 32rpx;
+  float: left;
+  margin-top: 32rpx;
+  margin-left: 100rpx;
+}
+.questMain .rests .restsYes image,.questMain .rests .restsNo image{
+  width: 32rpx;
+  height: 32rpx;
+  float: left;
+}
+.questMain .rests .restsYes a,.questMain .rests .restsNo a{
+ font-size: 28rpx;
+color: #555555;
+float: right;
+}
+.submitWj{
+  width: 590rpx;
+  height: 80rpx;
+  background: #F5A623;
+border-radius: 60rpx;
+font-size: 28rpx;
+color: #FFFFFF;
+text-align: center;
+line-height: 80rpx;
+margin-top: 80rpx;
+margin-bottom: 64rpx;
+}
+.dialog-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 8;
+  background: rgba(0, 0, 0, 0.3);
+}
+.picker-view {
+  transform:translateY(40vh);
+  width: 100%;
+  display: flex;
+  z-index:12;
+  background-color: #fff;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0rpx;
+  left: 0rpx;
+  height: 40vh;
+}
+.questMain .gender .active_color{
+background: rgba(254,139,37,0.20);
+}
+.questMain .gender .active_color a{
+color: #FE8B25;
+}
+

@@ -1,0 +1,136 @@
+<!--pages/discussion/discussion.wxml-->
+<view class="container" style='margin-top: {{height}}px'> 
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+     <view class='fdEndBox'>
+        <view class='searchEndList' data-id='{{dataArr.id}}' bindtap='homeDetailTap'>
+            <view class='leftImg'>
+              <image mode="aspectFill" src='{{dataArr.image}}'></image>
+            </view>
+            <view class='rightMain'>
+              <p>{{dataArr.ward}}-{{dataArr.village}}</p>
+              <view class='nameImgPic'>
+                  <image src='{{dataArr.head}}'></image>
+                  <span>{{dataArr.callers}}</span>
+                  <b>{{dataArr.rent}} <a>元/月</a></b>
+                 
+              </view>
+              <text>{{dataArr.type}}-{{dataArr.area}} ㎡</text>
+               <view class='addessSum' >
+                  <image src='https://www.suitius.com/image/resources/ic_list_sign.png'></image>
+                  <span>{{dataArr.metro}}</span>
+               </view>
+            </view>
+        </view>
+    </view>
+
+    <view class='visitTime'>
+        <view class='visitMain' style="height:{{status == 0?'335rpx':'190rpx'}}">
+            <p>到访时间</p>
+            <view class='timeEnd'>
+              <image src='https://www.suitius.com/image/resources/homeDetail/ic_suite_balcony20.png'></image>
+              <text decode="{{true}}">{{dataArr.access_date}}&nbsp;&nbsp; {{dataArr.access_time}}</text>
+              <view class='pending' wx:if="{{status == 0}}">待处理</view>
+               <view class='consent' wx:elif="{{status ==2}}" >已同意</view> 
+              <view class='refuse' wx:else>已拒绝</view>
+            </view>
+             <view class='headNew'>
+               <image class='images' src='{{dataArr.avatar}}'></image>
+               <text>{{dataArr.name}}</text>
+               <view class='phoneFs' wx:if="{{status == 2}}" bindtap='phoneFsTap'>
+                <span>发送</span>
+                  <image src='../../resources/restImg/ic_suite_phone.png'></image>
+               </view>
+            </view> 
+            <view class='select' style="display:{{status == 0?'block':'none'}}">
+                <view class='refuse' bindtap='refuseTap'>拒绝</view>
+                <view class='consent' bindtap='consentTap'>同意</view>
+            </view>
+        </view>
+    </view>
+
+    <view class='chatBoxes'>
+        <scroll-view scroll-y scroll-top="{{scrollTop}}" scroll-with-animation style="height:{{scrollHeight-height}}px">
+          <!-- 留言的聊天 --> 
+             <view  class='otherId commons' wx:if="{{dataArr.message != undefined}}">
+                <view class='headPortrait'>
+                    <image src='{{dataArr.avatar}}'></image>
+                </view>
+                <view class='content'>
+                    <b>{{dataArr.name}}</b>
+                    <view class='contentText'>
+                        <text selectable='true'>{{dataArr.message}}</text> 
+                        <p></p>
+                    </view>
+                </view>
+            </view>
+        <!-- 本人的聊天 -->
+        <view wx:for="{{array}}" wx:key="key">
+            <view wx:if="{{item.user_id == userInfo.user_id}}" class='oneselfId commons'>
+                <view class='content'>
+                    <b>{{item.callers}}</b>
+                    <view class='contentText'>
+                        <text selectable='true'>{{item.msg}}</text> 
+                        <p></p>
+                    </view>
+                </view>
+                <view class='headPortrait'>
+                    <image src='{{item.head}}'></image>
+                </view>
+            </view>
+           
+            <!-- 其他人的聊天 -->
+             <!-- <view class='otherId commons'>
+                <view class='headPortrait'>
+                    <image src='https://www.suitius.com/image/resources/ic_topbar_me.png'></image>
+                </view>
+                <view class='content'>
+                    <b>名字</b>
+                    <view class='contentText'>
+                        <span>内容道什觉道什觉道什觉道什觉道什觉道什觉道什觉道什觉道什觉道什觉道什觉道什觉道什觉得</span> 
+                        <p></p>
+                    </view>
+                </view>
+            </view> -->
+             <!-- 房东的聊天 -->
+             <view wx:else class='otherId commons'>
+                <view class='headPortrait'>
+                    <image src='{{item.head}}'></image>
+                </view>
+                <view class='content'>
+                    <b>{{item.callers}}<a wx:if="{{item.user_id == userInfo.user_id}}">房东</a></b>
+                    <view class='contentText'>
+                        <text selectable='true'>{{item.msg}}</text> 
+                        <p></p>
+                    </view>
+                </view>
+            </view>
+            </view>
+        </scroll-view>
+    </view>
+
+<view class='inputBox'>
+    <view class='inputWidth'>
+        <input type='text' maxlength="50" cursor-spacing="8" placeholder='请留言' value='{{mainInput}}' bindinput='mainInput'/>
+        <p bindtap='sendTap'>发送</p>
+    </view>
+</view>
+
+
+<!-- 点击拒绝跳出弹出框 -->
+<view class='tipsWindown' style="visibility:{{questionShow ? 'visible':'hidden'}}" bindtap='hidenTipTap'></view>
+    <view class='expectationss' style="visibility:{{questionShow ? 'visible':'hidden'}}" >
+         <p>请选择拒绝原因</p>
+         <image class='chahao' src='https://www.suitius.com/image/resources/homeDetail/ic_pop_close.png' bindtap='hidenTipTap'></image>
+              <view class="selectss {{showNumber==1?'activeSelect':''}}" data-index = '1' bindtap='elsectTap'>
+                  A.<text>房子已经租出去了</text>
+              </view>
+              <view class="selectss {{showNumber==2?'activeSelect':''}}"  data-index = '2' bindtap='elsectTap'>
+                  B.<text>预约的时间不可行</text>
+              </view>
+              <view class="selectss {{showNumber==3?'activeSelect':''}}"  data-index = '3' bindtap='elsectTap'>
+                  C.<text>其他原因</text>
+              </view>
+           <view class='buttonsumss' bindtap='yesTapCh'>确定</view>
+    </view>
+
+</view>

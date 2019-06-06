@@ -1,0 +1,143 @@
+<!--pages/homeRegister/homeRegister.wxml-->
+<view class="container" style='margin-top: {{height}}px'> 
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class='uploadPictures'>
+    <view class='homeImg'>
+      <p>房源图片<a>最多上传9张图片哦~</a></p>
+      <scroll-view scroll-x style="width: 100%;margin-top:24rpx;">
+      <view class='chumList' style='width:{{tempFilePaths.length >= 9?tempFilePaths.length*156:tempFilePaths.length*156+140}}rpx;'>
+        <view wx:for="{{tempFilePaths}}" wx:key="key" class='headList'>
+            <image src='{{item}}' class='images'  data-index="{{index}}" ></image>
+            <image class='delImg' data-index="{{index}}" bindtap="tapaa" src='https://www.suitius.com/image/resources/ic_search_closs.png'></image>
+        </view>
+         <view class='tapPhoto' style="visibility:{{tempFilePaths.length >= 9?'hidden':'visible'}}" bindtap='tapPhoto'>
+             <image class='absoloatImg' src='../../resources/restImg/ic_user_camera.png'></image>
+         </view>
+      </view>
+    </scroll-view>
+
+ </view>
+
+
+     <view class='homeImg'>
+        <p>房产证图片（或现租赁合同）</p>
+        <scroll-view scroll-x style="width: 100%;margin-top:24rpx;">
+      <view class='chumList' style='width:{{propertyImg.length*156+140}}rpx;'>
+        <view wx:for="{{propertyImg}}" wx:key="key" class='headList'>
+            <image src='{{item}}' class='images'  data-index="{{index}}" ></image>
+            <image class='delImg' data-index="{{index}}" bindtap="delImgPyTap" src='https://www.suitius.com/image/resources/ic_search_closs.png'></image>
+        </view>
+         <view class='tapPhoto' style="visibility:{{tempFilePaths.length >= 9?'hidden':'visible'}}" bindtap='tapproperty'>
+             <image class='absoloatImg' src='../../resources/restImg/ic_user_camera.png'></image>
+         </view>
+      </view>
+    </scroll-view>
+</view>
+
+</view>
+
+
+
+<view class='filloutMes'>
+    <view class='fillList fillName'>
+      <image src='../../resources/restImg/ic_landlord_name.png'></image>
+    <input type='text' placeholder='请输入姓名' placeholder-style="color:#9B9B9B" value='{{nameText}}' bindinput='nameInput'></input>
+    </view>
+    <view class='fillList fillPlot'>
+    <image src='../../resources/restImg/ic_landlord_house.png'></image>
+      <input type='text' placeholder='小区名称' placeholder-style="color:#9B9B9B" value='{{plotText}}' bindinput='plotInput'></input>
+    </view>
+    <view class='fillList fillAddess'>
+    <image src='../../resources/restImg/ic_landlord_site.png'></image>
+      <input type='text' placeholder='详细地址' placeholder-style="color:#9B9B9B" value='{{addessText}}' bindinput='addessInput'></input>
+    </view>
+    <view class='fillList fillArea'>
+    <image src='../../resources/restImg/ic_landlord_bag4.png'></image>
+      <input type='number' placeholder='请输入面积' placeholder-style="color:#9B9B9B" value='{{areaText}}' bindinput='areaInput'></input>
+      <text> ㎡</text>
+    </view>
+    
+
+    <view class='fillList fillSelect'>
+      <view class='leftSelect'>
+        <text>户型</text>
+        <view class='leftSelectBox' bindtap='houseTap'>
+        {{houseText1}}{{houseText2}}{{houseText3}}
+           <p></p>
+        </view>
+      </view> 
+      <view class='rightSelect'>
+        <text>装修风格</text>
+        <view class='leftSelectBox' bindtap='fitmentTap'>
+        {{fitmentText}}
+           <p></p>
+        </view>
+      </view>
+    </view>
+
+
+    <view class='fillList fillPhoto'>
+    <image src='../../resources/restImg/ic_landlord_phone.png'></image>
+      <input type='number' placeholder='请输入手机号' maxlength='11' placeholder-style="color:#9B9B9B" value='{{photoNumber}}' bindinput='photoInput'></input>
+      <view class="codeTap {{photoTap?'activeCode':''}}" bindtap='gainCodeTap'>{{codeText}}</view>
+    </view>
+    <view class='fillList fillCode'>
+    <image src='../../resources/restImg/ic_landlord_verify.png' ></image>
+      <input type='number' placeholder='验证码' maxlength='6' placeholder-style="color:#9B9B9B" value='{{codeNumber}}' bindinput='codeInput'></input>
+    </view>
+
+<view class='btnSumTap' bindtap='btnSumTap'>提交</view>
+
+
+</view>
+
+
+
+
+      <!--"调起选择组件开始-->
+<view class="dialog-mask " style="z-index:11;visibility:{{DayIsShow ? 'visible': 'hidden'}}" bindtap="hideSelected" />
+<view class="picker-view" animation="{{animationDay}}" style="visibility:{{DayIsShow ? 'visible':'hidden'}}">
+  <view style="height:15% ;width:95%;margin-top:10rpx;margin-bottom:10rpx;">
+    <text catchtap="hideSelected">取消</text>
+    <text style="float: right;color:#F5A623" catchtap="daySure" >确定</text>
+  </view>
+   <!-- 装修-->
+    <picker-view wx:if="{{timeVal == 1}}" style="width: 100%; height: 300px;" bindchange="cityChange" value="{{value1}}" wx:key="">
+    <picker-view-column>
+         <view  wx:for="{{arrayDay}}" wx:key="key" class="picker-item"  style="text-align: center;line-height:34px">
+        {{item}}</view>
+    </picker-view-column>
+  </picker-view>
+  <!-- 户型-->
+  <picker-view wx:if="{{timeVal == 2}}" style="width: 100%; height: 300px;" bindchange="cityChange" value="{{value2}}" wx:key="">
+    <picker-view-column>
+         <view  wx:for="{{arrayTime1}}" wx:key="key" class="picker-item"  style="text-align: center;line-height:34px">
+        {{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+         <view  wx:for="{{arrayTime2}}" wx:key="key" class="picker-item"  style="text-align: center;line-height:34px">
+        {{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+         <view  wx:for="{{arrayTime3}}" wx:key="key" class="picker-item"  style="text-align: center;line-height:34px">
+        {{item}}</view>
+    </picker-view-column>
+  </picker-view>
+   
+</view>
+        <!--"调起城市组件结束-->
+
+<!-- 点击问号跳出弹出框 -->
+<view class='tipsWindown' style="visibility:{{questionShow ? 'visible':'hidden'}}" bindtap='hidenTipTap'></view> 
+    <view class='expectationss' style="visibility:{{questionShow ? 'visible':'hidden'}}" >
+         <p>上传须知</p>
+         <!-- <image class='chahao' src='https://www.suitius.com/image/resources/homeDetail/ic_pop_close.png' bindtap='hidenTipTap'></image> -->
+         <text>1.业主应上传产权文件:内容包括权属证号、地址信息(含楼栋门牌号)、产权人信息；
+               2.转租/合租用户应上传租赁合同:内容包括地址信息、租期、出租人信息、承租人信息；
+               3.房屋包租/托管用户应同时上传产权文件和租赁合同；
+               4.照片请拍摄清晰,请勿涂抹遮挡；
+         </text>
+           <view class='buttonsumss' bindtap='bindYesTap'>知道了</view>
+    </view>
+
+</view>

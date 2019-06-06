@@ -1,14 +1,41 @@
 {
-  "pages":[
+  "pages":[    
     "pages/index/index",
+    "pages/login/login",
     "pages/searchs/searchs",
     "pages/mine/mine",
-    "pages/article/article"
+    "pages/article/article",
+    "pages/message/message",
+    "pages/sultnews/sultnews",
+    "pages/homeRegister/homeRegister",
+    "pages/searchEnd/searchEnd",
+    "pages/homeDetail/homeDetail",
+    "pages/relationFD/relationFD",
+    "pages/questionnaire/questionnaire",
+    "pages/personalData/personalData",
+    "pages/discussion/discussion",
+    "pages/journeyNews/journeyNews",
+    "pages/journeyList/journeyList",
+    "pages/discussionList/discussionList",
+    "pages/routeChat/routeChat",
+    "pages/visitChat/visitChat",
+    "pages/myHome/myHome",
+    "pages/amendHome/amendHome",
+    "pages/cardBag/cardBag",
+    "pages/auditStatus/auditStatus",
+    "pages/myVisit/myVisit",
+    "pages/sultSetting/sultSetting",
+    "pages/asregards/asregards",
+    "pages/feedback/feedback",
+    "pages/collect/collect",
+    "pages/checkData/checkData",
+    "commpents/navber/navber"
   ],
-  "window":{
+  "window":{    
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "SULT",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle":"black",
+    "navigationStyle":"custom"
   }
 }

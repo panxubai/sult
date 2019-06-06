@@ -1,0 +1,156 @@
+/* pages/journeyList/journeyList.wxss */
+page{
+  background: #eff3f6;
+}
+.container{
+
+  box-shadow: 0 4rpx 8rpx 0 rgba(0,0,0,0.10) inset;
+}
+.routeList:first-child{
+   box-shadow: 0 4rpx 8rpx 0 rgba(0,0,0,0.10) inset; 
+}
+.routeList{
+  border-top: 1px solid #eff3f6;
+  width: 100%;
+  height: 312rpx;
+  padding: 40rpx 40rpx 0;
+  box-sizing: border-box;
+  background: #fff;
+  border-bottom: 22rpx solid #eff3f6;
+}
+.routeList .routeTop{
+   width: 100%;
+  height: 170rpx;
+  display: flex;
+  border-bottom: 1px solid #E5E5E5;
+}
+.routeList .routeTop image{
+   width: 172rpx;
+  height: 130rpx;
+}
+.routeList .routeTop .routeRight{
+    margin-left: 32rpx;
+ height: 170rpx; 
+ width: 100%;
+ position: relative;
+}
+.routeList .routeBottomJj,.routeBottomDs,.routeBottomTy{
+position: absolute;
+top: 0;
+right: 0;
+  height: 80rpx;
+
+}
+.routeList .routeBottomTy span{
+  display: block;
+  width: 130rpx;
+  height: 50rpx;
+  background: #AADD76;
+  border-radius: 40rpx;
+   font-size: 24rpx;
+  color: #FFFFFF;
+   line-height: 50rpx;
+   text-align: center;
+}
+ .routeList .routeBottomJj span{
+  display: block;
+  width: 130rpx;
+  height: 50rpx;
+  background: #C0C0C0;
+border-radius: 40rpx;
+   font-size: 24rpx;
+color: #FFFFFF;
+   line-height: 50rpx;
+   text-align: center;
+} 
+.routeList .routeBottomDs span{
+  display: block;
+  width: 130rpx;
+  height: 50rpx;
+border-radius: 40rpx;
+   font-size: 24rpx;
+   line-height: 50rpx;
+   text-align: center;
+  background: #fff;
+  color: #AADD76;
+}
+.routeList .routeTop .routeRight p{
+ font-size: 32rpx;
+color: #222222;
+font-weight: 500;
+margin-bottom: 40rpx;
+display:block;
+width:360rpx;
+overflow: hidden;
+text-overflow:ellipsis;
+white-space: nowrap;
+}
+.routeList .routeTop .routeRight .routeTime{
+  width: 100%;
+  margin-top: 30rpx;
+}
+.routeList .routeTop .routeRight .routeTime text{
+  font-size: 28rpx;
+color: #9B9B9B;
+float: left;
+margin-top: 15rpx;
+}
+.routeList .routeTop .routeRight .routeTime b{
+  font-size: 44rpx;
+color: #FE8B25;
+float: right;
+}
+.routeList .routeTop .routeRight .routeTime b a{
+ font-size: 28rpx;
+color: #FE8B25;
+}
+
+.routeList .routeBottom{
+   width: 100%;
+  height: 80rpx;
+  position: relative;
+}
+.routeList .routeBottom a{
+     display:block;
+    width:40rpx;
+    height:40rpx;
+    background:#FE2C54;
+  border-radius:50%;
+  font-size:20rpx;
+  color:#FFFFFF;
+  letter-spacing:0;
+  line-height:40rpx;
+  position:absolute;
+  top:16rpx;
+right:39rpx;
+
+  text-align:center;
+}
+.routeList .routeBottom span{
+   font-size: 28rpx;
+   line-height: 80rpx;
+color: #9B9B9B;
+}
+.routeList .routeBottom image{
+   width: 32rpx;
+   height: 32rpx;
+   float: right;
+   margin-top: 24rpx;
+}
+
+
+.noHome{
+  width: 100%;
+  text-align: center;
+}
+.noHome image{
+  width: 260rpx;
+  height: 260rpx;
+  margin-top: 250rpx;
+}
+.noHome text{
+  display: block;
+  font-size: 32rpx;
+color: #9B9B9B;
+margin-top: 48rpx;
+}

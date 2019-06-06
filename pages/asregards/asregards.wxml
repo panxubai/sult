@@ -1,0 +1,10 @@
+<!--pages/asregards/asregards.wxml-->
+<view class="container" style='margin-top: {{height}}px'> 
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+    <view class='box'>
+        <image src='../../resources/restImg/img_suit_picture.png'></image>
+        <text>SULT</text>
+        <p>{{banbenV}}</p>
+    </view>
+    <view class='copyright'>上海劢极信息科技公司版权所有</view>
+</view>

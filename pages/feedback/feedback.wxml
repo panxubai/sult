@@ -1,0 +1,54 @@
+<!--pages/feedback/feedback.wxml-->
+<view class="container" style='margin-top: {{height}}px'> 
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+   <view class='feedMain'> 
+        <view class='rentingWhat'>
+        <text>您遇到的问题类型</text>
+        <view class='rentingYes' data-index = '1' bindtap='rentingWhatTap'>
+         <image wx:if="{{rentingIndex == 1}}" src='https://www.suitius.com/image/resources/questionnaire/ic_boy6.png' data-index = '1'></image>
+          <image wx:else src='https://www.suitius.com/image/resources/questionnaire/ic_boy5.png' data-index = '1'></image>
+          产品意见
+        </view>
+        <view class='rentingNo' data-index = '2' bindtap='rentingWhatTap'>
+          <image wx:if="{{rentingIndex == 2}}" src='https://www.suitius.com/image/resources/questionnaire/ic_boy6.png' data-index = '2' ></image>
+          <image wx:else src='https://www.suitius.com/image/resources/questionnaire/ic_boy5.png' data-index = '2'></image>
+          功能
+        </view>
+
+        <view class='rentingNoYes' data-index = '3' bindtap='rentingWhatTap'>
+          <image wx:if="{{rentingIndex == 3}}" src='https://www.suitius.com/image/resources/questionnaire/ic_boy6.png' data-index = '3' ></image>
+          <image wx:else src='https://www.suitius.com/image/resources/questionnaire/ic_boy5.png' data-index = '3'></image>
+          其他
+        </view>
+      </view>
+
+
+      <view class="section">
+        <textarea placeholder="亲，我们非常重视您给我们提出的宝贵建议，帮助我们不断完善产品，谢谢！" placeholder-style="color:#9B9B9B;" value='{{sectionInput}}' maxlength='150' bindinput='sectionInput' />
+      </view>
+
+
+  <view class='homeImg'>
+      <p>上传图片<a>({{tempFilePaths.length}}/5)</a></p>
+      <scroll-view scroll-x style="width: 100%;margin-top:24rpx;">
+      <view class='chumList' style='width:{{tempFilePaths.length == 9?tempFilePaths.length*156:tempFilePaths.length*156+140}}rpx;'>
+        <view wx:for="{{tempFilePaths}}" wx:key="key" class='headList'>
+            <image src='{{item}}' class='images'  data-index="{{index}}" ></image>
+            <image class='delImg' data-index="{{index}}" bindtap="tapaa" src='https://www.suitius.com/image/resources/ic_search_closs.png'></image>
+        </view>
+         <view class='tapPhoto' style="visibility:{{tempFilePaths.length == 5?'hidden':'visible'}}" bindtap='tapPhoto'>
+             <image class='absoloatImg' src='../../resources/restImg/ic_user_camera.png'></image>
+         </view>
+      </view>
+    </scroll-view>
+ </view>
+ 
+    <view class='inputBox'>
+        <input type='text' placeholder='(选填)请填写你的手机号或者邮箱、QQ' value='{{phoneEmalInput}}' placeholder-style="color:#9B9B9B;" bindinput='phoneEmalInput'></input>
+    </view>
+
+
+    <view class='btnSumBox' bindtap='btnSumBoxTap'>提交申请</view>
+   
+   </view>
+</view>

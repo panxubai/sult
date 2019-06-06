@@ -1,0 +1,24 @@
+/* pages/login/login.wxss */
+.container{
+  width: 100%;
+}
+.container .loginSum{
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+.container .loginSum image{
+  margin-top:180rpx; 
+  width: 200rpx;
+  height: 200rpx;
+}
+.container .loginSum text{
+  display: block;
+  margin: 50rpx 0;
+  font-size: 32rpx;
+  color: #999;
+}
+.container .loginSum button{
+  background: #ff860c;
+  color: #fff;
+}

@@ -1,0 +1,47 @@
+<!--pages/message/message.wxml-->
+<view class="container" style='margin-top: {{height}}px'> 
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+    <view class='messageMain'>
+          <view class='systemNew' bindtap='systemTap' data-type='0'>
+              <view class='messageImg'>
+                <image class='ic_message' src='https://www.suitius.com/image/resources/ic_message_xitong1.png'></image>
+              </view>
+              <view class='messageView'>
+                  <p>系统消息</p>
+              </view>
+              <image class='ic_more' src='https://www.suitius.com/image/resources/ic_more.png'></image>
+              <a wx:if="{{newXx.suit>0}}">{{newXx.suit}}</a>
+          </view>
+
+          <view class='journey' bindtap='journeyTap' wx:if="{{indexPd == 0}}" data-type='1'>
+               <view class='messageImg'>
+                <image class='ic_message' src='https://www.suitius.com/image/resources/ic_message_xitong2.png'></image>
+              </view>
+              <view class='messageView'>
+                  <p>行程消息</p>
+              </view>
+               <image class='ic_more' src='https://www.suitius.com/image/resources/ic_more.png'></image>
+                 <a wx:if="{{newXx.trip>0}}">{{newXx.trip}}</a>
+          </view>
+          <view class='usenet' bindtap='journeyTap' wx:if="{{indexPd == 0}}" data-type='2'>
+               <view class='messageImg'>
+                <image class='ic_message' src='https://www.suitius.com/image/resources/ic_message_xitong.png'></image>
+              </view>
+              <view class='messageView'>
+                  <p>讨论组消息</p>
+              </view>
+               <image class='ic_more' src='https://www.suitius.com/image/resources/ic_more.png'></image>
+                <a wx:if="{{newXx.disc>0}}">{{newXx.disc}}</a>
+          </view>
+           <view class='visit' bindtap='journeyTap' wx:if="{{indexPd == 1}}" data-type='3'>
+               <view class='messageImg'>
+               <image class='ic_message' src='https://www.suitius.com/image/resources/ic_message_xitong2.png'></image>
+              </view>
+              <view class='messageView'>
+                  <p>到访消息</p>
+              </view>
+               <image class='ic_more' src='https://www.suitius.com/image/resources/ic_more.png'></image>
+                <a wx:if="{{newXx.visit>0}}">{{newXx.visit}}</a>
+          </view>
+    </view>
+</view>
